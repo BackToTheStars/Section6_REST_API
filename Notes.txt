@@ -1,0 +1,5 @@
+
+
+Instead of Python 3.5.2 installed Python 3.7.3 on Heroku - success! Three days of mistakes.
+
+
