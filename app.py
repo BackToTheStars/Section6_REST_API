@@ -3,6 +3,9 @@
 # models is our internal representation, helper/classes for a server
 # resources is external API representation
 
+import os               
+# for Postgres database environment variable, provided by Heroku CLI
+
 from flask import Flask # request processes JSON payloads 
 from flask_restful import Api
 from flask_jwt import JWT
@@ -13,7 +16,10 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db' # database file is in the root
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db') 
+# App will connect to Heroku environment variable. GET(<read>, <default>)
+# If there's nothing, it will use the path to database file in the root.
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'Nick'   # in the production environment it cannot be so open as here, it should be hidden 
 api = Api(app)            # class API from flask_restful

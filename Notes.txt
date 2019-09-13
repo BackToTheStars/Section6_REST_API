@@ -1,6 +1,11 @@
 
-
 Instead of Python 3.5.2 installed Python 3.7.3 on Heroku - success! Three days of mistakes.
 
 Terminal:  heroku logs --app=stores-restful-apis
 
+Address of the Heroku app:
+https://stores-restful-apis.herokuapp.com/
+
+"import OS" package provides the access to environment variables
+
+"psycopg2" is a python library to interact with Postgres databases.

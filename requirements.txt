@@ -6,3 +6,4 @@ Werkzeug
 Jinja2
 SQLAlchemy
 uwsgi
+psycopg2
