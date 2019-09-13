@@ -17,10 +17,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db' # database file is i
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'Nick'   # in the production environment it cannot be so open as here, it should be hidden 
 api = Api(app)            # class API from flask_restful
-
-@app.before_first_request
-def create_tables():
-    db.create_all()
   
 jwt = JWT(app, authenticate, identity)  # JWT will create a new endpoint, /auth, which will return a JWT token
 
