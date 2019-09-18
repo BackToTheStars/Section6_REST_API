@@ -1,3 +1,36 @@
+9/17/19
+
+server root:
+apt-get install postgresql postgresql-contrib
+sudo -i -u postgres       - switches to user postgres
+psql                      - connects to Postgres database, same as username
+\conninfo                 - connection info
+\q                        - quit database
+exit                      - exit to root user
+adduser nick
+visudo                    - put same privileges as root
+vi /etc/ssh/sshd_config   - configuration for PermitRootLogin
+PermitRootLogin no
+AllowUsers nick
+:wq
+service sshd reload
+ssh nick@95.85.15.100
+sudo su
+exit
+
+login to console as nick
+sudo su
+sudo -i -u postgres
+createuser nick -P
+createdb nick
+exit
+exit
+psql
+\conninfo
+\q
+
+sudo vi /etc/postgresql/9.5/main/pg_hba.conf
+
 
 Instead of Python 3.5.2 installed Python 3.7.3 on Heroku - success! Three days of mistakes.
 
@@ -9,3 +42,17 @@ https://stores-restful-apis.herokuapp.com/
 "import OS" package provides the access to environment variables
 
 "psycopg2" is a python library to interact with Postgres databases.
+
+9/15/19
+Switching to another branch (master of Section 6 will be used for automatic deployments)
+git branch feature/item-categories
+git push --set-upstream origin feature/item-categories
+git checkout feature/item-categories
+
+git checkout master
+git merge feature/item-categories
+git branch -d feature/item-categories   (deletes the branch)
+
+git branch production (automatic delpoys to test)
+
+
