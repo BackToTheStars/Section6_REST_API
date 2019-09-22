@@ -1,3 +1,33 @@
+9/22/19
+
+postgresql installation config: change local all "peer" to "md5" (security password)
+:wq
+nginx = "reversed proxy", enables multi-threading for Python/Flask, allows to run several Flask apps on the server,
+redirecting requests to different apps
+sudo apt-get install nginx
+sudo ufw status                  - Ubuntu firewall
+sudo ufw enable                  - enable firewall
+sudo ufw allow 'Nginx HTTP'      - adds nginx to firewall rules
+sudo ufw allow ssh               - adds ssh to firewall rules, so we don't get locked
+sudo ufw status
+systemctl status nginx           - checks if nginx is running
+sudo vi /etc/nginx/sites-available/items-rest.conf
+written config file for uwsgi & nginx
+sudo ln -s /etc/nginx/sites-available/items-rest.conf /etc/nginx/sites-enabled/
+sudo mkdir /var/www/html/items-rest
+sudo chown nick:nick /var/www/html/items-rest
+cd /var/www/html/items-rest
+git clone https://github.com/BackToTheStars/Section6_REST_API.git .    - clones our app to the folder
+mkdir log
+ls
+sudo apt-get install python-pip python3-dev libpq-dev
+pip install virtualenv
+virtualenv venv --python=python3.5
+ls
+source venv/bin/activate
+pip install -r requirements.txt
+
+
 9/17/19
 
 server root:
