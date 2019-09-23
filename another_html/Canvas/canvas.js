@@ -7,12 +7,12 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
 // Primary visual variables
-var x1 =  100;
-var y1 =  50;
-var x2 =  502;
-var y2 =  630;
+var x1 =  250;
+var y1 =  150;
+var x2 =  652;
+var y2 =  730;
 var xTextShift =     11;
-var yHeaderShift =   28;
+var yHeaderShift =   29;
 var yHeaderSpacer =  26;
 var headerWidth =    70;
 var yTextSpacer =    26;
@@ -93,5 +93,150 @@ c.fillText("ced sensing as well as neuromorphic pro-", xT, yT+16*yTextSpacer);
 c.fillText("cessing, which aims to mimic the human", xT, yT+17*yTextSpacer);
 c.fillText("brain’s approach to information processing.", xT, yT+18*yTextSpacer);
 
+c.font = "14px Arial";
+c.fillStyle = "white";
+c.fillText("October 17, 2018", x2-109, y2+14);
+c.fillText("www.geekwire.com", x1+1, y2+14);
+
 // The new organization will be based in Southern California and operate as part of Boeing’s Engineering, Test & Technology unit. Charles Toups is moving over from his post as vice president and general manager of Boeing Research & Technology to lead DC&N as vice president and general manager.
 //Boeing’s wants to stimulate innovations in secure communications, AI and complex system optimization. AI has obvious applications in autonomous flight, while quantum computers could be tailor-made for the network optimization challenges for next-generation air traffic management systems. DC&N will also focus on advanced sensing as well as neuromorphic processing, which aims to mimic the human brain’s approach to information processing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Primary visual variables
+x1 =  1050;
+y1 =  150;
+x2 =  1452;
+y2 =  730;
+xTextShift =     11;
+yHeaderShift =   29;
+yHeaderSpacer =  26;
+headerWidth =    70;
+yTextSpacer =    26;
+yTextShift =     28;
+frameWidth =      2;
+framesColor =  "#3D3D3D";
+headerColor =  "#DDDDDD";
+textColor =    "#FFFFFF";
+
+// Misc variables calculations
+xT =      x1 + xTextShift;
+yH =      y1 + yHeaderShift;
+yHeader = y1 + headerWidth;
+yT =      y1 + headerWidth + yTextShift; 
+
+// Main white rectangle
+c.fillStyle = textColor;
+c.fillRect(x1, y1, x2-x1, y2-y1);
+
+// Header grey rectangle
+c.fillStyle = headerColor;
+c.fillRect(x1, y1, x2-x1, headerWidth);
+
+// Frames
+c.beginPath();
+c.moveTo(x1, y1);
+c.lineTo(x1, y2);
+c.lineTo(x2, y2);
+c.lineTo(x2, y1);
+c.lineTo(x1, y1);
+c.moveTo(x1, yHeader);
+c.lineTo(x2, yHeader);
+c.lineWidth = frameWidth;
+c.strokeStyle = framesColor;
+// can be "#fa34a3", rgba(), text value, any css.
+c.stroke();
+
+// Highlighting
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+39, yT-20, 154, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+105, yT+6, 264, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+32, 375, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+58, 195, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+147, yT+110, 220, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+188, 375, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+81, yT+240, 295, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+292, 100, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+302, yT+292, 70, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+318, 383, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+344, 110, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+272, yT+396, 90, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+422, 226, yTextSpacer);
+
+// Header text
+c.font = "20px Arial";
+c.fillStyle = "black";
+c.fillText("Air Force completes first flight test of", xT, yH);
+c.fillText("Valkyrie unmanned fighter jet", xT, yH + yHeaderSpacer);
+
+//Air Force completes first flight test of Valkyrie unmanned fighter jet
+
+c.font = "20px Arial";
+c.fillStyle = "black";
+c.fillText("The XQ-58A Valkyrie, a jet-powered drone", xT, yT);
+c.fillText("designed to fly alongside manned fighter", xT, yT+1*yTextSpacer);
+c.fillText("jets and navigate autonomously, comple-", xT, yT+2*yTextSpacer);
+c.fillText("ted its first test flight. ", xT, yT+3*yTextSpacer);
+c.fillText("The flight test is a major step forward for", xT, yT+4*yTextSpacer);
+c.fillText("an experimental “loyal wingman” concept", xT, yT+5*yTextSpacer);
+c.fillText("that envisions small robotic drones ac-", xT, yT+6*yTextSpacer);
+c.fillText("companying fighter jets into combat,", xT, yT+7*yTextSpacer);
+c.fillText("scouting ahead or absorbing enemy fire.", xT, yT+8*yTextSpacer);
+c.fillText("It aligns with the Pentagon’s increasing", xT, yT+9*yTextSpacer);
+c.fillText("focus on competing with China and Russia", xT, yT+10*yTextSpacer);
+c.fillText("for military dominance.", xT, yT+11*yTextSpacer);
+c.fillText("San Diego-based company called Kratos", xT, yT+12*yTextSpacer);
+c.fillText("Defense and Security Solutions to develop", xT, yT+13*yTextSpacer);
+c.fillText("the Valkyrie. Boeing expects it to achieve", xT, yT+14*yTextSpacer);
+c.fillText("its first flight next year.", xT, yT+15*yTextSpacer);
+c.fillText("The Valkyrie has an estimated unit cost", xT, yT+16*yTextSpacer);
+c.fillText("of $2 million to $3 million, close to cost of", xT, yT+17*yTextSpacer);
+c.fillText("antiaircraft missiles that enemies would fire", xT, yT+18*yTextSpacer);
+
+c.font = "14px Arial";
+c.fillStyle = "white";
+c.fillText("March 6, 2019", x2-90, y2+14);
+c.fillText("www.washingtonpost.com", x1+1, y2+14);
+
+//The XQ-58A Valkyrie, a jet-powered drone designed to fly alongside manned fighter jets and navigate autonomously, completed its first test flight Tuesday at Yuma Proving Grounds in Arizona, according to an Air Force announcement and video released Wednesday.
+
+//The flight test is a major step forward for an experimental “loyal wingman” concept that envisions small robotic drones accompanying fighter jets into combat, scouting ahead or absorbing enemy fire. Military experts have suggested such systems would be useful in a war between two rival nations, something that aligns with the Pentagon’s increasing focus on competing with China and Russia for military dominance.
+
+//The Pentagon has yet to commit to the idea. But the Air Force Research Laboratory is among several military agencies dabbling in such technology, partnering with a San Diego-based company called Kratos Defense and Security Solutions to develop the Valkyrie.
+
+//Chicago-based aerospace giant Boeing introduced its own “loyal wingman” prototype drone last month at a trade show in Australia, according to the trade publication Defense News. It expects its variant to achieve its first flight next year.
+
+//[The Pentagon is building robotic wingmen to fly alongside fighter planes]
+
+//The Valkyrie has an estimated unit cost of $2 million to $3 million, something that is intended to give it a similar cost profile to the antiaircraft missiles that enemies would theoretically fire at it. And it is distinct from prevailing U.S. drone models such as the MQ-9 Reaper in that it is jet-powered and can fly at near-supersonic speeds, which could enable it to keep pace with an F-16 or F-35 fighter jet.
+
+//The Valkyrie “is the first example of a class of [drone] that is defined by low procurement and operating costs while providing game changing combat capability,” Air Force Research Lab program manager Doug Szczublewski said in a statement.
+
+//[A key U.S. ally is close to adding swarming attack drones to its military arsenal]
+
+//The test is also a major step forward for Kratos, the Valkyrie’s manufacturer. Kratos already does a steady business with the U.S. military for small drones the military uses for target practice in training exercises. And it has been trying to break into the much larger military fighter jet market that is dominated by Lockheed Martin, Boeing and Northrop Grumman.
+
+//Kratos chief executive Eric DeMarco said in a call with investors late last month that a successful initial flight test for the Valkyrie would be “one of the most significant milestones in Kratos’ history."
+
+//“We also see 2019 as the year that Kratos is established as the world leader in the high performance unmanned aerial drone system product class that we’re in, which we see as a multibillion-dollar opportunity for our company,” DeMarco said.
+
+//Clarification: The XQ-58A Valkyrie is designed to accompany fighter jets at “high-subsonic” speeds, not supersonic. This article has been updated.
+
