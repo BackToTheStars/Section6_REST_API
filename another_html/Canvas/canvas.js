@@ -6,70 +6,92 @@ canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
+// Primary visual variables
+var x1 =  100;
+var y1 =  50;
+var x2 =  502;
+var y2 =  630;
+var xTextShift =     11;
+var yHeaderShift =   28;
+var yHeaderSpacer =  26;
+var headerWidth =    70;
+var yTextSpacer =    26;
+var yTextShift =     28;
+var frameWidth =      2;
+var framesColor =  "#3D3D3D";
+var headerColor =  "#DDDDDD";
+var textColor =    "#FFFFFF";
+
+// Misc variables calculations
+var xT =      x1 + xTextShift;
+var yH =      y1 + yHeaderShift;
+var yHeader = y1 + headerWidth;
+var yT =      y1 + headerWidth + yTextShift; 
+
 // Main white rectangle
-c.fillStyle = "#FFFFFF";
-c.fillRect(300, 150, 400, 580);
+c.fillStyle = textColor;
+c.fillRect(x1, y1, x2-x1, y2-y1);
 
 // Header grey rectangle
-c.fillStyle = "#DDDDDD";
-c.fillRect(300, 150, 400, 70);
+c.fillStyle = headerColor;
+c.fillRect(x1, y1, x2-x1, headerWidth);
 
 // Frames
 c.beginPath();
-c.moveTo(300, 150);
-c.lineTo(300, 730);
-c.lineTo(700, 730);
-c.lineTo(700, 150);
-c.lineTo(300, 150);
-c.moveTo(300, 220);
-c.lineTo(700, 220);
-c.lineWidth=2
-c.strokeStyle = "#3D3D3D";
+c.moveTo(x1, y1);
+c.lineTo(x1, y2);
+c.lineTo(x2, y2);
+c.lineTo(x2, y1);
+c.lineTo(x1, y1);
+c.moveTo(x1, yHeader);
+c.lineTo(x2, yHeader);
+c.lineWidth = frameWidth;
+c.strokeStyle = framesColor;
 // can be "#fa34a3", rgba(), text value, any css.
 c.stroke();
 
 // Highlighting
-c.fillStyle = "#FFFB1E"; c.fillRect(350, 306, 134, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(333, 384, 134, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(328, 462, 349, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(305, 488, 215, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(418, 514, 190, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(305, 540, 185, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(370, 566, 187, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(305, 592, 380, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(305, 618, 85, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(610, 618, 75, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(305, 644, 115, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(514, 644, 170, 26);
-c.fillStyle = "#FFFB1E"; c.fillRect(305, 670, 80, 26);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+39, yT+58, 134, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+22, yT+136, 134, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+17, yT+214, 349, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+240, 215, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+107, yT+266, 190, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+292, 185, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+59, yT+318, 187, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+344, 380, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+370, 85, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+299, yT+370, 75, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+396, 115, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT+203, yT+396, 171, yTextSpacer);
+c.fillStyle = "#FFFB1E"; c.fillRect(xT-6, yT+422, 80, yTextSpacer);
 
 // Header text
 c.font = "20px Arial";
 c.fillStyle = "black";
-c.fillText("Boeing creates ‘Disruptive Computing", 311, 178);
-c.fillText("and Networks’ special unit", 311, 204);
+c.fillText("Boeing creates ‘Disruptive Computing", xT, yH);
+c.fillText("and Networks’ special unit", xT, yH + yHeaderSpacer);
 
 c.font = "20px Arial";
 c.fillStyle = "black";
-c.fillText("The new organization will be based in", 311, 248);
-c.fillText("Southern California and operate as part of", 311, 274);
-c.fillText("Boeing’s Engineering, Test & Technology", 311, 300);
-c.fillText("unit. Charles Toups is moving over from", 311, 326);
-c.fillText("his post as vice president and general", 311, 352);
-c.fillText("manager of Boeing Research & Technolo-", 311, 378);
-c.fillText("gy to lead DC&N as vice president and", 311, 404);
-c.fillText("general manager.", 311, 430);
-c.fillText("Boeing’s wants to stimulate innovations", 311, 456);
-c.fillText("in secure communications, AI and comp-", 311, 482);
-c.fillText("lex system optimization. AI has obvious", 311, 508);
-c.fillText("applications in autonomous flight, while", 311, 534);
-c.fillText("quantum computers could be tailor-made", 311, 560);
-c.fillText("for the network optimization challenges", 311, 586);
-c.fillText("for next-generation air traffic management", 311, 612);
-c.fillText("systems. DC&N will also focus on advan-", 311, 638);
-c.fillText("ced sensing as well as neuromorphic pro-", 311, 664);
-c.fillText("cessing, which aims to mimic the human", 311, 690);
-c.fillText("brain’s approach to information processing.", 311, 716);
+c.fillText("The new organization will be based in", xT, yT);
+c.fillText("Southern California and operate as part of", xT, yT+1*yTextSpacer);
+c.fillText("Boeing’s Engineering, Test & Technology", xT, yT+2*yTextSpacer);
+c.fillText("unit. Charles Toups is moving over from", xT, yT+3*yTextSpacer);
+c.fillText("his post as vice president and general", xT, yT+4*yTextSpacer);
+c.fillText("manager of Boeing Research & Technolo-", xT, yT+5*yTextSpacer);
+c.fillText("gy to lead DC&N as vice president and", xT, yT+6*yTextSpacer);
+c.fillText("general manager.", xT, yT+7*yTextSpacer);
+c.fillText("Boeing’s wants to stimulate innovations", xT, yT+8*yTextSpacer);
+c.fillText("in secure communications, AI and comp-", xT, yT+9*yTextSpacer);
+c.fillText("lex system optimization. AI has obvious", xT, yT+10*yTextSpacer);
+c.fillText("applications in autonomous flight, while", xT, yT+11*yTextSpacer);
+c.fillText("quantum computers could be tailor-made", xT, yT+12*yTextSpacer);
+c.fillText("for the network optimization challenges", xT, yT+13*yTextSpacer);
+c.fillText("for next-generation air traffic management", xT, yT+14*yTextSpacer);
+c.fillText("systems. DC&N will also focus on advan-", xT, yT+15*yTextSpacer);
+c.fillText("ced sensing as well as neuromorphic pro-", xT, yT+16*yTextSpacer);
+c.fillText("cessing, which aims to mimic the human", xT, yT+17*yTextSpacer);
+c.fillText("brain’s approach to information processing.", xT, yT+18*yTextSpacer);
 
 // The new organization will be based in Southern California and operate as part of Boeing’s Engineering, Test & Technology unit. Charles Toups is moving over from his post as vice president and general manager of Boeing Research & Technology to lead DC&N as vice president and general manager.
 //Boeing’s wants to stimulate innovations in secure communications, AI and complex system optimization. AI has obvious applications in autonomous flight, while quantum computers could be tailor-made for the network optimization challenges for next-generation air traffic management systems. DC&N will also focus on advanced sensing as well as neuromorphic processing, which aims to mimic the human brain’s approach to information processing.
