@@ -74,6 +74,8 @@ sudo rm /etc/nginx/sites-available/default
 sudo systemctl reload nginx
 sudo systemctl restart nginx
 sudo service postgresql start
+sudo reboot now
+sudo systemctl start uwsgi_items_rest
 
 
 9/17/19
