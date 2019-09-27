@@ -7,9 +7,9 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
 // Primary visual variables
-var x1 =  250;
+var x1 =  450;
 var y1 =  150;
-var x2 =  652;
+var x2 =  852;
 var y2 =  730;
 var xTextShift =     11;
 var yHeaderShift =   29;
@@ -22,11 +22,22 @@ var framesColor =  "#3D3D3D";
 var headerColor =  "#DDDDDD";
 var textColor =    "#FFFFFF";
 
+var menuWidth = 300;
+var menuFrameWidth = 2;
+var menuFrameColor = "black";
+var menuVerticalDivisionsNumber = 6;
+var menuColor = "white";
+var menuTextColor = "black";
+var menuTextXShift = 6;
+var menuTextYShift = 19;
+
 // Misc variables calculations
 var xT =      x1 + xTextShift;
 var yH =      y1 + yHeaderShift;
 var yHeader = y1 + headerWidth;
 var yT =      y1 + headerWidth + yTextShift; 
+var yMenu = window.innerHeight;
+var menuYDivisions = innerHeight / menuVerticalDivisionsNumber;
 
 // Main white rectangle
 c.fillStyle = textColor;
@@ -107,25 +118,10 @@ c.fillText("www.geekwire.com", x1+1, y2+14);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Primary visual variables
-x1 =  1050;
+x1 =  1150;
 y1 =  150;
-x2 =  1452;
+x2 =  1552;
 y2 =  730;
 xTextShift =     11;
 yHeaderShift =   29;
@@ -240,3 +236,35 @@ c.fillText("www.washingtonpost.com", x1+1, y2+14);
 
 //Clarification: The XQ-58A Valkyrie is designed to accompany fighter jets at “high-subsonic” speeds, not supersonic. This article has been updated.
 
+
+
+
+
+
+// Left Menu
+
+// White rectangle
+c.fillStyle = menuColor;
+c.fillRect(0, 0, menuWidth, yMenu);
+
+c.beginPath();
+c.moveTo(menuWidth, 0);
+c.lineTo(menuWidth, yMenu);
+var i;
+for (i = 1; i < (menuVerticalDivisionsNumber); i++)  {
+    c.moveTo(0, menuYDivisions * i);
+    c.lineTo(menuWidth, menuYDivisions * i);
+}
+c.lineWidth = menuFrameWidth;
+c.strokeStyle = menuFrameColor;
+// can be "#fa34a3", rgba(), text value, any css.
+c.stroke();
+
+c.font = "16px Arial";
+c.fillStyle = menuTextColor;
+c.fillText("Person", menuTextXShift, 0 * menuYDivisions+menuTextYShift);
+c.fillText("Company", menuTextXShift, 1 * menuYDivisions+menuTextYShift);
+c.fillText("City", menuTextXShift, 2 * menuYDivisions+menuTextYShift);
+c.fillText("Country", menuTextXShift, 3 * menuYDivisions+menuTextYShift);
+c.fillText("Project", menuTextXShift, 4 * menuYDivisions+menuTextYShift);
+c.fillText("Concept", menuTextXShift, 5 * menuYDivisions+menuTextYShift);
