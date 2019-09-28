@@ -7,6 +7,7 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
 // Primary visual variables
+var i;
 var x1 =  450;
 var y1 =  150;
 var x2 =  852;
@@ -22,14 +23,16 @@ var framesColor =  "#3D3D3D";
 var headerColor =  "#DDDDDD";
 var textColor =    "#FFFFFF";
 
-var menuWidth = 300;
-var menuFrameWidth = 2;
-var menuFrameColor = "black";
-var menuVerticalDivisionsNumber = 6;
-var menuColor = "white";
-var menuTextColor = "black";
-var menuTextXShift = 6;
-var menuTextYShift = 19;
+var menuWidth =                   300;
+var menuFrameWidth =                2;
+var menuFrameWidthSecondary =     0.5;
+var menuFrameColor =          "black";
+var menuVerticalDivisionsNumber =   6;
+var menuColor =               "white";
+var menuTextColor =           "black";
+var menuTextXShift =                6;
+var menuTextYShift =               19;
+var menuClassesYWidth =            26;
 
 // Misc variables calculations
 var xT =      x1 + xTextShift;
@@ -37,7 +40,7 @@ var yH =      y1 + yHeaderShift;
 var yHeader = y1 + headerWidth;
 var yT =      y1 + headerWidth + yTextShift; 
 var yMenu = window.innerHeight;
-var menuYDivisions = innerHeight / menuVerticalDivisionsNumber;
+var menuYDivisions = Math.floor(innerHeight / menuVerticalDivisionsNumber);
 
 // Main white rectangle
 c.fillStyle = textColor;
@@ -247,24 +250,48 @@ c.fillText("www.washingtonpost.com", x1+1, y2+14);
 c.fillStyle = menuColor;
 c.fillRect(0, 0, menuWidth, yMenu);
 
+// Left grey rectangles 
+for (i = 1; i < (menuVerticalDivisionsNumber+1); i++)  {
+    c.fillStyle = headerColor;
+    c.fillRect(0, menuYDivisions*(i-1), menuWidth, menuClassesYWidth);
+}
+
+// Drawing vertical divisions of left menu
 c.beginPath();
 c.moveTo(menuWidth, 0);
 c.lineTo(menuWidth, yMenu);
-var i;
-for (i = 1; i < (menuVerticalDivisionsNumber); i++)  {
-    c.moveTo(0, menuYDivisions * i);
-    c.lineTo(menuWidth, menuYDivisions * i);
-}
 c.lineWidth = menuFrameWidth;
+c.strokeStyle = menuFrameColor;
+// can be "#fa34a3", rgba(), text value, any css.
+c.stroke();
+
+for (i = 1; i < (menuVerticalDivisionsNumber+1); i++)  {
+    c.moveTo(0, menuYDivisions * (i-1));
+    c.lineTo(menuWidth, menuYDivisions * (i-1));
+    c.moveTo(0, menuYDivisions * (i-1) + menuClassesYWidth);
+    c.lineTo(menuWidth, menuYDivisions * (i-1) + menuClassesYWidth);
+}
+
+c.lineWidth = menuFrameWidthSecondary;
 c.strokeStyle = menuFrameColor;
 // can be "#fa34a3", rgba(), text value, any css.
 c.stroke();
 
 c.font = "16px Arial";
 c.fillStyle = menuTextColor;
-c.fillText("Person", menuTextXShift, 0 * menuYDivisions+menuTextYShift);
-c.fillText("Company", menuTextXShift, 1 * menuYDivisions+menuTextYShift);
-c.fillText("City", menuTextXShift, 2 * menuYDivisions+menuTextYShift);
-c.fillText("Country", menuTextXShift, 3 * menuYDivisions+menuTextYShift);
-c.fillText("Project", menuTextXShift, 4 * menuYDivisions+menuTextYShift);
-c.fillText("Concept", menuTextXShift, 5 * menuYDivisions+menuTextYShift);
+c.fillText("Person:", menuTextXShift, 0 * menuYDivisions+menuTextYShift);
+c.fillText("Company:", menuTextXShift, 1 * menuYDivisions+menuTextYShift);
+c.fillText("City:", menuTextXShift, 2 * menuYDivisions+menuTextYShift);
+c.fillText("Country:", menuTextXShift, 3 * menuYDivisions+menuTextYShift);
+c.fillText("Project:", menuTextXShift, 4 * menuYDivisions+menuTextYShift);
+c.fillText("Concept:", menuTextXShift, 5 * menuYDivisions+menuTextYShift);
+
+// Left Menu texts
+c.font = "20px Arial";
+c.fillStyle = "black";
+c.fillText("Tups, Charles", 0+5, menuYDivisions*(1-1)+47);
+c.fillText("Boeing", 0+5, menuYDivisions*(2-1)+47);
+c.fillText("San Diego", 0+5, menuYDivisions*(3-1)+47);
+c.fillText("United States", 0+5, menuYDivisions*(4-1)+47);
+c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+47);
+c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+47);
