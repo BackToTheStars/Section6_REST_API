@@ -250,6 +250,42 @@ c.fillText("www.washingtonpost.com", x1+1, y2+14);
 c.fillStyle = menuColor;
 c.fillRect(0, 0, menuWidth, yMenu);
 
+var j = 43;
+var k = 22;
+c.font = "18px Arial";
+c.fillStyle = "black";
+c.fillText("Boeing", 0+5, menuYDivisions*(2-1)+j);
+c.fillText("Kratos", 0+5, menuYDivisions*(2-1)+j+1*k);
+c.fillText("Nortrop Grumman", 0+5, menuYDivisions*(2-1)+j+2*k);
+c.fillText("Halliburton", 0+5, menuYDivisions*(2-1)+j+3*k);
+c.fillText("Carlyle", 0+5, menuYDivisions*(2-1)+j+4*k);
+c.fillText("Lockheed Martin", 0+5, menuYDivisions*(2-1)+j+5*k);
+
+c.fillText("Toups, Charles", 0+5, menuYDivisions*(1-1)+j+0*k);
+c.fillText("Muilenburg, Dennis", 0+5, menuYDivisions*(1-1)+j+1*k);
+c.fillText("DeMarco, Eric", 0+5, menuYDivisions*(1-1)+j+2*k);
+c.fillText("Rubinstein, David", 0+5, menuYDivisions*(1-1)+j+3*k);
+c.fillText("Warden, Kathy", 0+5, menuYDivisions*(1-1)+j+4*k);
+c.fillText("Novakovic, Phebe", 0+5, menuYDivisions*(1-1)+j+5*k);
+ 
+c.fillText("San Diego, CA", 0+5, menuYDivisions*(3-1)+j);
+c.fillText("Baghdad", 0+5, menuYDivisions*(3-1)+j+1*k);
+c.fillText("Kabul", 0+5, menuYDivisions*(3-1)+j+2*k);
+c.fillText("Doha", 0+5, menuYDivisions*(3-1)+j+3*k);
+c.fillText("Norfolk, VA", 0+5, menuYDivisions*(3-1)+j+4*k);
+c.fillText("Istanbul", 0+5, menuYDivisions*(3-1)+j+5*k);
+
+c.fillText("Turkey", 0+5, menuYDivisions*(4-1)+j);
+c.fillText("Qatar", 0+5, menuYDivisions*(4-1)+j+1*k);
+c.fillText("Afghanistan", 0+5, menuYDivisions*(4-1)+j+2*k);
+c.fillText("Iraq", 0+5, menuYDivisions*(4-1)+j+3*k);
+c.fillText("United States", 0+5, menuYDivisions*(4-1)+j+4*k);
+c.fillText("Iran", 0+5, menuYDivisions*(4-1)+j+5*k);
+
+c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+47);
+c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+47);
+
+
 // Left grey rectangles 
 for (i = 1; i < (menuVerticalDivisionsNumber+1); i++)  {
     c.fillStyle = headerColor;
@@ -266,10 +302,10 @@ c.strokeStyle = menuFrameColor;
 c.stroke();
 
 for (i = 1; i < (menuVerticalDivisionsNumber+1); i++)  {
-    c.moveTo(0, menuYDivisions * (i-1));
-    c.lineTo(menuWidth, menuYDivisions * (i-1));
-    c.moveTo(0, menuYDivisions * (i-1) + menuClassesYWidth);
-    c.lineTo(menuWidth, menuYDivisions * (i-1) + menuClassesYWidth);
+    c.moveTo(0, menuYDivisions*(i-1)+0.5);
+    c.lineTo(menuWidth, menuYDivisions*(i-1)+0.5);
+    c.moveTo(0, menuYDivisions*(i-1)+menuClassesYWidth+0.5);
+    c.lineTo(menuWidth, menuYDivisions*(i-1)+menuClassesYWidth+0.5);
 }
 
 c.lineWidth = menuFrameWidthSecondary;
@@ -286,12 +322,9 @@ c.fillText("Country:", menuTextXShift, 3 * menuYDivisions+menuTextYShift);
 c.fillText("Project:", menuTextXShift, 4 * menuYDivisions+menuTextYShift);
 c.fillText("Concept:", menuTextXShift, 5 * menuYDivisions+menuTextYShift);
 
-// Left Menu texts
-c.font = "20px Arial";
-c.fillStyle = "black";
-c.fillText("Tups, Charles", 0+5, menuYDivisions*(1-1)+47);
-c.fillText("Boeing", 0+5, menuYDivisions*(2-1)+47);
-c.fillText("San Diego", 0+5, menuYDivisions*(3-1)+47);
-c.fillText("United States", 0+5, menuYDivisions*(4-1)+47);
-c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+47);
-c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+47);
+
+
+
+
+
+
