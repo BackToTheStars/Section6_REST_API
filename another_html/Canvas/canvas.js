@@ -283,7 +283,8 @@ c.fillText("United States", 0+5, menuYDivisions*(4-1)+j+4*k);
 c.fillText("Iran", 0+5, menuYDivisions*(4-1)+j+5*k);
 
 c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+j);
-c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+j);
+c.fillText("F-22 Raptor", 0+5, menuYDivisions*(5-1)+j+1*k);
+c.fillText("X-48B", 0+5, menuYDivisions*(5-1)+j+2*k);
 
 c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+47);
 
