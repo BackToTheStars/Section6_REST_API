@@ -284,9 +284,17 @@ c.fillText("Iran", 0+5, menuYDivisions*(4-1)+j+5*k);
 
 c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+j);
 c.fillText("F-22 Raptor", 0+5, menuYDivisions*(5-1)+j+1*k);
-c.fillText("X-48B", 0+5, menuYDivisions*(5-1)+j+2*k);
+c.fillText("X-48B Orbiter", 0+5, menuYDivisions*(5-1)+j+2*k);
+c.fillText("M-11 Sentinel", 0+5, menuYDivisions*(5-1)+j+3*k);
+c.fillText("MQ-19 Reaper", 0+5, menuYDivisions*(5-1)+j+4*k);
+c.fillText("J-11 Dragon", 0+5, menuYDivisions*(5-1)+j+5*k);
 
-c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+47);
+c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+j);
+c.fillText("Offensive Swarm", 0+5, menuYDivisions*(6-1)+j+1*k);
+c.fillText("Eye In The Sky", 0+5, menuYDivisions*(6-1)+j+2*k);
+c.fillText("Dead Man's Hand", 0+5, menuYDivisions*(6-1)+j+3*k);
+c.fillText("Quantum Cypher", 0+5, menuYDivisions*(6-1)+j+4*k);
+c.fillText("Situational Awareness", 0+5, menuYDivisions*(6-1)+j+5*k);
 
 
 // Left grey rectangles 
