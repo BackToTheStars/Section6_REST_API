@@ -250,52 +250,53 @@ c.fillText("www.washingtonpost.com", x1+1, y2+14);
 c.fillStyle = menuColor;
 c.fillRect(0, 0, menuWidth, yMenu);
 
-var j = 43;
+var j = 45;
 var k = 22;
 c.font = "18px Arial";
 c.fillStyle = "black";
-c.fillText("Boeing", 0+5, menuYDivisions*(2-1)+j);
-c.fillText("Kratos", 0+5, menuYDivisions*(2-1)+j+1*k);
-c.fillText("Nortrop Grumman", 0+5, menuYDivisions*(2-1)+j+2*k);
-c.fillText("Halliburton", 0+5, menuYDivisions*(2-1)+j+3*k);
-c.fillText("Carlyle", 0+5, menuYDivisions*(2-1)+j+4*k);
-c.fillText("Lockheed Martin", 0+5, menuYDivisions*(2-1)+j+5*k);
 
-c.fillText("Toups, Charles", 0+5, menuYDivisions*(1-1)+j+0*k);
+c.fillText("DeMarco, Eric", 0+5, menuYDivisions*(1-1)+j+0*k);
 c.fillText("Muilenburg, Dennis", 0+5, menuYDivisions*(1-1)+j+1*k);
-c.fillText("DeMarco, Eric", 0+5, menuYDivisions*(1-1)+j+2*k);
+c.fillText("Novakovic, Phebe", 0+5, menuYDivisions*(1-1)+j+2*k);
 c.fillText("Rubinstein, David", 0+5, menuYDivisions*(1-1)+j+3*k);
-c.fillText("Warden, Kathy", 0+5, menuYDivisions*(1-1)+j+4*k);
-c.fillText("Novakovic, Phebe", 0+5, menuYDivisions*(1-1)+j+5*k);
+c.fillText("Toups, Charles", 0+5, menuYDivisions*(1-1)+j+4*k);
+c.fillText("Warden, Kathy", 0+5, menuYDivisions*(1-1)+j+5*k);
+
+c.fillText("Boeing", 0+5, menuYDivisions*(2-1)+j);
+c.fillText("Carlyle", 0+5, menuYDivisions*(2-1)+j+1*k);
+c.fillText("Halliburton", 0+5, menuYDivisions*(2-1)+j+2*k);
+c.fillText("Kratos", 0+5, menuYDivisions*(2-1)+j+3*k);
+c.fillText("Lockheed Martin", 0+5, menuYDivisions*(2-1)+j+4*k);
+c.fillText("Nortrop Grumman", 0+5, menuYDivisions*(2-1)+j+5*k);
+
  
-c.fillText("San Diego, CA", 0+5, menuYDivisions*(3-1)+j);
-c.fillText("Baghdad", 0+5, menuYDivisions*(3-1)+j+1*k);
-c.fillText("Kabul", 0+5, menuYDivisions*(3-1)+j+2*k);
-c.fillText("Doha", 0+5, menuYDivisions*(3-1)+j+3*k);
+c.fillText("Baghdad", 0+5, menuYDivisions*(3-1)+j);
+c.fillText("Doha", 0+5, menuYDivisions*(3-1)+j+1*k);
+c.fillText("Istanbul", 0+5, menuYDivisions*(3-1)+j+2*k);
+c.fillText("Kabul", 0+5, menuYDivisions*(3-1)+j+3*k);
 c.fillText("Norfolk, VA", 0+5, menuYDivisions*(3-1)+j+4*k);
-c.fillText("Istanbul", 0+5, menuYDivisions*(3-1)+j+5*k);
+c.fillText("San Diego, CA", 0+5, menuYDivisions*(3-1)+j+5*k);
 
-c.fillText("Turkey", 0+5, menuYDivisions*(4-1)+j);
-c.fillText("Qatar", 0+5, menuYDivisions*(4-1)+j+1*k);
-c.fillText("Afghanistan", 0+5, menuYDivisions*(4-1)+j+2*k);
-c.fillText("Iraq", 0+5, menuYDivisions*(4-1)+j+3*k);
-c.fillText("United States", 0+5, menuYDivisions*(4-1)+j+4*k);
-c.fillText("Iran", 0+5, menuYDivisions*(4-1)+j+5*k);
+c.fillText("Afghanistan", 0+5, menuYDivisions*(4-1)+j);
+c.fillText("China", 0+5, menuYDivisions*(4-1)+j+1*k);
+c.fillText("Iran", 0+5, menuYDivisions*(4-1)+j+2*k);
+c.fillText("Qatar", 0+5, menuYDivisions*(4-1)+j+3*k);
+c.fillText("Turkey", 0+5, menuYDivisions*(4-1)+j+4*k);
+c.fillText("United States", 0+5, menuYDivisions*(4-1)+j+5*k);
 
-c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+j);
+c.fillText("Chengdu J-20", 0+5, menuYDivisions*(5-1)+j);
 c.fillText("F-22 Raptor", 0+5, menuYDivisions*(5-1)+j+1*k);
-c.fillText("X-48B Orbiter", 0+5, menuYDivisions*(5-1)+j+2*k);
-c.fillText("M-11 Sentinel", 0+5, menuYDivisions*(5-1)+j+3*k);
-c.fillText("MQ-19 Reaper", 0+5, menuYDivisions*(5-1)+j+4*k);
-c.fillText("J-11 Dragon", 0+5, menuYDivisions*(5-1)+j+5*k);
+c.fillText("MQ-9 Reaper", 0+5, menuYDivisions*(5-1)+j+2*k);
+c.fillText("RQ-170 Sentinel", 0+5, menuYDivisions*(5-1)+j+3*k);
+c.fillText("X-37B Orbital Test Vehicle", 0+5, menuYDivisions*(5-1)+j+4*k);
+c.fillText("XQ-58A Valkyrie", 0+5, menuYDivisions*(5-1)+j+5*k);
 
-c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+j);
-c.fillText("Offensive Swarm", 0+5, menuYDivisions*(6-1)+j+1*k);
-c.fillText("Eye In The Sky", 0+5, menuYDivisions*(6-1)+j+2*k);
-c.fillText("Dead Man's Hand", 0+5, menuYDivisions*(6-1)+j+3*k);
-c.fillText("Quantum Cypher", 0+5, menuYDivisions*(6-1)+j+4*k);
+c.fillText("Artificial Intelligence", 0+5, menuYDivisions*(6-1)+j);
+c.fillText("Loyal Wingman", 0+5, menuYDivisions*(6-1)+j+1*k);
+c.fillText("Perimeter, Dead Hand", 0+5, menuYDivisions*(6-1)+j+2*k);
+c.fillText("Quantum Cypher", 0+5, menuYDivisions*(6-1)+j+3*k);
+c.fillText("Robotic Swarm", 0+5, menuYDivisions*(6-1)+j+4*k);
 c.fillText("Situational Awareness", 0+5, menuYDivisions*(6-1)+j+5*k);
-
 
 // Left grey rectangles 
 for (i = 1; i < (menuVerticalDivisionsNumber+1); i++)  {
@@ -333,8 +334,51 @@ c.fillText("Country:", menuTextXShift, 3 * menuYDivisions+menuTextYShift);
 c.fillText("Project:", menuTextXShift, 4 * menuYDivisions+menuTextYShift);
 c.fillText("Concept:", menuTextXShift, 5 * menuYDivisions+menuTextYShift);
 
+// Drawing the timeline
+let xTime = 360;
+let yTime = 945;
+let yTimeLength = 30;
+let distance = 150;
 
+c.beginPath();
+for (i = 0; i < 20; i++)  {
+    c.moveTo(xTime + distance*i, yTime);
+    c.lineTo(xTime + distance*i, yTime+yTimeLength);
+}
+c.moveTo(xTime, yTime);
+c.lineTo(xTime, yTime+yTimeLength);
+c.lineWidth = 2;
+c.strokeStyle = "white";
+// can be "#fa34a3", rgba(), text value, any css.
+c.stroke();
 
+c.beginPath();
+c.moveTo(xTime + distance*3, yTime-30);
+c.lineTo(xTime + distance*3, yTime+yTimeLength+30);
+c.lineWidth = 3;
+c.strokeStyle = "white";
+// can be "#fa34a3", rgba(), text value, any css.
+c.stroke();
+c.font = "22px Arial";
+c.fillStyle = "White";
+c.fillText("2018", xTime+distance*3-70, yTime-15);
+c.fillText("2019", xTime+distance*3+20, yTime-15);
+
+// Months
+c.font = "16px Arial";
+c.fillStyle = "White";
+c.fillText("September '18", xTime+30-1*distance, yTime+20);
+c.fillText("October '18", xTime+30, yTime+20);
+c.fillText("November '18", xTime+30 + 1*distance, yTime+20);
+c.fillText("December '18", xTime+30 + 2*distance, yTime+20);
+c.fillText("January '18", xTime+30 + 3*distance, yTime+20);
+c.fillText("February '18", xTime+30 + 4*distance, yTime+20);
+c.fillText("March '18", xTime+30 + 5*distance, yTime+20);
+c.fillText("April '18", xTime+30 + 6*distance, yTime+20);
+c.fillText("May '18", xTime+30 + 7*distance, yTime+20);
+c.fillText("June '18", xTime+30 + 8*distance, yTime+20);
+c.fillText("July '18", xTime+30 + 9*distance, yTime+20);
+c.fillText("August '18", xTime+30 + 10*distance, yTime+20);
 
 
 
