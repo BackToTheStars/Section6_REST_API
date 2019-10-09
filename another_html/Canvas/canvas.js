@@ -122,9 +122,9 @@ c.fillText("www.geekwire.com", x1+1, y2+14);
 
 
 // Primary visual variables
-x1 =  1150;
+x1 =  1250;
 y1 =  150;
-x2 =  1552;
+x2 =  1652;
 y2 =  730;
 xTextShift =     11;
 yHeaderShift =   29;
