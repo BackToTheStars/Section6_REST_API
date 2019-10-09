@@ -120,11 +120,10 @@ c.fillText("www.geekwire.com", x1+1, y2+14);
 
 
 
-
 // Primary visual variables
-x1 =  1250;
+x1 =  1300;
 y1 =  150;
-x2 =  1652;
+x2 =  1702;
 y2 =  730;
 xTextShift =     11;
 yHeaderShift =   29;
@@ -382,4 +381,14 @@ c.fillText("August '18", xTime+30 + 10*distance, yTime+20);
 
 
 
+// Connections
 
+c.beginPath();
+c.rect(590, 514, 169, 26);
+c.rect(1384, 281, 215, 26);
+c.strokeStyle = "red";
+c.lineWidth = "4";
+c.stroke();
+
+
+//c.fillStyle = "#FFFB1E"; c.fillRect(xT+107, yT+266, 190, yTextSpacer);
