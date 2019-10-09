@@ -116,6 +116,82 @@ c.fillText("www.geekwire.com", x1+1, y2+14);
 //Boeing’s wants to stimulate innovations in secure communications, AI and complex system optimization. AI has obvious applications in autonomous flight, while quantum computers could be tailor-made for the network optimization challenges for next-generation air traffic management systems. DC&N will also focus on advanced sensing as well as neuromorphic processing, which aims to mimic the human brain’s approach to information processing.
 
 
+// COMMENT
+
+// Primary visual variables
+x1 =  900;
+y1 =  550;
+x2 =  1252;
+y2 =  830;
+xTextShift =     11;
+yHeaderShift =   29;
+yHeaderSpacer =  26;
+headerWidth =    70;
+yTextSpacer =    26;
+yTextShift =     28;
+frameWidth =      2;
+framesColor =  "#3D3D3D";
+headerColor =  "#b3ffb0";
+textColor =    "#FFFFFF";
+
+// Misc variables calculations
+xT =      x1 + xTextShift;
+yH =      y1 + yHeaderShift;
+yHeader = y1 + headerWidth;
+yT =      y1 + headerWidth + yTextShift; 
+
+// Main white rectangle
+c.fillStyle = textColor;
+c.fillRect(x1, y1, x2-x1, y2-y1);
+
+// Header grey rectangle
+c.fillStyle = headerColor;
+c.fillRect(x1, y1, x2-x1, headerWidth);
+
+// Frames
+c.beginPath();
+c.moveTo(x1, y1);
+c.lineTo(x1, y2);
+c.lineTo(x2, y2);
+c.lineTo(x2, y1);
+c.lineTo(x1, y1);
+c.moveTo(x1, yHeader);
+c.lineTo(x2, yHeader);
+c.lineWidth = frameWidth;
+c.strokeStyle = framesColor;
+// can be "#fa34a3", rgba(), text value, any css.
+c.stroke();
+
+// Header text
+c.font = "20px Arial";
+c.fillStyle = "black";
+c.fillText("Boeing created special unit of", xT, yH);
+c.fillText("coders to advance new warfare", xT, yH + yHeaderSpacer);
+
+//Air Force completes first flight test of Valkyrie unmanned fighter jet
+
+c.font = "20px Arial";
+c.fillStyle = "black";
+c.fillText("", xT, yT);
+c.fillText("", xT, yT+1*yTextSpacer);
+c.fillText("", xT, yT+2*yTextSpacer);
+c.fillText("", xT, yT+3*yTextSpacer);
+c.fillText("", xT, yT+4*yTextSpacer);
+c.fillText("", xT, yT+5*yTextSpacer);
+c.fillText("", xT, yT+6*yTextSpacer);
+c.fillText("", xT, yT+7*yTextSpacer);
+
+c.font = "14px Arial";
+c.fillStyle = "white";
+c.fillText("Date not provided", x2-112, y2+14);
+c.fillText("Lancelot comment", x1+1, y2+14);
+
+
+
+
+
+
+
 
 
 
@@ -380,15 +456,20 @@ c.fillText("July '18", xTime+30 + 9*distance, yTime+20);
 c.fillText("August '18", xTime+30 + 10*distance, yTime+20);
 
 
-
-// Connections
+// Connectors
 
 c.beginPath();
-c.rect(590, 514, 169, 26);
+c.rect( 590, 514, 169, 26);
 c.rect(1384, 281, 215, 26);
 c.strokeStyle = "red";
 c.lineWidth = "4";
 c.stroke();
 
+c.beginPath();
+c.moveTo(759, 527);
+c.lineTo(1384, 294);
+c.strokeStyle = "red";
+c.lineWidth = "1";
+c.stroke();
 
 //c.fillStyle = "#FFFB1E"; c.fillRect(xT+107, yT+266, 190, yTextSpacer);
