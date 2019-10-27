@@ -1,3 +1,4 @@
+
 function TiledCanvas (canvas, settings) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext('2d');
@@ -33,7 +34,7 @@ TiledCanvas.prototype.cloneObject = function (obj) {
 		if (typeof obj[k] === "object" && !(obj[k] instanceof Array)) {
 			clone[k] = this.cloneObject(obj[k]);
 		} else {
-			clone[k] = obj[k]
+			clone[k] = obj[k];
 		}
 	}
 	return clone;
