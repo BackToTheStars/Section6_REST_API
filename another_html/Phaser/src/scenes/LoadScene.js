@@ -12,11 +12,10 @@ export class LoadScene extends Phaser.Scene{
     init(){
     
     }
-    preload(){
-    
+    preload() {
+
     }
     create(){
         this.scene.start(CST.SCENES.MENU, "hello from Load Scene");
-        
     }
 }
