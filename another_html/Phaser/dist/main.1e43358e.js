@@ -258,8 +258,8 @@ var _MenuScene = require("./scenes/MenuScene");
 
 /** @type {import("../typings/phaser")} */
 var game = new Phaser.Game({
-  width: 300,
-  height: 300,
+  width: 800,
+  height: 600,
   scene: [_LoadScene.LoadScene, _MenuScene.MenuScene]
 });
 },{"./scenes/LoadScene":"src/scenes/LoadScene.js","./scenes/MenuScene":"src/scenes/MenuScene.js"}],"../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -290,7 +290,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4708" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "5653" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
