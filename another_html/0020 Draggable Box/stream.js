@@ -1,6 +1,7 @@
 window.onload=function(){
-      
-      
+     
+     
+     
 function EventStream() {
     var listeners = this.listeners = [];
 
@@ -68,6 +69,8 @@ EventStream.prototype.merge = function (stream) {
 
 var canvas = document.querySelector("canvas");
 var context = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var width = canvas.width;
 var height = canvas.height;
@@ -167,6 +170,8 @@ drag.map(function (position) {
     context.clearRect(0, 0, width, height);
     box.bind(context).fill();
 });
+
+
 
     
 }
