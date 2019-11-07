@@ -1,9 +1,16 @@
 
 // HOW TO MOVE THE BOX ON THE SCREEN
 
+// Starting coordinates of the box to be moved:
+
+var x1 = 450;
+var y1 = 150;
+var sizeX = 402;
+var sizeY = 580;
+
 window.onload=function(){
      
-// I like to use event streams to solve problems like these. What is an event stream? It is a stream of events. So let's create our own EventStream constructor:     
+// I like to use "event streams" to solve problems like these. What is an "event stream"? It is a stream of events. So let's create our own "EventStream" constructor:     
      
 function EventStream() {
     var listeners = this.listeners = [];
@@ -15,7 +22,7 @@ function EventStream() {
     }];
 }
 
-// We won't be using the EventStream constructor directly. Instead we'll write a function which creates an event stream, subscribes it to a stream of events and returns the stream:
+// We won't be using the "EventStream" constructor directly. Instead we'll write a function which creates an event stream, subscribes it to a stream of events and returns the stream:
 
 function getEventStream(event, target) {
     var pair = new EventStream;
@@ -149,7 +156,7 @@ Box.prototype.bind = function (context) {
 
 // Then we create a box and draw it to the screen:
 
-var box = new Box(450, 150, 402, 580); 
+var box = new Box(x1, y1, sizeX, sizeY); 
 box.bind(context).fill();
 
 // Now we need to make it draggable. We start dragging by holding down the mouse button. So the first thing we do is create a mousedown event stream:
