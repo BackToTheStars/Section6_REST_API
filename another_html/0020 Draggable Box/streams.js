@@ -8,8 +8,14 @@ var y1 = 150;
 var sizeX = 402;
 var sizeY = 580;
 var headerWidth = 70;
+var frameWidth = 2;
 var headerColor =  "#DDDDDD";
 var textColor =    "#FFFFFF";
+var framesColor =  "#3D3D3D"; 
+var xTextShift =     11;
+var yHeaderShift =   29;
+var yHeaderSpacer =  26;
+
 
 window.onload=function(){
      
@@ -162,10 +168,11 @@ Box.prototype.bind = function (context) {
 var box = new Box(x1, y1, sizeX, sizeY); 
 // box.bind(context).fill();   // fills rectangle with black (default)
 
-
-
-
-
+x1 = x1;
+y1 = y1;
+x2 = x1+sizeX;
+y2 = y1+sizeY;
+yHeader = y1+headerWidth;
 
 box.bind(context).fillStyle = textColor;
 box.bind(context).fillRect(x1, y1, sizeX, sizeY);
@@ -174,18 +181,18 @@ box.bind(context).fillRect(x1, y1, sizeX, sizeY);
 box.bind(context).fillStyle = headerColor;
 box.bind(context).fillRect(x1, y1, sizeX, headerWidth);   
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Frames
+box.bind(context).lineWidth = frameWidth;
+box.bind(context).strokeStyle = framesColor;
+box.bind(context).beginPath();
+box.bind(context).moveTo(x1, y1);
+box.bind(context).lineTo(x1, y2);
+box.bind(context).lineTo(x2, y2);
+box.bind(context).lineTo(x2, y1);
+box.bind(context).lineTo(x1, y1);
+box.bind(context).moveTo(x1, yHeader);    // cannot draw ???
+box.bind(context).lineTo(x2, yHeader);    // cannot draw ???
+box.bind(context).stroke();  
 
 
 
@@ -275,48 +282,45 @@ drag.map(function (position) {
 
     context.clearRect(0, 0, width, height);    // fills blue background
 //  box.bind(context).fill();                  // cuts black in blue
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+           
+    x1 = box.x;
+    y1 = box.y;
+    x2 = x1+sizeX;
+    y2 = y1+sizeY;
+    yHeader = y1+headerWidth;
+    var xT = x1+xTextShift;
+    var yH = y1+yHeaderShift;
+             
+    // White rectangle         
     box.bind(context).fillStyle = textColor;
     box.bind(context).fillRect(box.x, box.y, sizeX, sizeY);
     
     // Header grey rectangle
     box.bind(context).fillStyle = headerColor;
     box.bind(context).fillRect(box.x, box.y, sizeX, headerWidth);    
+       
+    // Frames
+    box.bind(context).lineWidth = frameWidth;
+    box.bind(context).strokeStyle = framesColor;
+    box.bind(context).beginPath();
+    box.bind(context).moveTo(x1, y1);
+    box.bind(context).lineTo(x1, y2);
+    box.bind(context).lineTo(x2, y2);
+    box.bind(context).lineTo(x2, y1);
+    box.bind(context).lineTo(x1, y1);
+    box.bind(context).lineTo(x1, yHeader);    // cannot draw ???
+    box.bind(context).lineTo(x2, yHeader);    // cannot draw ???
+    console.log(x1, yHeader);
+    console.log(x2, yHeader);
+    console.log("---------");
+    box.bind(context).stroke();  
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // Header text
+    box.bind(context).font = "20px Arial";
+    box.bind(context).fillStyle = "black";
+    box.bind(context).fillText("Boeing creates ‘Disruptive Computing", xT, yH);
+    box.bind(context).fillText("and Networks’ special unit", xT, yH+yHeaderSpacer);
+  
 });
 
 
