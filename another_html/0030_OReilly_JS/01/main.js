@@ -16,4 +16,4 @@ function draw (n) {
   return hand
 }
 console.log('Your hand:')
-console.log(draw(5))
+console.log(draw(30))
