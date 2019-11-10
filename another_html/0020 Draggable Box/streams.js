@@ -150,6 +150,19 @@ function getPosition(element) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Next we create a constructor for a Box:
 
 function Box(x, y, w, h) {
@@ -171,6 +184,23 @@ Box.prototype.bind = function (context) {
     // *** for unknown reason this code breaks the rectangles and font looks bad, pixelated ???
     return context;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Then we create a box and draw it to the screen:
 
