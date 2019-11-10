@@ -7,6 +7,9 @@ var x1 = 450;
 var y1 = 150;
 var sizeX = 402;
 var sizeY = 580;
+var headerWidth = 70;
+var headerColor =  "#DDDDDD";
+var textColor =    "#FFFFFF";
 
 window.onload=function(){
      
@@ -150,14 +153,47 @@ function Box(x, y, w, h) {
 
 Box.prototype.bind = function (context) {
     context.beginPath();
-    context.rect(this.x, this.y, this.w, this.h);
+    context.rect(this.x, this.y, this.w, this.h);  // draws rectangle
     return context;
 };
 
 // Then we create a box and draw it to the screen:
 
 var box = new Box(x1, y1, sizeX, sizeY); 
-box.bind(context).fill();
+// box.bind(context).fill();   // fills rectangle with black (default)
+
+
+
+
+
+
+box.bind(context).fillStyle = textColor;
+box.bind(context).fillRect(x1, y1, sizeX, sizeY);
+
+// Header grey rectangle
+box.bind(context).fillStyle = headerColor;
+box.bind(context).fillRect(x1, y1, sizeX, headerWidth);   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Now we need to make it draggable. We start dragging by holding down the mouse button. So the first thing we do is create a mousedown event stream:
 
@@ -237,8 +273,50 @@ drag.map(function (position) {
     box.x += position.dx;
     box.y += position.dy;
 
-    context.clearRect(0, 0, width, height);
-    box.bind(context).fill();
+    context.clearRect(0, 0, width, height);    // fills blue background
+//  box.bind(context).fill();                  // cuts black in blue
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    box.bind(context).fillStyle = textColor;
+    box.bind(context).fillRect(box.x, box.y, sizeX, sizeY);
+    
+    // Header grey rectangle
+    box.bind(context).fillStyle = headerColor;
+    box.bind(context).fillRect(box.x, box.y, sizeX, headerWidth);    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 });
 
 
