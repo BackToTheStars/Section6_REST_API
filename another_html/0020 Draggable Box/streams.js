@@ -15,6 +15,8 @@ var framesColor =  "#3D3D3D";
 var xTextShift =     11;
 var yHeaderShift =   29;
 var yHeaderSpacer =  26;
+var yTextShift =     28;
+var yTextSpacer =    26;
 
 
 window.onload=function(){
@@ -160,6 +162,13 @@ function Box(x, y, w, h) {
 Box.prototype.bind = function (context) {
     context.beginPath();
     context.rect(this.x, this.y, this.w, this.h);  // draws rectangle
+    context.rect(this.x, this.y, this.w, headerWidth);      // draws rectangle for header
+    // *** for unknown reason I can draw frames only here, not below with rectangles ???
+    // context.font = "14px Arial";
+    // context.fillStyle = "white";
+    // context.fillText("October 17, 2018", this.x+this.w-109, this.y+this.h+14);
+    // context.fillText("www.geekwire.com", this.x+1, this.y+this.h+14);
+    // *** for unknown reason this code breaks the rectangles and font looks bad, pixelated ???
     return context;
 };
 
@@ -173,6 +182,9 @@ y1 = y1;
 x2 = x1+sizeX;
 y2 = y1+sizeY;
 yHeader = y1+headerWidth;
+var xT = x1+xTextShift;
+var yH = y1+yHeaderShift;
+var yT = y1+headerWidth+yTextShift;
 
 box.bind(context).fillStyle = textColor;
 box.bind(context).fillRect(x1, y1, sizeX, sizeY);
@@ -185,6 +197,7 @@ box.bind(context).fillRect(x1, y1, sizeX, headerWidth);
 box.bind(context).lineWidth = frameWidth;
 box.bind(context).strokeStyle = framesColor;
 box.bind(context).beginPath();
+/*
 box.bind(context).moveTo(x1, y1);
 box.bind(context).lineTo(x1, y2);
 box.bind(context).lineTo(x2, y2);
@@ -192,9 +205,42 @@ box.bind(context).lineTo(x2, y1);
 box.bind(context).lineTo(x1, y1);
 box.bind(context).moveTo(x1, yHeader);    // cannot draw ???
 box.bind(context).lineTo(x2, yHeader);    // cannot draw ???
+*/
 box.bind(context).stroke();  
 
+// Header text
+box.bind(context).font = "20px Arial";
+box.bind(context).fillStyle = "black";
+box.bind(context).fillText("Boeing creates ‘Disruptive Computing", xT, yH);
+box.bind(context).fillText("and Networks’ special unit", xT, yH+yHeaderSpacer);
 
+box.bind(context).font = "20px Arial";
+box.bind(context).fillStyle = "black";
+box.bind(context).fillText("The new organization will be based in", xT, yT);
+box.bind(context).fillText("Southern California and operate as part of", xT, yT+1*yTextSpacer);
+box.bind(context).fillText("Boeing’s Engineering, Test & Technology", xT, yT+2*yTextSpacer);
+box.bind(context).fillText("unit. Charles Toups is moving over from", xT, yT+3*yTextSpacer);
+box.bind(context).fillText("his post as vice president and general", xT, yT+4*yTextSpacer);
+box.bind(context).fillText("manager of Boeing Research & Technolo-", xT, yT+5*yTextSpacer);
+box.bind(context).fillText("gy to lead DC&N as vice president and", xT, yT+6*yTextSpacer);
+box.bind(context).fillText("general manager.", xT, yT+7*yTextSpacer);
+box.bind(context).fillText("Boeing’s wants to stimulate innovations", xT, yT+8*yTextSpacer);
+box.bind(context).fillText("in secure communications, AI and comp-", xT, yT+9*yTextSpacer);
+box.bind(context).fillText("lex system optimization. AI has obvious", xT, yT+10*yTextSpacer);
+box.bind(context).fillText("applications in autonomous flight, while", xT, yT+11*yTextSpacer);
+box.bind(context).fillText("quantum computers could be tailor-made", xT, yT+12*yTextSpacer);
+box.bind(context).fillText("for the network optimization challenges", xT, yT+13*yTextSpacer);
+box.bind(context).fillText("for next-generation air traffic management", xT, yT+14*yTextSpacer);
+box.bind(context).fillText("systems. DC&N will also focus on advan-", xT, yT+15*yTextSpacer);
+box.bind(context).fillText("ced sensing as well as neuromorphic pro-", xT, yT+16*yTextSpacer);
+box.bind(context).fillText("cessing, which aims to mimic the human", xT, yT+17*yTextSpacer);
+box.bind(context).fillText("brain’s approach to information processing.", xT, yT+18*yTextSpacer);
+
+
+box.bind(context).font = "14px Arial";
+box.bind(context).fillStyle = "white";
+box.bind(context).fillText("October 17, 2018", x2-109, y2+14);
+box.bind(context).fillText("www.geekwire.com", x1+1, y2+14);
 
 
 
@@ -290,6 +336,7 @@ drag.map(function (position) {
     yHeader = y1+headerWidth;
     var xT = x1+xTextShift;
     var yH = y1+yHeaderShift;
+    var yT = y1+headerWidth+yTextShift; 
              
     // White rectangle         
     box.bind(context).fillStyle = textColor;
@@ -303,16 +350,15 @@ drag.map(function (position) {
     box.bind(context).lineWidth = frameWidth;
     box.bind(context).strokeStyle = framesColor;
     box.bind(context).beginPath();
+/*    
     box.bind(context).moveTo(x1, y1);
     box.bind(context).lineTo(x1, y2);
     box.bind(context).lineTo(x2, y2);
     box.bind(context).lineTo(x2, y1);
     box.bind(context).lineTo(x1, y1);
-    box.bind(context).lineTo(x1, yHeader);    // cannot draw ???
-    box.bind(context).lineTo(x2, yHeader);    // cannot draw ???
-    console.log(x1, yHeader);
-    console.log(x2, yHeader);
-    console.log("---------");
+    box.bind(context).moveTo(x1+200, y1);    // cannot draw ???
+    box.bind(context).lineTo(x2-200, y2);    // cannot draw ???
+*/    
     box.bind(context).stroke();  
     
     // Header text
@@ -320,10 +366,37 @@ drag.map(function (position) {
     box.bind(context).fillStyle = "black";
     box.bind(context).fillText("Boeing creates ‘Disruptive Computing", xT, yH);
     box.bind(context).fillText("and Networks’ special unit", xT, yH+yHeaderSpacer);
-  
+    
+    box.bind(context).font = "20px Arial";
+    box.bind(context).fillStyle = "black";
+    box.bind(context).fillText("The new organization will be based in", xT, yT);
+    box.bind(context).fillText("Southern California and operate as part of", xT, yT+1*yTextSpacer);
+    box.bind(context).fillText("Boeing’s Engineering, Test & Technology", xT, yT+2*yTextSpacer);
+    box.bind(context).fillText("unit. Charles Toups is moving over from", xT, yT+3*yTextSpacer);
+    box.bind(context).fillText("his post as vice president and general", xT, yT+4*yTextSpacer);
+    box.bind(context).fillText("manager of Boeing Research & Technolo-", xT, yT+5*yTextSpacer);
+    box.bind(context).fillText("gy to lead DC&N as vice president and", xT, yT+6*yTextSpacer);
+    box.bind(context).fillText("general manager.", xT, yT+7*yTextSpacer);
+    box.bind(context).fillText("Boeing’s wants to stimulate innovations", xT, yT+8*yTextSpacer);
+    box.bind(context).fillText("in secure communications, AI and comp-", xT, yT+9*yTextSpacer);
+    box.bind(context).fillText("lex system optimization. AI has obvious", xT, yT+10*yTextSpacer);
+    box.bind(context).fillText("applications in autonomous flight, while", xT, yT+11*yTextSpacer);
+    box.bind(context).fillText("quantum computers could be tailor-made", xT, yT+12*yTextSpacer);
+    box.bind(context).fillText("for the network optimization challenges", xT, yT+13*yTextSpacer);
+    box.bind(context).fillText("for next-generation air traffic management", xT, yT+14*yTextSpacer);
+    box.bind(context).fillText("systems. DC&N will also focus on advan-", xT, yT+15*yTextSpacer);
+    box.bind(context).fillText("ced sensing as well as neuromorphic pro-", xT, yT+16*yTextSpacer);
+    box.bind(context).fillText("cessing, which aims to mimic the human", xT, yT+17*yTextSpacer);
+    box.bind(context).fillText("brain’s approach to information processing.", xT, yT+18*yTextSpacer);
+    
+    
+    
+    box.bind(context).font = "14px Arial";
+    box.bind(context).fillStyle = "white";
+    box.bind(context).fillText("October 17, 2018", x2-109, y2+14);
+    box.bind(context).fillText("www.geekwire.com", x1+1, y2+14);
+   
 });
-
-
 
     
 }
