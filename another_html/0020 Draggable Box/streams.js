@@ -21,6 +21,9 @@ var yTextSpacer =    26;
 
 window.onload=function(){
      
+     
+     
+     
 // I like to use "event streams" to solve problems like these. What is an "event stream"? It is a stream of events. So let's create our own "EventStream" constructor:     
      
 function EventStream() {
@@ -40,6 +43,11 @@ function getEventStream(event, target) {
     target.addEventListener(event, pair[1]);
     return pair[0];
 }
+
+
+
+
+
 
 // Now we can create event streams as follows:
 
