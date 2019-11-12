@@ -1,7 +1,13 @@
 
 // https://www.youtube.com/watch?v=izR19HsNY2g
+// https://www.youtube.com/watch?v=dB8EGjgEu0s
+
+
 // https://www.youtube.com/user/loftblog/videos
 // https://www.youtube.com/watch?v=SveV1LXwWZ4&list=PLY4rE9dstrJzNRmAeTHXAlT7lJFC2YjDg&index=3
+
+// Контекст в JavaScript    sayHello.bind(person1)() - передача контекста в "this".name
+// Замыкания в Javascript
 
 var NewsBox = function (
     primaryHeader,
