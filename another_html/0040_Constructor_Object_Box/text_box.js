@@ -25,6 +25,7 @@ var NewsBox = function (
         console.log("Header: "+this.primaryHeader);
         console.log("Second header: "+secondaryHeader);
         console.log("News: "+this.text);
+        console.log('Firing function');
     }
 };
 
@@ -36,7 +37,8 @@ news[0] = new NewsBox(                            // вызов конструк
     'Some news text goes here'
     );                                            
 
-
+console.log(news[0])  // создан первый объект класса NewsBox в массиве
+console.log(news[0].printToConsole())
 
 
 
