@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SkanerSoft 11/18/19</title>
+</head>
+<body>
+
+<canvas id="canvas" width="300", height="300", style="border: 1px solid;"></canvas>
+<script type="text/javascript">
+ 
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+
+let x = 10;
+let y = 10;
+
+function drawRect() {
+    context.fillStyle = 'green';
+    context.clearRect(0, 0, 300, 300);
+    context.fillRect(x,y,50,50);
+}
+
+var nextGameStep = (function() {
+    return requestAnimationFrame ||
+    webkitRequestAnimationFrame  ||
+    mozRequestAnimationFrame     ||
+    oRequestAnimationFrame       ||
+    msRequestAnimationFrame      ||
+    function (callback) {
+        setTimeout(callback, 1000/60);
+    };
+})();
+
+var gameEngineStart = function (callback) {   // стартуем игровую фукцию
+    gameEngine = callback;
+    gameEngineStep();
+}
+
+var gameEngineStep = function() {             // циклически выполняется
+    gameEngine();
+    nextGameStep(gameEngineStep);
+}
+
+var setGameEngine = function (callback) {
+    gameEngine = callback;
+}
+
+var gameLoopRight = function() {
+    drawRect();
+    x+= 2;
+    if (x >= 250) {                           // правый край поля
+        setGameEngine(gameLoopLeft);
+    }
+}
+
+var gameLoopLeft = function() {
+    drawRect();
+    x-= 2;
+    if (x < 0 ) {                             // левый край поля
+        setGameEngine(gameLoopRight);
+    }
+}
+
+gameEngineStart(gameLoopRight);
+
+
+// editor.lineHeight
+
+</script>
+</body>
+</html>
+ 
+
