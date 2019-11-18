@@ -16,12 +16,14 @@ let x = 10;
 let y = 10;
 
 
+var gameEngineStart = function (callback) {   // стартуем игровую фукцию
+    gameEngine = callback;
+    gameEngineStep();
+}
 
-
-function drawRect() {
-    context.fillStyle = 'green';
-    context.clearRect(0, 0, 300, 300);
-    context.fillRect(x,y,50,50);
+var gameEngineStep = function() {             // циклически выполняется
+    gameEngine();
+    nextGameStep(gameEngineStep);
 }
 
 var nextGameStep = (function() {
@@ -35,33 +37,29 @@ var nextGameStep = (function() {
     };
 })();
 
-var gameEngineStart = function (callback) {   // стартуем игровую фукцию
-    gameEngine = callback;
-    gameEngineStep();
+function drawRect() {
+    context.fillStyle = 'green';
+    context.clearRect(0, 0, 300, 300);
+    context.fillRect(x,y,50,50);
 }
 
-var gameEngineStep = function() {             // циклически выполняется
-    gameEngine();
-    nextGameStep(gameEngineStep);
+var setGameEngine = function (callback) {     // позволяет перевернуть направление игры
+    gameEngine = callback;                    // callback это вызов функции в качестве аргумента
 }
 
-var setGameEngine = function (callback) {
-    gameEngine = callback;
-}
-
-var gameLoopRight = function() {
+var gameLoopRight = function() {              // двигает направо, у стены вызывает переворот налево 
     drawRect();
-    x+= 2;
+    x+= 1;
     if (x >= 250) {                           // правый край поля
-        setGameEngine(gameLoopLeft);
+        setGameEngine(gameLoopLeft);          // вызов переворота игры
     }
 }
 
-var gameLoopLeft = function() {
-    drawRect();
-    x-= 2;
+var gameLoopLeft = function() {               // двигает налево, у стены вызывает переворот направо
+    drawRect();                               // Дискурс: Игрок ходит, затем вызывает ход другого игрока.
+    x-= 1;
     if (x < 0 ) {                             // левый край поля
-        setGameEngine(gameLoopRight);
+        setGameEngine(gameLoopRight);         // вызов переворота игры
     }
 }
 
