@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SkanerSoft 11/18/19</title>
+</head>
+<body>
+
+<canvas id="canvas" width="300", height="300", style="border: 1px solid;"></canvas>
+
+<script type="text/javascript" src="point.js"></script>
+<script type="text/javascript">
+ 
+let pjs = new PointJS('2d', 400, 400);
+pjs.system.initFullPage();
+
+let log = pjs.system.log;
+let game = pjs.game;
+let point = pjs.vector.point;
+let camera = pjs.camera;
+let brush = pjs.brush;
+let OOP = pjs.OOP;
+let math = pjs.math;
+
+let width = game.getWH().w;
+let height = game.getWH().h;
+
+let key = pjs.keyControl;
+key.initKeyControl();
+
+var stars = [];
+
+var createStars = function(count) {
+    OOP.forInt(count, function() {
+        let w = math.random(1,3);
+        let h = w;                             //math.random(1,3);
+        let x = math.random(0, width-w);
+        let y = math.random(0, height-h);
+        let dx = math.random(0, 2);
+        let dy = math.random(0, 2);
+        stars.push(game.newRectObject({
+            x: x,
+            y: y,
+            w: w,
+            h: h,
+            fillColor: '#FFFFFF',
+        }));
+    });
+};
+
+createStars(1000);
+
+
+game.newLoop('game', function() {
+    game.clear();
+
+    OOP.forArr(stars, function (el){
+        el.draw();
+    });
+});
+
+game.startLoop('game');
+
+
+</script>
+</body>
+</html>
