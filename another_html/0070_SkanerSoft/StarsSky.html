@@ -32,12 +32,14 @@ var stars = [];
 
 var createStars = function(count) {
     OOP.forInt(count, function() {
-        let w = math.random(1,3);
+        let w = math.random(1,4);
         let h = w;                             //math.random(1,3);
         let x = math.random(0, width-w);
         let y = math.random(0, height-h);
-        let dx = math.random(0, 2);
-        let dy = math.random(0, 2);
+        let dx = math.random(-20000, 20000);
+        dx = dx/10000;
+        let dy = math.random(-20000, 20000);
+        dy = dy/10000;
         stars.push(game.newRectObject({
             x: x,
             y: y,
