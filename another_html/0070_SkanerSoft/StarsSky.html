@@ -44,6 +44,10 @@ var createStars = function(count) {
             w: w,
             h: h,
             fillColor: '#FFFFFF',
+            userData: {
+                dx: dx,
+                dy:dy,
+            }
         }));
     });
 };
@@ -56,6 +60,7 @@ game.newLoop('game', function() {
 
     OOP.forArr(stars, function (el){
         el.draw();
+        el.move(point(el.dx, el.dy));
     });
 });
 
