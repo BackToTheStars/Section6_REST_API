@@ -9,7 +9,7 @@ db.users.insertOne(
         "birthday": new Date('1977-6-31')
     });
 
-
+    
 db.users.insertMany([
     {
         "name": "Сева",
