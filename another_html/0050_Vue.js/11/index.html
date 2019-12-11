@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<p lang="en">
 <head>
     <meta charset="UTF-8">
     <title> #11 Vue.js 11/18/19 12/11/19</title>
@@ -19,9 +19,18 @@
         <p>Если умножить возраст на 3, получится {{ myAge*3 }} лет.</p>
         <p>{{ randomNumber() }}</p>
         <!-- <img src="http://sovietart.net/gal15/88-7.jpg"></img> -->
-        <img v-bind:src = "imageLink" style="width:300px; height: 180px;"></img> <!-- перехват управления src через Vue -->
+        <img v-bind:src = "image" style="width:300px; height: 180px;"></img> <!-- перехват управления src через Vue -->
+        <hr>
+        <input type="text" v-bind:value="name">
+        <button v-on:click="increase(2, $event)">Click me</button> <!-- v-on is a listener-->
+        <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinates">Вот координаты: x = {{ x }}, y = {{ y }}</p>
+        <p v-on:mousemove="updateCoordinates">Ещё координаты: 
+            x = {{ x }}, y = {{ y }}
+            - <span>Участок без обновления</span>
+        </p>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+</p>
  

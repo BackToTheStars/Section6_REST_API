@@ -7,7 +7,10 @@ new Vue({
         finishedLink: '<a href="http://google.com">Google</a>',
         myName: 'Иосиф Виссарионович',
         myAge: 56,
-        imageLink: 'http://sovietart.net/gal15/88-7.jpg'
+        image: 'http://sovietart.net/gal15/88-7.jpg',
+        counter: 0,
+        x: 0,
+        y: 0,
     },
     methods: {
         sayHello: function() {
@@ -17,6 +20,13 @@ new Vue({
         },
         randomNumber: function() {
             return Math.random();
+        },
+        increase: function(step, event) {
+            this.counter += step;
+        },
+        updateCoordinates: function(event) {  // почему работает только в пределах одной строки???
+            this.x = event.clientX;
+            this.y = event.clientY;
         }
     }
 });
