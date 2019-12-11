@@ -7,6 +7,7 @@ new Vue({
         finishedLink: '<a href="http://google.com">Google</a>',
         myName: 'Иосиф Виссарионович',
         myAge: 56,
+        imageLink: 'http://sovietart.net/gal15/88-7.jpg'
     },
     methods: {
         sayHello: function() {
@@ -16,7 +17,7 @@ new Vue({
         },
         randomNumber: function() {
             return Math.random();
-        },
+        }
     }
 });
 

@@ -10,7 +10,7 @@
     <!-- development version, includes helpful console warnings -->
     <div id="app">
         <h1 v-once>{{ title }}</h1>
-        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p> <!-- перехват управления href через Vue -->
         <hr>
         <p v-html="finishedLink"></p>
         <hr>
@@ -18,6 +18,8 @@
         <p>Возраст его {{ myAge }} лет.</p>
         <p>Если умножить возраст на 3, получится {{ myAge*3 }} лет.</p>
         <p>{{ randomNumber() }}</p>
+        <!-- <img src="http://sovietart.net/gal15/88-7.jpg"></img> -->
+        <img v-bind:src = "imageLink" style="width:300px; height: 180px;"></img> <!-- перехват управления src через Vue -->
     </div>
     <script src="script.js"></script>
 </body>
