@@ -111,12 +111,12 @@ yearsToRetirement(1945, 'Мама');
 // FUNCTION STATEMENTS & EXPRESSIONS
 console.log('*** FUNCTION STATEMENTS & EXPRESSIONS ***');
 
-// Function Declaration
+// Function Declaration = don't produce immediate value
 function firstFunction(name, job) {
     return 0;
 }
 
-// Function Expression
+// Function Expression = always produces a value
 let whatDoYouDo = function (name, job) {
     switch(job) {
         case 'teacher':
@@ -134,3 +134,45 @@ console.log(whatDoYouDo('Николай', 'Программист'));
 console.log(whatDoYouDo('Коля Чертухин', 'driver'));
 console.log(whatDoYouDo('Профессор Дугин', 'teacher'));
 console.log(whatDoYouDo('Костин', 'banker'));
+
+
+// ARRAYS
+
+console.log('*******  ARRAYS  *******');
+
+let names = ['Ваня', 'Петя', 'Клава'];
+let years = new Array(1979, 1977, 1981);
+
+console.log(names[0]);
+console.log(names);
+console.log(names.length);
+
+// Mutate array data
+names[0] = 'Коля';
+console.log(names[0]);
+
+names[5] = 'Маша';
+console.log(names);
+
+names[names.length] = 'Нюрка';
+console.log(names);
+
+let person = ['Петя', 'Иванов' , 1977, 'Учитель', false];
+person.push('Есть собака Шарик') // вставить в конец
+person.unshift('Господин');      // вставить в начало
+console.log(person);
+
+person.pop();                    // стереть последний элемент
+console.log(person);
+person.pop();
+console.log(person);
+person.pop();
+console.log(person);
+
+person.shift();                  // стереть первый элемент
+console.log(person);
+
+console.log(person.indexOf(1977)); // каков номер элемента в массиве
+console.log(person.indexOf(1956)); // возвращает -1 если элемента нет
+
+console.log(person[-1]);           // возвращает undefined, такого нет.

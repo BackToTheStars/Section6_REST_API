@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> #11 Vue.js 11/18/19 12/11/19</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <!-- development version, includes helpful console warnings -->
+    <div id="app">
+        <h1 v-once>{{ title }}</h1>
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+        <hr>
+        <p v-html="finishedLink"></p>
+        <hr>
+        <p>А имя ему - {{ myName }}.</p> <!-- соединение строk в языке html-->
+        <p>Возраст его {{ myAge }} лет.</p>
+        <p>Если умножить возраст на 3, получится {{ myAge*3 }} лет.</p>
+        <p>{{ randomNumber() }}</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+ 

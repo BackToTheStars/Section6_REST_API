@@ -3,17 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vue.js 11/18/19</title>
+    <title>Vue.js 11/18/19 12/11/19</title>
+    <script src="vue.js"></script>
 </head>
 <body>
     <!-- development version, includes helpful console warnings -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="script.js"></script>
-
     <div id="app">
+        <input type="text" v-on:input="changeTitle">
         <p>{{ title }}</p>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
  
