@@ -27,7 +27,11 @@ new Vue({
         updateCoordinates: function(event) {  // почему работает только в пределах одной строки???
             this.x = event.clientX;
             this.y = event.clientY;
-        }
+        },
+        dummy: function(event) {      // пустая функция, чтобы не менялись координаты при наведении на <span>
+            event.stopPropagation();  // останавливает распространение event на другие функции программы
+            return 0;
+        },
     }
 });
 

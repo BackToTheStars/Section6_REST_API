@@ -27,7 +27,8 @@
         <p v-on:mousemove="updateCoordinates">Вот координаты: x = {{ x }}, y = {{ y }}</p>
         <p v-on:mousemove="updateCoordinates">Ещё координаты: 
             x = {{ x }}, y = {{ y }}
-            - <span>Участок без обновления</span>
+            - <span v-on:mousemove="dummy">Участок без обновления</span> <!-- пустая функция, чтобы не менялись координаты мышки -->
+            - <span v-on:mousemove.stop="">Участок без обновления</span> <!-- пустая функция и модификатор stop-->
         </p>
     </div>
     <script src="script.js"></script>
