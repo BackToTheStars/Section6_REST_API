@@ -11,6 +11,7 @@ new Vue({
         counter: 0,
         x: 0,
         y: 0,
+        keyPressed: '',
     },
     methods: {
         sayHello: function() {
@@ -31,6 +32,12 @@ new Vue({
         dummy: function(event) {      // пустая функция, чтобы не менялись координаты при наведении на <span>
             event.stopPropagation();  // останавливает распространение event на другие функции программы
             return 0;
+        },
+        alertMe: function() {
+            alert('Он нажал клавишу Enter или Space!');
+        },
+        alertButton: function(event) {
+            alert('Кнопка нажата!');
         },
     }
 });

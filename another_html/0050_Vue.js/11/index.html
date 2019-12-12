@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
-<p lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title> #11 Vue.js 11/18/19 12/11/19</title>
-    <script src="vue.js"></script>
+    <script src="vue.js"></script> <!-- development version, includes helpful console warnings -->
 </head>
 <body>
-    <!-- development version, includes helpful console warnings -->
-    <div id="app">
+<div id="app">
+    <div>
         <h1 v-once>{{ title }}</h1>
         <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p> <!-- перехват управления href через Vue -->
         <hr>
@@ -30,8 +29,19 @@
             - <span v-on:mousemove="dummy">Участок без обновления</span> <!-- пустая функция, чтобы не менялись координаты мышки -->
             - <span v-on:mousemove.stop="">Участок без обновления</span> <!-- пустая функция и модификатор stop-->
         </p>
+        <input type="text" v-on:keyup.enter.space="alertMe"> <!-- key modifiers (can be a lot of different ones!) -->
+        <button v-on:click="alertButton($event)">Show Alert!</button>
     </div>
-    <script src="script.js"></script>
+    <div>
+        <input type="text" v-on:keydown="keyPressed = $event.target.value">
+        <p>{{ keyPressed }}</p>
+    </div>
+    <div>
+        <input type="text" v-on:keydown.enter="keyPressed = $event.target.value">
+        <p>{{ keyPressed }}</p>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
-</p>
+</html>
  
