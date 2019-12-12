@@ -33,10 +33,10 @@ new Vue({
             event.stopPropagation();  // останавливает распространение event на другие функции программы
             return 0;
         },
-        alertMe: function() {
+        alertMe: function() {   // выводит Alert когда нажаты Enter или Space
             alert('Он нажал клавишу Enter или Space!');
         },
-        alertButton: function(event) {
+        alertButton: function(event) {   // выводит Alert когда нажата кнопка.
             alert('Кнопка нажата!');
         },
     }
