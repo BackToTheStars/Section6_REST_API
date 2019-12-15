@@ -2,12 +2,12 @@
 new Vue({
     el: '#app',
     data: {
-        title: 'Hello Петя!',
+        title: 'Hello Владислав!',
         link: 'http://google.com', // используем directive "v-bind" чтобы привязать href к link
-        finishedLink: '<a href="http://google.com">Google</a>',
-        myName: 'Иосиф Виссарионович',
+        finishedLink: '<a href="http://google.com">Google</a>', // anchor tag
+        myName: 'Иннокентий Яковлевич',
         myAge: 56,
-        image: 'http://sovietart.net/gal15/88-7.jpg',
+        image: 'http://sovietart.net/gal15/88-7.jpg', // image link
         counter: 0,
         x: 0,
         y: 0,
