@@ -1,0 +1,4 @@
+Sources for Robo 3D R1 Double 40 mm fan setup - hexagon hot end
+
+3D ROBO R1 Dual Fan Mount "Black Widow" 10mm and 20mm fan setups (http://www.thingiverse.com/thing:821080)
+R1+ Fix for 3D ROBO R1 Dual Fan Mount (http://www.thingiverse.com/thing:1026691)
