@@ -34,7 +34,7 @@ new Vue({
             return 0;
         },
         alertMe: function() {   // выводит Alert когда нажаты Enter или Space
-            alert('Он нажал клавишу Enter или Space!');
+            alert('Он нажал клавишу Enter или Space!');  // выводит alert с этим текстом в браузер
         },
         alertButton: function(event) {   // выводит Alert когда нажата кнопка.
             alert('Кнопка нажата!');
