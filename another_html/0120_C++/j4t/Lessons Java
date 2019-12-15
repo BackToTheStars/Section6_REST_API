@@ -1,0 +1,77 @@
+// https://www.youtube.com/watch?v=lGQxeGiqmKU&index=3&list=PLB0276A0A62BDEF06
+
+int i = 0xF;                  // 15 бывает
+float firstIndexOfArray = 1.2;
+char b = 'c';
+byte c;
+double d = 1.5e55;
+boolean e=true;               //false
+long f;
+
+int[] arr = new int[10];      // массив
+arr[0] = 5;                   
+arr[10] = 9;                  // будет ошибка
+int[] arr2 = {2, 3, 5, 6, 7, 12};
+String[] arr3 = {"aaa", "bb"};
+
+a++;  // increment by 1 - наименьший приоритет
+++a;  // the same
+
+a = 2;
+b = 3;
+c = ++a - b++;
+float с = a / 7; b 
+
+a *= 2;
+a /= 3;
+
+int a = 4;
+Ver g;
+if (6==a) {
+
+}
+
+boolean b = (a < 5) && (a > 3);  // and
+b = (a < 5) || (a > 3);          // or
+
+String[] arr;
+
+Object[] arr;
+
+String g;
+
+        g.split();
+
+// Control structures
+
+if (condition) {
+//actions
+} else if {
+//alternative actions
+} else if {
+} else {
+}
+
+switch (a) {
+case 0:
+    a++;
+    b++;
+    break;
+case 1;
+    a--;
+    break;
+default:
+    a = a + 5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
