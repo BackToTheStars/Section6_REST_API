@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_004_videopauseresume\opencv_004_videopauseresume\source.cpp(39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_004_videopauseresume\opencv_004_videopauseresume\source.cpp(50): warning C4129: 'm': unrecognized character escape sequence
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_004_videopauseresume\opencv_004_videopauseresume\source.cpp(94): warning C4129: 'm': unrecognized character escape sequence
+  OpenCV_004_VideoPauseResume.vcxproj -> C:\Users\Nikolay Grigoryev\documents\visual studio 2015\Projects\OpenCV\OpenCV_004_VideoPauseResume\Debug\OpenCV_004_VideoPauseResume.exe
+  OpenCV_004_VideoPauseResume.vcxproj -> C:\Users\Nikolay Grigoryev\documents\visual studio 2015\Projects\OpenCV\OpenCV_004_VideoPauseResume\Debug\OpenCV_004_VideoPauseResume.pdb (Full PDB)

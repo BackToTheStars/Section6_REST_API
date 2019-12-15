@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_003_videowriter\opencv_003_videowriter\source.cpp(30): warning C4129: 'm': unrecognized character escape sequence
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_003_videowriter\opencv_003_videowriter\source.cpp(36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  OpenCV_003_VideoWriter.vcxproj -> c:\Users\Nikolay Grigoryev\Documents\Visual Studio 2015\Projects\OpenCV\OpenCV_003_VideoWriter\Debug\OpenCV_003_VideoWriter.exe
+  OpenCV_003_VideoWriter.vcxproj -> c:\Users\Nikolay Grigoryev\Documents\Visual Studio 2015\Projects\OpenCV\OpenCV_003_VideoWriter\Debug\OpenCV_003_VideoWriter.pdb (Full PDB)

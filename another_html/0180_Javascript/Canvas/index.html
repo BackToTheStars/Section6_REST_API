@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+
+// ***************************************************
+
+
+
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  var numberOfSquares = 10;
+  for (var i = 0; i < numberOfSquares; i++) {
+    for (var j = 0; j < numberOfSquares; j++) {
+      ctx.fillStyle = 'rgb(' + Math.floor(255*(1-1/numberOfSquares*i)) + ', ' + Math.floor(255*(1-1/numberOfSquares*j)) + ', 0)';
+      ctx.fillRect(j * 90, i *90, 86, 86);
+    }
+  }
+ 
+
+var numberOfSquares = 10;
+var red1 = 0; var red2 = 255;
+var green1 = 0; var green2 = 200;
+var blue1 = 0; var blue2 = 150;
+  for (var i = 0; i < numberOfSquares; i++) {
+    for (var j = 0; j < numberOfSquares; j++) {
+      ctx.fillStyle = 'rgb(' + (red1 + Math.floor((red2 - red1)*Math.random())) + ', ' + (green1+Math.floor((green2-green1)*Math.random())) + ', ' + (blue1+Math.floor((blue2-blue1)*Math.random())) + ')';
+      ctx.fillRect(j * 90, i *90, 85, 85);
+    }
+  }
+
+var red1 = 0; var red2 = 255;
+var green1 = 0; var green2 = 255;
+var blue1 = 0; var blue2 = 255;
+var lineX = 0; var lineX1 = 0;
+var lineY = 0; var lineY2 = 0;
+var lineLength = 30;
+var lineThickness = 80;
+var numberOfLines = 600;
+
+for (var i = 0; i < numberOfLines; i++) {
+    
+    ctx.strokeStyle = 'rgba(' + (red1 + Math.floor((red2 - red1)*Math.random())) + ', ' + (green1+Math.floor((green2-green1)*Math.random())) + ', ' + (blue1+Math.floor((blue2-blue1)*Math.random())) + ', ' + 1.5*Math.random() + ')';
+    
+    lineX = 2920*Math.random()-500;
+    lineX2 = 2920*Math.random();
+    lineY = 2920*Math.random()-920;
+    lineY2 = 2920*Math.random();   
+    
+    ctx.lineWidth = lineThickness*Math.random()*Math.random();
+    
+    ctx.beginPath();
+    ctx.moveTo(lineX, lineY);
+    ctx.lineTo(lineX2, lineY2);
+    ctx.stroke();
+}
+
+var red1 = 0; var red2 = 255;
+var green1 = 0; var green2 = 255;
+var blue1 = 0; var blue2 = 255;
+
+var lineX = 0; var lineX1 = 0;
+var lineY = 0; var lineY2 = 0;
+var lineLength = 0;
+var lineThickness = 0;
+var numberOfLines = 30000;
+var lineTransparency = 0;
+
+for (var i = 0; i < numberOfLines; i++) {
+    
+    lineLength = 78;
+    lineLength = lineLength*(1 + Math.random());
+//  console.log('length = ', lineLength);
+    lineX = 2920*Math.random()-500;
+    lineX2 = lineX + lineLength;
+    lineY = 2920*Math.random()-920;
+    lineY2 = 2920*Math.random();   
+
+    // TRANSPARENCY
+    lineTransparency = 0.7;
+    lineTransparency = lineTransparency*(1 + Math.random());
+
+    // COLOR & TRANSPARENCY
+    ctx.strokeStyle = 'rgba(' + (red1 + Math.floor((red2 - red1)*Math.random())) + ', ' + (green1+Math.floor((green2-green1)*Math.random())) + ', ' + (blue1+Math.floor((blue2-blue1)*Math.random())) + ', ' + lineTransparency + ')';
+
+    // WIDTH
+    lineThickness = 30;
+    ctx.lineWidth = lineThickness*(1 + Math.random());
+    
+    ctx.beginPath();
+    ctx.moveTo(lineX, lineY);
+    ctx.lineTo(lineX2, lineY);
+    ctx.stroke();
+}
+
+var numberOfSquares = 12;
+var canvasLength = 11700;
+var canvasHeight = 6750;
+var bigSquareSize = 549;
+var smallSquareSize = 300;
+var bigBoxTransparency = 1;
+var smallBoxTransparency = 1;
+
+var red1 = 0; var red2 = 255;
+var green1 = 0; var green2 = 200;
+var blue1 = 0; var blue2 = 150;
+
+ctx.fillStyle = 'rgb(' + 0 + ', ' + 0 + ', ' + 0 + ')';
+ctx.fillRect(0, 0, canvasLength, canvasHeight);
+
+for (var i = 0; i < numberOfSquares; i++) {
+    for (var j = 0; j < (numberOfSquares+9); j++) {
+    
+    ctx.fillStyle = 'rgba(' + (red1 + Math.floor((red2 - red1)*Math.random())) + ', ' + (green1+Math.floor((green2-green1)*Math.random())) + ', ' + (blue1+Math.floor((blue2-blue1)*Math.random())) + ', ' + bigBoxTransparency + ')';
+    var squareX = 100 + j*bigSquareSize;
+    var squareY = 100 + i*bigSquareSize;
+    ctx.fillRect(squareX, squareY, bigSquareSize-26, bigSquareSize-26);
+
+    ctx.fillStyle = 'rgba(' + 255 + ', ' + 255 + ', ' + 255 + ', ' + 1 + ')';
+    var squareX = 202 + j*bigSquareSize;
+    var squareY = 202 + i*bigSquareSize;
+    ctx.fillRect(squareX, squareY, smallSquareSize+18, smallSquareSize+16);
+
+    ctx.fillStyle = 'rgba(' + (red1 + Math.floor((red2 - red1)*Math.random())) + ', ' + (green1+Math.floor((green2-green1)*Math.random())) + ', ' + (blue1+Math.floor((blue2-blue1)*Math.random())) + ', ' + smallBoxTransparency + ')';
+    var squareX = 210 + j*bigSquareSize;
+    var squareY = 210 + i*bigSquareSize;
+    ctx.fillRect(squareX, squareY, smallSquareSize, smallSquareSize);
+
+    }
+}
+
+
+
+/*
+var         services = ['Estimating', 'Panel load studies'];
+var           cities = ['San Diego', 'Dallas', 'Los Angeles'];
+var      instruments = ['Panel load recorder', 'Accubid', 'LiveCount'];
+
+var         overhead = 0.1;
+var           profit = 0.08;
+var   costOfEstimate = 2000;
+var            bonus = 0.008; // = 0,8%
+var           shares = 100*bonus/profit;
+
+console.log(services);
+console.log(cities);
+console.log('I can get '+ shares +'% of contractors profit');
+*/
+
+
+
+
+//    location.reload();
+
+
+
+/*
+ctx.beginPath();
+ctx.arc(12.5 * 25, 12.5 + 25, 50, 0, Math.PI * 2, true);
+ctx.stroke();
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+// ***************************************************
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="11700" height="6750"></canvas>
+ </body>
+</html>

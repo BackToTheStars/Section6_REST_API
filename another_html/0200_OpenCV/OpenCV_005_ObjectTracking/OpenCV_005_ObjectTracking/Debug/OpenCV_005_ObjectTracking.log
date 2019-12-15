@@ -1,0 +1,129 @@
+﻿  Source.cpp
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(38): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): error C2146: syntax error: missing ';' before identifier 'windowName'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): error C2440: 'initializing': cannot convert from 'const char [15]' to 'int'
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): note: There is no context in which this conversion is possible
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(41): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(41): error C2086: 'const int string': redefinition
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): note: see declaration of 'string'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(41): error C2146: syntax error: missing ';' before identifier 'windowName1'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(41): error C2440: 'initializing': cannot convert from 'const char [10]' to 'int'
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(41): note: There is no context in which this conversion is possible
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(42): error C2086: 'const int string': redefinition
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): note: see declaration of 'string'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(42): error C2146: syntax error: missing ';' before identifier 'windowName2'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(42): error C2440: 'initializing': cannot convert from 'const char [18]' to 'int'
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(42): note: There is no context in which this conversion is possible
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(43): error C2086: 'const int string': redefinition
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): note: see declaration of 'string'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(43): error C2146: syntax error: missing ';' before identifier 'windowName3'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(43): error C2440: 'initializing': cannot convert from 'const char [31]' to 'int'
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(43): note: There is no context in which this conversion is possible
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(44): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(44): error C2086: 'const int string': redefinition
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): note: see declaration of 'string'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(44): error C2146: syntax error: missing ';' before identifier 'trackbarWindowName'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(44): error C2440: 'initializing': cannot convert from 'const char [10]' to 'int'
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(44): note: There is no context in which this conversion is possible
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(50): error C2373: 'string': redefinition; different type modifiers
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(40): note: see declaration of 'string'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(50): error C2146: syntax error: missing ';' before identifier 'intToString'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(50): error C2143: syntax error: missing ';' before '{'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(50): error C2447: '{': missing function header (old-style formal list?)
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(61): error C3861: 'namedWindow': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(75): error C3861: 'createTrackbar': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(76): error C3861: 'createTrackbar': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(77): error C3861: 'createTrackbar': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(78): error C3861: 'createTrackbar': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(79): error C3861: 'createTrackbar': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(80): error C3861: 'createTrackbar': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(64): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(64): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(64): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(65): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(65): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(65): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(66): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(66): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(66): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(67): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(67): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(67): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(68): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(68): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(68): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(69): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(69): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(69): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(93): error C3861: 'circle': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(95): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(96): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(98): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(99): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(101): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(102): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(104): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(105): error C3861: 'line': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(107): error C3861: 'intToString': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(107): error C3861: 'putText': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(115): error C2065: 'MORPH_RECT': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(115): error C3861: 'getStructuringElement': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(117): error C2065: 'MORPH_RECT': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(117): error C3861: 'getStructuringElement': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(119): error C3861: 'erode': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(120): error C3861: 'erode': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(123): error C3861: 'dilate': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(124): error C3861: 'dilate': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(134): error C2065: 'vector': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(134): error C2059: syntax error: '>'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(135): error C2065: 'vector': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(135): error C2275: 'cv::Vec4i': illegal use of this type as an expression
+  c:\users\nikolay grigoryev\downloads\opencv\build\include\opencv2\core\matx.hpp(371): note: see declaration of 'cv::Vec4i'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(135): error C2065: 'hierarchy': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(137): error C2065: 'contours': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(137): error C2065: 'hierarchy': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(137): error C3861: 'findContours': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(141): error C2065: 'hierarchy': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(141): error C2228: left of '.size' must have class/struct/union
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(141): note: type is 'unknown-type'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(142): error C2065: 'hierarchy': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(142): error C2228: left of '.size' must have class/struct/union
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(142): note: type is 'unknown-type'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(145): error C2065: 'hierarchy': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(147): error C2065: 'contours': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(147): error C3861: 'moments': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(155): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(156): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(166): error C3861: 'putText': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(172): error C3861: 'putText': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(192): error C2065: 'VideoCapture': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(192): error C2146: syntax error: missing ';' before identifier 'capture'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(192): error C2065: 'capture': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(194): error C2065: 'capture': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(194): error C2228: left of '.open' must have class/struct/union
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(194): note: type is 'unknown-type'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(196): error C2065: 'capture': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(196): error C2228: left of '.set' must have class/struct/union
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(196): note: type is 'unknown-type'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(197): error C2065: 'capture': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(197): error C2228: left of '.set' must have class/struct/union
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(197): note: type is 'unknown-type'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(202): error C2065: 'capture': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(202): error C2228: left of '.read' must have class/struct/union
+  c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(202): note: type is 'unknown-type'
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(204): error C2065: 'COLOR_BGR2HSV': undeclared identifier
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(204): error C3861: 'cvtColor': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(219): error C3861: 'imshow': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(220): error C3861: 'imshow': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(221): error C3861: 'imshow': identifier not found
+c:\users\nikolay grigoryev\documents\visual studio 2015\projects\opencv\opencv_005_objecttracking\opencv_005_objecttracking\source.cpp(226): error C3861: 'waitKey': identifier not found
