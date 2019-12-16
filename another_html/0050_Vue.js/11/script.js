@@ -3,6 +3,8 @@ new Vue({         // this is called "Vue instance"
     
     el: '#app',   // connect to DOM, Document Object Model (медленно)
     
+
+    
     data: {       // store properties in data object, to be used
         title: 'Hello Владислав!',
         link: 'http://google.com', // используем directive "v-bind" чтобы привязать href к link
@@ -22,6 +24,14 @@ new Vue({         // this is called "Vue instance"
         resultOfExersize: "",
     },
 
+
+
+
+
+
+
+
+
     computed: {    // dependent properties, вызываются так же, как и переменные data object выше.
         output: function() {
             console.log("Computed.");
@@ -32,6 +42,12 @@ new Vue({         // this is called "Vue instance"
             return this.resultOfExersize;
         },
     },
+
+
+
+
+
+
 
     watch: {  // execute code upon data changes (better to use "computed", more optimal)
         counter2: function(value) {  // launches asynchronous task
@@ -49,6 +65,11 @@ new Vue({         // this is called "Vue instance"
             }, 5000);
         },
     },
+
+
+
+
+
 
     methods: {     // это называется methods object, это методы Vue Instance
         sayHello: function() {

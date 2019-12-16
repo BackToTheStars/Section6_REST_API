@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title> #11 Vue.js 11/18/19 12/11/19</title>
     <script src="vue.js"></script> <!-- development version, includes helpful console warnings -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div id="app">
@@ -82,8 +83,14 @@
         <button @click="counter4++">+1</button>
         <button @click="counter4+=5">+5</button>
         <p>Counter = {{ counter4 }}, {{ reached37 }}</p>
-
+        <em>When counter reaches 37, it will reset to 0 in 5 seconds</em>
     </div>
+    <div>
+        <hr>
+        <h4>Dynamic styling with CSS classes</h4>
+        <div class="demo"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
 </div>
 <script src="script.js"></script>
 </body>
