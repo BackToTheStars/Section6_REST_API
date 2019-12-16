@@ -46,6 +46,22 @@
         <input type="text" v-on:keydown.enter="keyPressed = $event.target.value"> <!-- то же самое, но выводим только когда нажата клавиша Enter -->
         <p>{{ keyPressed }}</p>
     </div>
+    <div>
+        <hr>
+        <h4>2-way data binding with Vue.js </h4>
+        <input type="text" v-model="name2">    <!-- v-model связывает переменную в обе стороны -->
+        <p>{{ name2 }}</p>
+    </div>
+    <div>
+        <hr>
+        <h4>Reactivity to changes with computed properties</h4>
+        <button v-on:click="counter2++">Increase</button>
+        <button v-on:click="counter2--">Decrease</button>
+        <button v-on:click="counter3++">Increase Counter3</button>
+        <button v-on:click="counter3--">Decrease Counter3</button>
+        <p>Counters: {{ counter2 }} | {{ counter3 }}</p>
+        <p>Smaller/larger: {{ checkIsCounter2Larger() }} | {{ output }}</p> <!-- при вызове computed functions скобки не нужны, properties вызываются как переменные -->
+    </div>
 </div>
 <script src="script.js"></script>
 </body>
