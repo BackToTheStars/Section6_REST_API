@@ -27,6 +27,16 @@ new Vue({         // this is called "Vue instance"
         }
     },
 
+    watch: {  // execute code upon data changes (better to use "computed", more optimal)
+        counter2: function(value) {  // launches asynchronous task
+            var vm = this;
+            setTimeout(function() { 
+                vm.counter2 = 0;
+                console.log('reset counter2 to 0')
+            }, 2000);
+        },
+    },
+
     methods: {     // это называется methods object, это методы Vue Instance
         sayHello: function() {
             this.title = "А теперь здесь стоит другая строка"

@@ -56,11 +56,30 @@
         <hr>
         <h4>Reactivity to changes with computed properties</h4>
         <button v-on:click="counter2++">Increase</button>
+        <!-- "v-on:click" can be replaced with "@click" -->
         <button v-on:click="counter2--">Decrease</button>
         <button v-on:click="counter3++">Increase Counter3</button>
         <button v-on:click="counter3--">Decrease Counter3</button>
         <p>Counters: {{ counter2 }} | {{ counter3 }}</p>
         <p>Smaller/larger: {{ checkIsCounter2Larger() }} | {{ output }}</p> <!-- при вызове computed functions скобки не нужны, properties вызываются как переменные -->
+        <em>Press F12 to open console and see how computed object and method are called from this code. Computed will be called only when needed, method will be called each time.</em>
+    </div>
+    <div>
+        <hr>
+        <h4>An alternative to computed properties: watch object</h4>
+        <em>"watch" object watches counter2 variable (buttons above and calls a function each time counter2 changes. See console.</em>
+    </div>
+    <div>
+        <hr>
+        <h4>Shortcuts for "v-on", "v-bind:</h4>
+        <p>"v-on:click" can be replaced with "@click". Result will be the same.</p>
+        <p>"v-bind:href=..." can be replaced with ":href=..." Result will be the same.
+        </p>
+    </div>
+    <div>
+        <hr>
+        <h4>Reactivity exersize</h4>
+
     </div>
 </div>
 <script src="script.js"></script>
