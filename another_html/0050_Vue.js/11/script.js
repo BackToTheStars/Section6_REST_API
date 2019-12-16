@@ -18,13 +18,19 @@ new Vue({         // this is called "Vue instance"
         name2: 'Nick',
         counter2: 0,
         counter3: 0,
+        counter4: 0,
+        resultOfExersize: "",
     },
 
     computed: {    // dependent properties, вызываются так же, как и переменные data object выше.
         output: function() {
             console.log("Computed.");
             return this.counter3 > 5 ? 'Greater than 5' : 'Smaller or equal 5';
-        }
+        },
+        reached37: function() {
+            this.counter4 >=37 ? this.resultOfExersize = "reached 37" : this.resultOfExersize = "not there yet";
+            return this.resultOfExersize;
+        },
     },
 
     watch: {  // execute code upon data changes (better to use "computed", more optimal)
@@ -32,8 +38,15 @@ new Vue({         // this is called "Vue instance"
             var vm = this;
             setTimeout(function() { 
                 vm.counter2 = 0;
-                console.log('reset counter2 to 0')
+                console.log('reset counter2 to 0');
             }, 2000);
+        },
+        resultOfExersize: function(value) {
+            var vx = this;
+            setTimeout(function() {
+                vx.counter4 = 0;
+                console.log('reset counter4 to 0');                
+            }, 5000);
         },
     },
 
