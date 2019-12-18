@@ -22,6 +22,11 @@ new Vue({         // this is called "Vue instance"
         counter3: 0,
         counter4: 0,
         resultOfExersize: "",
+        attachRed: false,
+        attachBlue: false,
+        attachGreen: false,
+        attachYellow: false,
+        color: 'red',
     },
 
 
@@ -40,6 +45,12 @@ new Vue({         // this is called "Vue instance"
         reached37: function() {
             this.counter4 >=37 ? this.resultOfExersize = "reached 37" : this.resultOfExersize = "not there yet";
             return this.resultOfExersize;
+        },
+        divClasses: function() {
+            return {
+                red: this.attachRed,
+                blue: !this.attachRed,
+            };
         },
     },
 

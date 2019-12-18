@@ -5,3 +5,21 @@
     display: inline-block;
     margin: 10px;
 }
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+}
+
+

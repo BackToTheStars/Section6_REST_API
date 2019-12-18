@@ -88,9 +88,41 @@
     <div>
         <hr>
         <h4>Dynamic styling with CSS classes</h4>
-        <div class="demo"></div>
-        <div class="demo"></div>
-        <div class="demo"></div>
+        <p>Click the boxes below :)</p>
+        <div 
+            class="demo"
+            @click="attachRed = !attachRed"
+            :class="{'red': attachRed}"
+        ></div>
+        <div 
+            class="demo"
+            @click="attachGreen = !attachGreen"
+            :class="{'green': attachGreen}"
+        ></div>
+        <div 
+            class="demo"
+            @click="attachRed = !attachRed"
+            :class="divClasses"
+        ></div>
+        <div 
+        class="demo"
+        @click="attachBlue = !attachBlue"
+        :class="{'blue': attachBlue}"
+        ></div>
+        <div 
+        class="demo"
+        @click="attachYellow = !attachYellow"
+        :class="{'yellow': attachYellow}"
+        ></div>
+        <div 
+        class="demo"
+        :class="[color, {'yellow': attachYellow}]"
+        ></div>
+        <!-- можно также использовать синтакс 
+        :class="color"                   -->
+    <hr>
+    <h4>Dynamic styling with CSS classes, using names</h4>
+    <input type="text" v-model="color">
 </div>
 <script src="script.js"></script>
 </body>
