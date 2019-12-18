@@ -27,6 +27,7 @@ new Vue({         // this is called "Vue instance"
         attachGreen: false,
         attachYellow: false,
         color: 'red',
+        width: 100,
     },
 
 
@@ -50,6 +51,12 @@ new Vue({         // this is called "Vue instance"
             return {
                 red: this.attachRed,
                 blue: !this.attachRed,
+            };
+        },
+        myStyle: function() {
+            return {
+                backgroundColor: this.color,
+                width: this.width + 'px',
             };
         },
     },

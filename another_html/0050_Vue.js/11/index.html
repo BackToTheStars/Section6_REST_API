@@ -96,8 +96,7 @@
         ></div>
         <div 
             class="demo"
-            @click="attachGreen = !attachGreen"
-            :class="{'green': attachGreen}"
+            :style="{backgroundColor: color}"
         ></div>
         <div 
             class="demo"
@@ -107,7 +106,7 @@
         <div 
         class="demo"
         @click="attachBlue = !attachBlue"
-        :class="{'blue': attachBlue}"
+        :style="myStyle"
         ></div>
         <div 
         class="demo"
@@ -123,6 +122,7 @@
     <hr>
     <h4>Dynamic styling with CSS classes, using names</h4>
     <input type="text" v-model="color">
+    <input type="text" v-model="width">
 </div>
 <script src="script.js"></script>
 </body>
