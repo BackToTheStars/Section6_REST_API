@@ -32,6 +32,10 @@ new Vue({         // this is called "Vue instance"
             highlight: false,
             shrink: true, 
         },
+        nickCSSClasses: {
+            nickExercise1: true,
+            nickExercise2: false,
+        },
     },
 
 
@@ -137,6 +141,12 @@ new Vue({         // this is called "Vue instance"
                 vx.effectClasses.highlight = !vx.effectClasses.highlight;
                 vx.effectClasses.shrink = !vx.effectClasses.shrink;  
             }, 1000);         
+        },
+
+        funcExercise2: function() {
+            var vx = this;
+            vx.nickCSSClasses.nickExercise1 = !vx.nickCSSClasses.nickExercise1;
+            vx.nickCSSClasses.nickExercise2 = !vx.nickCSSClasses.nickExercise2;
         },
 
     },

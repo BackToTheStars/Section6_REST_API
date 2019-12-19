@@ -85,6 +85,7 @@
         <p>Counter = {{ counter4 }}, {{ reached37 }}</p>
         <em>When counter reaches 37, it will reset to 0 in 5 seconds</em>
     </div>
+
     <div>
         <hr>
         <h4>Dynamic styling with CSS classes</h4>
@@ -123,7 +124,8 @@
         class="demo"
         :style="[myStyle, {'height': width + 'px'}]"
         ></div>
-        
+    </div>
+
     <hr>
     <h4>Dynamic styling with CSS classes, using names</h4>
     <input type="text" v-model="color">
@@ -131,7 +133,7 @@
     <p></p>
 
     <hr>
-    <h4>Exersize for dynamic styling</h4>
+    <h4>Exersize for dynamic styling 1</h4>
     <div id="Exersize">
         <div>
             <button @click="startEffect">Start Effect</button>
@@ -139,11 +141,24 @@
                 id="effect"
                 v-bind:class="effectClasses"
             ></div>
-            <!--  :class="{{ startEffect() }}"-->
-        </div> 
-    </div>
+        </div>
+        
+        <div>
+            <button @click="funcExercise2">Switch CSS class</button>
+            <div 
+                id="effect" 
+                v-bind:class="nickCSSClasses"
+            ></div>
+            <!-- effect refers to general class,
+                 nickCSSClasses refers to the object of sub-classes
+            -->
+        </div>
+
+    </div> 
+    
 
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -38,3 +38,16 @@
     width: 50px !important;
 }
 
+.nickExercise1 {
+    width: 300px !important;
+    height: 100px !important;
+    background: rgba(0, 255, 213, 0.5);
+    border: 1px solid black;
+}
+
+.nickExercise2 {
+    width: 300px !important;
+    height: 50px !important;
+    background: rgba(251, 255, 0, 0.5);
+    border: 1px solid black;
+}
