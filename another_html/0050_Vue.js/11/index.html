@@ -118,11 +118,31 @@
         :class="[color, {'yellow': attachYellow}]"
         ></div>
         <!-- можно также использовать синтакс 
-        :class="color"                   -->
+        :class="color"    -->
+        <div 
+        class="demo"
+        :style="[myStyle, {'height': width + 'px'}]"
+        ></div>
+        
     <hr>
     <h4>Dynamic styling with CSS classes, using names</h4>
     <input type="text" v-model="color">
     <input type="text" v-model="width">
+    <p></p>
+
+    <hr>
+    <h4>Exersize for dynamic styling</h4>
+    <div id="Exersize">
+        <div>
+            <button @click="startEffect">Start Effect</button>
+            <div 
+                id="effect"
+                v-bind:class="effectClasses"
+            ></div>
+            <!--  :class="{{ startEffect() }}"-->
+        </div> 
+    </div>
+
 </div>
 <script src="script.js"></script>
 </body>

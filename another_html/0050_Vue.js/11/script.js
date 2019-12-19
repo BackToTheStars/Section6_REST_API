@@ -28,6 +28,10 @@ new Vue({         // this is called "Vue instance"
         attachYellow: false,
         color: 'red',
         width: 100,
+        effectClasses: {
+            highlight: false,
+            shrink: true, 
+        },
     },
 
 
@@ -95,31 +99,47 @@ new Vue({         // this is called "Vue instance"
             return this.title;    // только title нельзя, но с this получаем доступ ко всему объекту Vue
             //return "Hello!";    // только возврат строки, иначе DOM не преобразует в html
         },
+
         randomNumber: function() {
             return Math.random();
         },
+
         increase: function(step, event) {
             this.counter += step;
         },
+
         updateCoordinates: function(event) {  // почему работает только в пределах одной строки???
             this.x = event.clientX;
             this.y = event.clientY;
         },
+
         dummy: function(event) {      // пустая функция, чтобы не менялись координаты при наведении на <span>
             event.stopPropagation();  // останавливает распространение event на другие функции программы
             return 0;
         },
+
         alertMe: function() {   // выводит Alert когда нажаты Enter или Space
             alert('Он нажал клавишу Enter или Space!');  // выводит alert с этим текстом в браузер
         },
+
         alertButton: function(event) {   // выводит Alert когда нажата кнопка.
             alert('Кнопка нажата!');
         },
+
         checkIsCounter2Larger: function() {
             console.log('Method is called.');
             return this.counter2 > 5 ? 'Greater than 5' : 'Smaller or equal 5';
-        }
-    }
+        },
+
+        startEffect: function() {
+            var vx = this;
+            setInterval(function() {
+                vx.effectClasses.highlight = !vx.effectClasses.highlight;
+                vx.effectClasses.shrink = !vx.effectClasses.shrink;  
+            }, 1000);         
+        },
+
+    },
 });
 
 
