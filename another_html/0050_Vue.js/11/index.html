@@ -124,6 +124,7 @@
         class="demo"
         :style="[myStyle, {'height': width + 'px'}]"
         ></div>
+        <!-- myStyle is a function, returns style object with color and width -->
     </div>
 
     <hr>
@@ -137,6 +138,7 @@
     <div id="Exersize">
         <div>
             <button @click="startEffect">Start Effect</button>
+            <p></p>
             <div 
                 id="effect"
                 v-bind:class="effectClasses"
@@ -144,22 +146,59 @@
         </div>
         
         <div>
+            <h4>Exercise for dynamic styling 2</h4>
             <button @click="funcExercise2">Switch CSS class</button>
+            <p></p>
             <div 
                 id="effect" 
-                v-bind:class="nickCSSClasses"
+                v-bind:class="[nickCSSClasses]"
             ></div>
             <!-- effect refers to general class,
                  nickCSSClasses refers to the object of sub-classes
             -->
         </div>
 
-    </div> 
-    
+        <div>
+            <h4> Exercise for dynamic styling 3</h4>
+            <input type="text" v-model="exercise3Class">
+            <em>(can be nickExercise1, nickExercise2)</em>
+            <p></p>
+            <div 
+                id="effect" 
+                :class="[exercise3Class]"
+            ></div>
+        </div>
 
+        <div>
+            <h4> Exercise for dynamic styling 4</h4>
+            <input type="text" v-model="shouldWeFireTheClass">
+            <em>(can be true of false)</em>
+            <p></p>
+            <div 
+                :class="[{nickExercise2: true}, shouldWeFireTheClass]"
+            ></div>
+        </div>
+
+        <div>
+            <h4> Exercise for dynamic styling 5</h4>
+            <input type="number" v-model="width5">
+            <em>Enter the width</em>
+
+            <p></p>
+            <button @click="progressBar()">Run Progress Bar</button>
+            <p></p>
+            <div 
+                :class="['nickExercise5']"
+                :style="[nickExercise5, {'width': width5}]"
+            ></div>
+        </div>
+
+    </div> 
 </div>
 
 <script src="script.js"></script>
+
 </body>
+
 </html>
  

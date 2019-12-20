@@ -36,6 +36,9 @@ new Vue({         // this is called "Vue instance"
             nickExercise1: true,
             nickExercise2: false,
         },
+        exercise3Class: 'nickExercise1',
+        shouldWeFireTheClass: '',
+        width5: 100,
     },
 
 
@@ -149,6 +152,12 @@ new Vue({         // this is called "Vue instance"
             vx.nickCSSClasses.nickExercise2 = !vx.nickCSSClasses.nickExercise2;
         },
 
+        progressBar: function() {
+            var vx = this;
+            setInterval(function() {
+                vx.width5 = vx.width5 + 1;
+            }, 200);
+        },
     },
 });
 
