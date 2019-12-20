@@ -28,17 +28,23 @@ new Vue({         // this is called "Vue instance"
         attachYellow: false,
         color: 'red',
         width: 100,
+
         effectClasses: {
             highlight: false,
             shrink: true, 
         },
-        nickCSSClasses: {
-            nickExercise1: true,
-            nickExercise2: false,
+        
+        resultOfFunc2: {
+            nickExercise1: false,
+            nickExercise2: true,
         },
+        // direct link to CSS classes for Exercise 2
+
         exercise3Class: 'nickExercise1',
         shouldWeFireTheClass: '',
-        width5: 100,
+        styleFor5: {
+            width: 1,
+        }
     },
 
 
@@ -148,14 +154,15 @@ new Vue({         // this is called "Vue instance"
 
         funcExercise2: function() {
             var vx = this;
-            vx.nickCSSClasses.nickExercise1 = !vx.nickCSSClasses.nickExercise1;
-            vx.nickCSSClasses.nickExercise2 = !vx.nickCSSClasses.nickExercise2;
+            vx.resultOfFunc2.nickExercise1 = !vx.resultOfFunc2.nickExercise1;
+            vx.resultOfFunc2.nickExercise2 = !vx.resultOfFunc2.nickExercise2;
+            return vx.resultOfFunc2
         },
 
         progressBar: function() {
             var vx = this;
             setInterval(function() {
-                vx.width5 = vx.width5 + 1;
+                vx.styleFor5.width = vx.styleFor5.width + 1;
             }, 200);
         },
     },

@@ -125,6 +125,9 @@
         :style="[myStyle, {'height': width + 'px'}]"
         ></div>
         <!-- myStyle is a function, returns style object with color and width -->
+        <!--This is called "array notation" or "array syntax".
+        "myStyle" refers to a general class
+        -->
     </div>
 
     <hr>
@@ -151,10 +154,10 @@
             <p></p>
             <div 
                 id="effect" 
-                v-bind:class="[nickCSSClasses]"
+                v-bind:class="resultOfFunc2"
             ></div>
-            <!-- effect refers to general class,
-                 nickCSSClasses refers to the object of sub-classes
+            <!-- 
+                resultOfFunc2 refers to the object of sub-classes
             -->
         </div>
 
@@ -181,7 +184,7 @@
 
         <div>
             <h4> Exercise for dynamic styling 5</h4>
-            <input type="number" v-model="width5">
+            <input type="number" v-model="styleFor5.width">
             <em>Enter the width</em>
 
             <p></p>
@@ -189,8 +192,11 @@
             <p></p>
             <div 
                 :class="['nickExercise5']"
-                :style="[nickExercise5, {'width': width5}]"
+                :style="[{width: styleFor5.width + 'px'}]"
             ></div>
+            <!-- 
+                style expects an object, with numbers + px added as a string 
+            -->
         </div>
 
     </div> 
