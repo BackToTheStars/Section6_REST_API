@@ -200,6 +200,32 @@
         </div>
 
     </div> 
+
+    <div>
+        <hr>
+        <h4>Conditional rendering with v-if="..."</h4>
+        <button @click="lecture36Show=!lecture36Show">Reverse Show</button>
+        <p v-if="lecture36Show">Do you see me?</p>
+        <p v-else>Now you don't see me</p>
+        <template v-if="lecture36Show">
+            <!-- v-if полностью убирает элемент из DOM -->
+            <p v-show="lecture36Show">This is the nested paragraph - inside template</p>
+            <!-- v-show не убирает элемент из DOM, а только скрывает -->
+            <p>Это второй nested параграф   - inside template</p>
+        </template>
+    </div>
+
+    <div>
+        <hr>
+        <h4>Rendering lists with v-for="..."</h4>
+        <ul>
+            <li v-for="ingredient in lecture40Object1"> 
+                {{ ingredient }} 
+            </li> 
+        </ul>
+    </div>
+
+
 </div>
 
 <script src="script.js"></script>

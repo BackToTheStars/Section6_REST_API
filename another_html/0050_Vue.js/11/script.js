@@ -44,7 +44,21 @@ new Vue({         // this is called "Vue instance"
         shouldWeFireTheClass: '',
         styleFor5: {
             width: 1,
-        }
+        },
+
+        lecture36Show: true,
+
+        lecture40Object1: [
+            'meat',
+            'fruit',
+            'cookies',
+            'something else',
+        ],
+        lecture40Object2: [
+            {name: 'Nick', age: 41, color: 'blue'},
+            {name: 'Natalia', age: 18, color: 'blue'},
+        ],
+                
     },
 
 
