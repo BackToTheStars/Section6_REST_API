@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    
 <div id="app">
+
+
     <div>
         <h1 v-once>{{ title }}</h1>
         <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p> <!-- перехват управления href через Vue -->
@@ -39,20 +43,28 @@
         <input type="text" v-on:keyup.enter.space="alertMe"> <!-- key modifiers (can be a lot of different ones!) -->
         <button v-on:click="alertButton($event)">Show Alert!</button>
     </div>
+
+
     <div>
         <input type="text" v-on:keydown="keyPressed = $event.target.value"> <!-- выводим строку, которую печатаем в поле ввода. Перехват событий клавиатуры -->
         <p>{{ keyPressed }}</p>
     </div>
+
+
     <div>
         <input type="text" v-on:keydown.enter="keyPressed = $event.target.value"> <!-- то же самое, но выводим только когда нажата клавиша Enter -->
         <p>{{ keyPressed }}</p>
     </div>
+
+
     <div>
         <hr>
         <h4>2-way data binding with Vue.js </h4>
         <input type="text" v-model="name2">    <!-- v-model связывает переменную в обе стороны -->
         <p>{{ name2 }}</p>
     </div>
+
+
     <div>
         <hr>
         <h4>Reactivity to changes with computed properties</h4>
@@ -65,11 +77,14 @@
         <p>Smaller/larger: {{ checkIsCounter2Larger() }} | {{ output }}</p> <!-- при вызове computed functions скобки не нужны, properties вызываются как переменные -->
         <em>Press F12 to open console and see how computed object and method are called from this code. Computed will be called only when needed, method will be called each time.</em>
     </div>
+
     <div>
         <hr>
         <h4>An alternative to computed properties: watch object</h4>
         <em>"watch" object watches counter2 variable (buttons above and calls a function each time counter2 changes. See console.</em>
     </div>
+
+
     <div>
         <hr>
         <h4>Shortcuts for "v-on", "v-bind:</h4>
@@ -77,6 +92,8 @@
         <p>"v-bind:href=..." can be replaced with ":href=..." Result will be the same.
         </p>
     </div>
+
+
     <div>
         <hr>
         <h4>Reactivity exersize</h4>
@@ -85,6 +102,7 @@
         <p>Counter = {{ counter4 }}, {{ reached37 }}</p>
         <em>When counter reaches 37, it will reset to 0 in 5 seconds</em>
     </div>
+
 
     <div>
         <hr>
@@ -130,11 +148,13 @@
         -->
     </div>
 
+
     <hr>
     <h4>Dynamic styling with CSS classes, using names</h4>
     <input type="text" v-model="color">
     <input type="text" v-model="width">
     <p></p>
+
 
     <hr>
     <h4>Exersize for dynamic styling 1</h4>
@@ -198,8 +218,8 @@
                 style expects an object, with numbers + px added as a string 
             -->
         </div>
-
     </div> 
+
 
     <div>
         <hr>
@@ -215,15 +235,24 @@
         </template>
     </div>
 
+
     <div>
         <hr>
-        <h4>Rendering lists with v-for="..."</h4>
-        <ul>
+        <h4>40 - Rendering lists with v-for="..."</h4>
+        <ul>Какой-то список
             <li v-for="ingredient in lecture40Object1"> 
                 {{ ingredient }} 
             </li> 
+            <p></p>
+        </ul>
+        <ul> Какой-то второй список
+            <li v-for="(ingredient, i) in lecture40Object1"> 
+                {{ ingredient }} [{{ i }}]
+            </li> 
+            <!-- [ и ] это в данном случает, текст а не массив -->
         </ul>
     </div>
+
 
 
 </div>
