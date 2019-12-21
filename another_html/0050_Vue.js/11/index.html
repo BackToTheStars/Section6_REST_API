@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    
+
 <div id="app">
 
 
@@ -77,6 +77,7 @@
         <p>Smaller/larger: {{ checkIsCounter2Larger() }} | {{ output }}</p> <!-- при вызове computed functions скобки не нужны, properties вызываются как переменные -->
         <em>Press F12 to open console and see how computed object and method are called from this code. Computed will be called only when needed, method will be called each time.</em>
     </div>
+
 
     <div>
         <hr>
@@ -251,6 +252,27 @@
             </li> 
             <!-- [ и ] это в данном случает, текст а не массив -->
         </ul>
+        <p></p>
+        <template v-for="(ingredient, i) in lecture40Object1">
+            <b>
+                {{ ingredient }}
+            </b>
+            <em>
+                {{ i }}
+            </em>
+        </template> 
+        <ul>Теперь выведем имена людей внутри массива словарей:
+            <li v-for="person in lecture40Object2"> 
+                {{ person.name }} 
+            </li> 
+            <p></p>
+        </ul>      
+        <ul>А теперь выведем все данные по людям из словаря:
+            <li v-for="person in lecture40Object2"> 
+                {{ person.name }} 
+            </li> 
+            <p></p>
+        </ul>    
     </div>
 
 
