@@ -284,15 +284,49 @@
             <p></p>
         </ul>    
     </div>
-    <div id="Exercise">
+
+
+    <div id="Exercise_46">
         <hr>
-        <h4>Упражнение 1 после лекции 45. "v-show", "v-for", "v-if"</h4>
-        <button @click="exercise1Lecture45=!exercise1Lecture45">Show / No show</button>
-        <p v-if="exercise1Lecture45">Когда показываем эту строку</p>
-        <p v-else-if="!exercise1Lecture45">То не показываем вот эту, удаляем элемент из DOM</p>
-        <p v-show="exercise1Lecture45">Это первая конструкция с v-show</p>
-        <p v-show="!exercise1Lecture45">а это её вторая невидимая часть, теперь не удаляем из DOM, а только скрываем</p>
+        <h4>Упражнение 1, лекция 46. "v-show", "v-if", "v-else"</h4>
+        <button @click="exercise1Lecture45=!exercise1Lecture46">Show / No show</button>
+        <p v-if="exercise1Lecture46">Когда показываем эту строку</p>
+        <p v-else-if="!exercise1Lecture46">То не показываем вот эту, удаляем элемент из DOM</p>
+        <p v-show="exercise1Lecture46">Это первая конструкция с v-show</p>
+        <p v-show="!exercise1Lecture46">а это её вторая невидимая часть, теперь не удаляем из DOM, а только скрываем</p>
+    
+        <hr>
+        <h4>Упражнение 2, лекция 46. "v-for", arrays</h4>
+        <ol>Выведем список книг в библиотеке:
+            <li v-for="(book, index) in exercise2Lecture46">
+                {{ book }}, позиция в массиве # {{ index }}
+            </li>
+        </ol>
+
+        <hr>
+        <h4>Упражнение 3, лекция 46. Итерации через элементы объекта</h4>
+        <ul>Задание - вывести объекты цивилизации Людей:
+            <li v-for="(element, index) in exercise3Lecture46">
+                <b> {{ element.type }} </b>
+                <div>
+                    {{ element.class }} {{ element.type}}, {{ element.weapons }} weapons, id {{ element.id }}, position {{ index }} in the database
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+        <h4>Упражнение 4, лекция 46. Nested loop</h4>
+        <ul>
+            <li v-for="(object, position) in exercise3Lecture46">
+                <b>{{ object.type }}</b> 
+                <em>(pos {{ position }} in DB) - </em>
+                <span v-for="(value, key, index) in object">
+                    {{ key }}: {{ value }}, 
+                </span>
+            </li>
+        </ul>
     </div>
+
 
 
 </div>

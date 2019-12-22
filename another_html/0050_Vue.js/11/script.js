@@ -59,7 +59,41 @@ new Vue({         // this is called "Vue instance"
             {name: 'Natalia', age: 18, color: 'blue'},
         ],
       
-        exercise1Lecture45: true,
+        exercise1Lecture46: true,
+        exercise2Lecture46: [
+            'Шиллер',
+            'Паустовский',
+            'Андерсен',
+            'Набоков',
+            'Беляев',
+            'Пушкин',
+        ],
+        exercise3Lecture46: [
+            {
+                id: 1,
+                type: 'ship',
+                class: 'military',
+                weapons: 239,
+            },
+            {
+                id: 2,
+                type: "base",
+                class: "civil",
+                weapons: 4,
+            },
+            {
+                id: 3,
+                type: 'ship',
+                class: 'transport',
+                weapons: 0,
+            },
+            {
+                id: 4,
+                type: "building",
+                class: 'library',
+                weapons: 0,
+            },
+        ],
     },
 
 
