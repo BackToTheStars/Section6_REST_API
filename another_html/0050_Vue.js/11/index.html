@@ -240,13 +240,15 @@
     <div>
         <hr>
         <h4>40 - Rendering lists with v-for="..."</h4>
-        <ul>Какой-то список
-            <li v-for="ingredient in lecture40Object1"> 
+        <button @click="lecture40Object1.push('spices')">Add Spices</button>
+        <ul>Список ингредиентов для нашего объектного супа:
+            <li v-for="ingredient in lecture40Object1" :key="ingredient"> 
                 {{ ingredient }} 
             </li> 
+            <!-- ОЧЕНЬ ВАЖНО: если не использовать этот v-bind:key, то можно столкнуться с некорректной работой v-for - push и подобных конструкций, потому что без key push может переписать существующий элемент, просто привязываясь к номеру его позиции-->
             <p></p>
         </ul>
-        <ul> Какой-то второй список
+        <ul> Тот же список, только теперь с индексами элементов:
             <li v-for="(ingredient, i) in lecture40Object1"> 
                 {{ ingredient }} [{{ i }}]
             </li> 
@@ -269,8 +271,16 @@
         </ul>      
         <ul>А теперь выведем все данные по людям из словаря:
             <li v-for="person in lecture40Object2"> 
-                {{ person.name }} 
+                <b>{{ person.name }}:</b>
+                <div v-for="(value, key, index) in person">
+                    {{ key }}: {{ value }} ({{ index }})
+                </div>
             </li> 
+            <p>Выведем числа от 1 до 10:
+                <span v-for="n in 10">
+                    {{ n }} 
+                </span>
+            </p>
             <p></p>
         </ul>    
     </div>
