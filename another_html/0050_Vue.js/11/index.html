@@ -284,7 +284,15 @@
             <p></p>
         </ul>    
     </div>
-
+    <div id="Exercise">
+        <hr>
+        <h4>Упражнение 1 после лекции 45. "v-show", "v-for", "v-if"</h4>
+        <button @click="exercise1Lecture45=!exercise1Lecture45">Show / No show</button>
+        <p v-if="exercise1Lecture45">Когда показываем эту строку</p>
+        <p v-else-if="!exercise1Lecture45">То не показываем вот эту, удаляем элемент из DOM</p>
+        <p v-show="exercise1Lecture45">Это первая конструкция с v-show</p>
+        <p v-show="!exercise1Lecture45">а это её вторая невидимая часть, теперь не удаляем из DOM, а только скрываем</p>
+    </div>
 
 
 </div>

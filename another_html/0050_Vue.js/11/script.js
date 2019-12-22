@@ -58,7 +58,8 @@ new Vue({         // this is called "Vue instance"
             {name: 'Nick', age: 41, color: 'blue'},
             {name: 'Natalia', age: 18, color: 'blue'},
         ],
-                
+      
+        exercise1Lecture45: true,
     },
 
 
