@@ -94,6 +94,14 @@ new Vue({         // this is called "Vue instance"
                 weapons: 0,
             },
         ],
+
+
+        playerHealth: 100,
+        monsterHealth: 100,
+        gameIsRunning: false,
+        
+
+
     },
 
 

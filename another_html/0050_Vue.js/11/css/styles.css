@@ -1,0 +1,161 @@
+.demo {
+    width: 130px;
+    height: 130px;
+    background-color: gray;
+    display: inline-block;
+    margin: 10px;
+}
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+}
+
+#effect {   /* used for id call */
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.highlight {
+    background-color: green;
+    width: 200px !important;
+}
+
+.shrink {
+    background-color: gray;
+    width: 50px !important;
+}
+
+.nickExercise1 {
+    width: 200px !important;
+    height: 100px !important;
+    background: rgba(0, 255, 213, 0.5);
+    border: 1px solid black;
+}
+
+.nickExercise2 {
+    width: 300px !important;
+    height: 50px !important;
+    background: rgba(251, 255, 0, 0.5);
+    border: 1px solid black;
+}
+
+.classExercise4 {
+    background: rgba(255, 0, 119, 0.904);
+}
+
+.nickExercise5 {
+    width: 1px;
+    height: 20px;
+    background: rgb(0, 4, 255);
+    border: 1px solid rgb(0, 4, 255);
+}
+
+/* ********** GAME ************** */
+
+.text-center {
+    text-align: center;
+}
+
+.healthbar {
+    width: 80%;
+    height: 40px;
+    background-color: #eee;
+    margin: auto;
+    transition: width 500ms;
+}
+
+.controls, .log {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 3px 6px #ccc;
+}
+
+.turn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.log ul {
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.log ul li {
+    margin: 5px;
+}
+
+.log ul .player-turn {
+    color: blue;
+    background-color: #e4e8ff;
+}
+
+.log ul .monster-turn {
+    color: red;
+    background-color: #ffc0c1;
+}
+
+button {
+    font-size: 20px;
+    background-color: #eee;
+    padding: 12px;
+    box-shadow: 0 1px 1px black;
+    margin: 10px;
+}
+
+#start-game {
+    background-color: #aaffb0;
+}
+
+#start-game:hover {
+    background-color: #76ff7e;
+}
+
+#attack {
+    background-color: #ff7367;
+}
+
+#attack:hover {
+    background-color: #ff3f43;
+}
+
+#special-attack {
+    background-color: #ffaf4f;
+}
+
+#special-attack:hover {
+    background-color: #ff9a2b;
+}
+
+#heal {
+    background-color: #aaffb0;
+}
+
+#heal:hover {
+    background-color: #76ff7e;
+}
+
+#give-up {
+    background-color: #ffffff;
+}
+
+#give-up:hover {
+    background-color: #c7c7c7;
+}
