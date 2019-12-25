@@ -234,17 +234,22 @@ new Vue({         // this is called "Vue instance"
         attack: function() {
             var damage = this.calculateDamage(3, 10)
             this.monsterHealth -= damage;
-            if (this.checkWin()) {
-                return;
-            };
-            this.monsterAttack();
             this.turns.unshift({
                 isPlayer: true,
                 text: 'Player hits monster for ' + damage,
             });
+            if (this.checkWin()) {
+                return;
+            };
+            this.monsterAttack();
         },
         specialAttack: function() {
-            this.monsterHealth -= this.calculateDamage(10, 20);
+            var damage = this.calculateDamage(10, 20);
+            this.monsterHealth -= damage;
+            this.turns.unshift({
+                isPlayer: true,
+                text: 'Player hits monster hard for ' + damage,
+            });
             if (this.checkWin()) {
                 return;
             };
@@ -264,6 +269,10 @@ new Vue({         // this is called "Vue instance"
             if (this.playerHealth >=100) {
                 this.playerHealth = 100;
             }
+            this.turns.unshift({
+                isPlayer: true,
+                text: 'Player heals for 10',
+            });
             this.monsterAttack();
             this.checkWin();
         },
