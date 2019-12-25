@@ -95,11 +95,11 @@ new Vue({         // this is called "Vue instance"
             },
         ],
 
-
+        // MONSTER GAME
         playerHealth: 100,
         monsterHealth: 100,
         gameIsRunning: false,
-        
+
 
 
     },
@@ -221,6 +221,14 @@ new Vue({         // this is called "Vue instance"
             setInterval(function() {
                 vx.styleFor5.width = vx.styleFor5.width + 1;
             }, 200);
+        },
+
+        // MONSTER GAME LECTURE 51
+
+        startGame: function() {
+            this.gameIsRunning = true;
+            this.playerHealth = 100;
+            this.monsterHealth = 100;
         },
     },
 });
