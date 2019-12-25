@@ -231,7 +231,26 @@ new Vue({         // this is called "Vue instance"
             this.monsterHealth = 100;
         },
         attack: function() {
+            var damage = this.calculateDamage(3, 10);
+            this.monsterHealth -= damage;
 
+            if (this.monsterHealth <=0) {
+                this.monsterHealth = 0;
+                alert('You won!');
+                this.gameIsRunning = false;
+                return;
+            };
+
+            var max = 12;
+            var min = 5;
+            var damage = this.calculateDamage(5, 12);
+            this.playerHealth -= damage;
+
+            if (this.playerHealth <=0) {
+                this.playerHealth = 0;
+                alert('You lost!');
+                this.gameIsRunning = false;
+            };
         },
         specialAttack: function() {
 
@@ -241,6 +260,9 @@ new Vue({         // this is called "Vue instance"
         },
         giveUp: function() {
 
+        },
+        calculateDamage: function(min, max) {
+            return Math.floor(Math.random()*(max-min) + min);
         },
     },
 });
