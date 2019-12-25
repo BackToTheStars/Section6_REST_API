@@ -225,7 +225,7 @@ new Vue({         // this is called "Vue instance"
 
         // MONSTER GAME LECTURE 51
 
-        startGame: function() {
+        startGame: function() {             // у нас в игре всего 4 переменных
             this.gameIsRunning = true;
             this.playerHealth = 100;
             this.monsterHealth = 100;
@@ -234,7 +234,7 @@ new Vue({         // this is called "Vue instance"
         attack: function() {
             var damage = this.calculateDamage(3, 10)
             this.monsterHealth -= damage;
-            this.turns.unshift({
+            this.turns.unshift({                     // вставить впереди массива
                 isPlayer: true,
                 text: 'Player hits monster for ' + damage,
             });
