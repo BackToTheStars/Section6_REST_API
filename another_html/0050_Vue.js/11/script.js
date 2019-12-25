@@ -232,7 +232,9 @@ new Vue({         // this is called "Vue instance"
         },
         attack: function() {
             this.monsterHealth -= this.calculateDamage(3, 10);
-            this.checkWin();
+            if (this.checkWin()) {
+                return;
+            };
 
             this.playerHealth -= this.calculateDamage(5, 12);
             this.checkWin();
@@ -256,15 +258,16 @@ new Vue({         // this is called "Vue instance"
                 } else {
                     this.gameIsRunning = false;
                 }
-                return;
+                return true;
             } else if (this.playerHealth <=0) {
                 if (confirm('You lost! New game?')) {
                     this.startGame();
                 } else {
                     this.gameIsRunning = false;
                 };
-                return;
+                return true;
             };
+            return false;
         },
     },
 });
