@@ -230,6 +230,18 @@ new Vue({         // this is called "Vue instance"
             this.playerHealth = 100;
             this.monsterHealth = 100;
         },
+        attack: function() {
+
+        },
+        specialAttack: function() {
+
+        },
+        heal: function() {
+
+        },
+        giveUp: function() {
+
+        },
     },
 });
 
