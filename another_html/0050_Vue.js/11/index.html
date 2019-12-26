@@ -16,7 +16,6 @@
 
 <div id="app">
 
-
     <div>
         <h1 v-once>{{ title }}</h1>
         <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p> <!-- перехват управления href через Vue -->
@@ -416,20 +415,35 @@
     
     <hr>
     <div>
-        <h4>Лекция 73, Vue Components</h4>
+        <h4>Лекция 73, Reusable Vue Components</h4>
         <hello></hello>
         <hello></hello>
         <hello></hello>
         <hello></hello>
     </div>
 
+</div>
+
+
+
+<div id="lecture77">
+    <hr>
+    <h4>{{ title}}</h4>
+    <button @click="title = 'Changed'">Update Title</button>
+    <button @click="destroy">Destroy</button>
+
 
     <hr>
-
-
-
+    <h4>Vue CLI & Workflows, Development Server</h4>
+    <p>Installation of Vue CLI: "npm install -g vue-cli"</p>
+    
 
 </div>
+
+
+
+
+
 
 <script src="script.js"></script>
 

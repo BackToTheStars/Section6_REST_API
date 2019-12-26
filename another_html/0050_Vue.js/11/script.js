@@ -2,9 +2,7 @@
 new Vue({         // this is called "Vue instance"
     
     el: '#app',   // connect to DOM, Document Object Model (медленно)
-    
-
-    
+        
     data: {       // store properties in data object, to be used
         title: 'Hello Владислав!',
         link: 'http://google.com', // используем directive "v-bind" чтобы привязать href к link
@@ -307,7 +305,45 @@ new Vue({         // this is called "Vue instance"
 // Lecture 73 Vue Components
 
 Vue.component('hello', {
-    template: '<p1>Hello!</p1>'
+    template: '<p1>Hello!</p1>',
 });
 
+
+new Vue({
+    el: '#lecture77',
+    data: {
+        title: 'Лекция 73, Vue.js Instance Lifecycle',
+    },
+    beforeCreate: function() {
+        console.log('beforeCreate()');
+    },
+    created: function(){
+        console.log('created()');
+    },
+    beforeMount: function(){
+        console.log('beforeMount()');
+    },
+    mounted: function(){
+        console.log('mounted()');
+    },
+    beforeUpdate: function(){
+        console.log('beforeUpdate()');
+    },
+    updated: function(){
+        console.log('updated()');
+    },
+    beforeDestroy: function(){
+        console.log('beforeDestroy()');
+    },
+    destroyed: function(){
+        console.log('destroyed()');
+    },
+
+    methods: {
+        destroy: function() {
+            this.$destroy();
+        },
+    },
+
+});
 
