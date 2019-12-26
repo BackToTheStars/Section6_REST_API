@@ -304,6 +304,10 @@ new Vue({         // this is called "Vue instance"
 });
 
 
+// Lecture 73 Vue Components
 
+Vue.component('hello', {
+    template: '<p1>Hello!</p1>'
+});
 
 
