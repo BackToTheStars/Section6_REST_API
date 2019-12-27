@@ -1,19 +1,22 @@
 <template>
-    <p>Server Status: {{ status }}</p>
-    <hr>
+    <div>
+        <p>Server Status: {{ status }}</p>
+        <hr>
+        <button @click="changeStatus">Change Status</button>
+    </div>
 </template>
-    export default: {
+    export default {
         data: function() {
             return {
-                status: 'Good to go'
-            }
-        },
-        methods: {
-            changeStatus() {
-                this.status = 'Critical' 
+                status: 'Good to go';
             }
         }
-    } 
+        methods: {
+            changeStatus() {
+                this.status = 'Critical'
+            }
+        }
+    }
 
 <script>
 
