@@ -347,3 +347,11 @@ new Vue({
 
 });
 
+new Vue({
+    el: 'Lecture_93',
+    data: {
+        status: 'Critical',
+    },
+    template: '<p>Server Status: {{ STATUS }}</p>'    
+});
+
