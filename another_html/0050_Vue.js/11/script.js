@@ -352,6 +352,11 @@ new Vue({
     components: {
         'component_93': cmp,   // local component registration
     },
+    methods: {
+        button93: function() {
+            console.log(cmp);
+        },
+    },
 });
 
 var cmp = {
