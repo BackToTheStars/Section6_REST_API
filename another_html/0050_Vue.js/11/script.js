@@ -305,7 +305,7 @@ new Vue({         // this is called "Vue instance"
 // Lecture 73 Vue Components
 
 Vue.component('hello', {
-    template: '<p1>Hello!</p1>',
+    template: '<p>Hello!</p>',
 });
 
 
@@ -348,10 +348,18 @@ new Vue({
 });
 
 new Vue({
-    el: 'Lecture_93',
-    data: {
-        status: 'Critical',
+    el: '#lecture93',
+    components: {
+        'component_93': cmp,   // local component registration
     },
-    template: '<p>Server Status: {{ STATUS }}</p>'    
 });
+
+var cmp = {
+    data: function() {
+        return {
+            status: 'Critical',
+        };
+    },
+    template: '<p>Server Status: {{ status }}</p>',
+};
 
