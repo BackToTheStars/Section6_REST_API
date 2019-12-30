@@ -1,24 +1,17 @@
+
+<!-- //// Component code from here was relocated to ServerStatus.vue
+          to be used as a local component 5 times in Home global component -->
 <template>
-    <!-- here wee can insert only one root element, like div -->
-    <div>   
-        <p>Server Status: {{ status }}</p>
-        <hr>
-        <button @click="changeStatus">Change Status</button>
+    <div>
+        <app-server-status v-for="server in 5"></app-server-status>
     </div>
 </template>
 <script>
+    import ServerStatus from './ServerStatus.vue'; // import local component
     export default {
-        data: function() {
-            return {
-                status: 'Good to go'
-            };
-        },
-        methods: {
-            changeStatus() {
-                this.status = 'Critical';
-            },
-        },
+        components: {
+            'app-server-status': ServerStatus,
+        }
     }
-
 </script>
 
