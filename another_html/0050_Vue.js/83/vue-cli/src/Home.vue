@@ -5,19 +5,19 @@
         <button @click="changeStatus">Change Status</button>
     </div>
 </template>
+<script>
     export default {
         data: function() {
             return {
-                status: 'Good to go';
-            }
-        }
+                status: 'Good to go'
+            };
+        },
         methods: {
             changeStatus() {
-                this.status = 'Critical'
-            }
-        }
+                this.status = 'Critical';
+            },
+        },
     }
 
-<script>
-
 </script>
+
