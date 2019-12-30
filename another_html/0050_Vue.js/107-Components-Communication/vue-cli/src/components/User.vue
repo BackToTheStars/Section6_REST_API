@@ -6,7 +6,7 @@
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail :myName="name" ></app-user-detail>   
+                <app-user-detail :myName="name"></app-user-detail>   
                 <!-- ":name" should be the same as in props -->
             </div>
             <div class="col-xs-12 col-sm-6">
