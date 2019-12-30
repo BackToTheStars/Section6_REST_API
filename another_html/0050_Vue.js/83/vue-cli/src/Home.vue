@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <!-- here wee can insert only one root element, like div -->
+    <div>   
         <p>Server Status: {{ status }}</p>
         <hr>
         <button @click="changeStatus">Change Status</button>
