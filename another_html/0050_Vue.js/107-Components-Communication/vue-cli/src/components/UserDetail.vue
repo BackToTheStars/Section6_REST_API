@@ -2,7 +2,7 @@
     <div class="component">
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
-        <p>User name: {{ switchName() }}</p>
+        <p>User name: {{ switchName() }}</p> <!-- вывод результата функции -->
         <p>User age: {{ userAge }}</p>
         <button @click="resetName">Name Reset</button>
         <button @click="resetFn()">Function Name Reset</button>
@@ -12,22 +12,22 @@
 </template>
 
 <script>
-    import { eventBus } from '../main.js';
+    import { eventBus } from '../main.js';    // импорт общей шины данных
 
     export default {
-        props: {                     // can be    props: ['myName'],     without validation
+        props: {                     // can be    props: ['myName'],   without validation
             myName:  {               // this is the props validation, that incoming data is a string
                 type: String,        // can be    myName: [String, Array],
                 default: 'John',     // can be    required: true,
             },    
-            resetFn: Function,
+            resetFn: Function,   // parent prop function
             userAge: Number,
         },
 // props, properties are used to pass data from parent to a child
 
         methods: {
             switchName() {
-                return this.myName.split("").reverse().join("");
+                return this.myName.split("").reverse().join("");  // операция со строкой как с массивом
             },
             resetName() {
                 this.myName = 'Muir';
@@ -37,8 +37,8 @@
         },
 
         created() {
-            eventBus.$on('ageWasEdited', (data) => {
-                this.userAge = data;
+            eventBus.$on('ageWasEdited', (data) => {  // создание события изменения переменной
+                this.userAge = data;                  // публикация переменной в общую шину данных
             });
         },
     };
