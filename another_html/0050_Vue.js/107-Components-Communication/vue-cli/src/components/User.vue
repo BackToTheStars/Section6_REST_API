@@ -14,6 +14,7 @@
                     @nameWasReset="name = $event"
                     :resetFn="resetName"
                     :userAge="age">
+                    
                 </app-user-detail>   
                 <!-- ":name" should be the same as in props -->
             </div>
