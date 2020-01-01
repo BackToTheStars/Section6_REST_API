@@ -18,7 +18,8 @@
             editAge() {
                 this.userAge = 30;
 //              this.$emit('ageWasEdited', this.userAge);
-                eventBus.$emit('ageWasEdited', this.userAge);
+//              eventBus.$emit('ageWasEdited', this.userAge);     - relocated to main.js
+                eventBus.changeAge(this.userAge);
             },
         },
     };
