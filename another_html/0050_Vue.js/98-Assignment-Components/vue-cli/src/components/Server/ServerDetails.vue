@@ -7,6 +7,22 @@
 </template>
 
 <script>
+
+    import { serverBus } from '../../main.js';
+
+    export default {
+        data: function() {
+            return {
+                server: null,
+            };  
+        },
+        created() {
+            serverBus.$on('serverSelected', (server) => {
+                this.server = server;
+            });
+        };
+    };
+
 </script>
 
 <style scoped>
