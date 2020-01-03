@@ -4,7 +4,7 @@
         class="list-group-item"
         style="cursor: pointer"
         @click="serverSelected">
-        Server #{{ id }}
+        Server #{{ server.id }}
     </li>
 </template>
 
@@ -13,10 +13,10 @@
     import { serverBus } from '../../main.js';
     
     export default {
-        props: ['id'],
+        props: ['server'],
         methods: {
             serverSelected() {
-                serverBus.$emit('serverSelected', this.id);  // id we get as a prop
+                serverBus.$emit('serverSelected', this.server);  // id we get as a prop
             },
         },
     }
