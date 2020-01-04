@@ -19,4 +19,9 @@
         margin: 30px auto;
         text-align: center;
     }
+
+    h2{
+        color: red;
+        /* this styling for slot can render only inside the child component Quote, not in parent App*/
+    }
 </style>
