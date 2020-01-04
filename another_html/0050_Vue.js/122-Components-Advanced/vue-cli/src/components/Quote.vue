@@ -1,11 +1,14 @@
 
 <template>
     <div>
-        <p>Here is a sample text</p>
+        <slot></slot>
     </div>
 </template>
 
 <script>
+    export default {
+
+    }
 </script>
 
 <style scoped>
@@ -13,6 +16,7 @@
         border: 1px solid gray;
         box-shadow: 1px 1px 2px black;
         padding: 30px;
-        margin: auto;
+        margin: 30px auto;
+        text-align: center;
     }
 </style>
