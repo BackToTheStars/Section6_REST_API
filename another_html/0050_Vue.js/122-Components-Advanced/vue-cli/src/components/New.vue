@@ -14,8 +14,14 @@
                 counter: 0,
             };
         },
-        destroyed(){
-            console.log('Destroyed!')  // this shows that this New vue instance is destroyed each time when we press a button in App.
+        destroyed() {
+            console.log('Destroyed!');  // this shows that this New vue instance is destroyed each time when we press a button in App.
+        },
+        deactivated() {
+            console.log('Deactivated!');
+        },
+        activated() {
+            console.log('Activated!');
         },
     }
 </script>
