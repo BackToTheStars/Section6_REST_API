@@ -16,9 +16,14 @@
 
 <script>
 import Quote from './components/Quote.vue';
+import Quote from './components/Quote.vue';
+import Quote from './components/Quote.vue';
+
 export default {
   components: {
     appQuote: Quote,
+    appAuthor,
+    appNew,
   },
   data: function() {
     return {
