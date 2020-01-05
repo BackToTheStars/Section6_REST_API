@@ -1,0 +1,13 @@
+.text {
+    font-family:Verdana, Geneva, Tahoma;
+    font-size: 20px;
+    border: 1px;
+    border-color: black;
+    padding: 20px 20px 20px 20 px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+/*    background-color: grey;  */
+}
