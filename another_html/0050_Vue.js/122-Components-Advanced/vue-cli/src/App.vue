@@ -3,6 +3,10 @@
     <div class="container">
       <div class="row">
         <div class ="col-xs-12">
+            <button @click="selectedComponent = 'appQuote'">Quote</button>
+            <button @click="selectedComponent = 'appAuthor'">Author</button>
+            <button @click="selectedComponent = 'appNew'">New</button>
+            <hr>
             <app-quote>
               <h2 slot="title">{{ quoteTitle }}</h2>
               <!-- this line will go to the slot "title" in the child component -->
@@ -16,18 +20,19 @@
 
 <script>
 import Quote from './components/Quote.vue';
-import Quote from './components/Quote.vue';
-import Quote from './components/Quote.vue';
+import Author from './components/Author.vue';
+import New from './components/New.vue';
 
 export default {
   components: {
     appQuote: Quote,
-    appAuthor,
-    appNew,
+    appAuthor: Author,
+    appNew: New,
   },
   data: function() {
     return {
-      quoteTitle: 'Here is the Title'
+      quoteTitle: 'Here is the Title',
+      selectedComponent: 'appQuote',
     }
   }
 }
