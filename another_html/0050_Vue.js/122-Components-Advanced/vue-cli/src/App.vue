@@ -8,7 +8,7 @@
             <button @click="selectedComponent = 'appAuthor'">Author</button>
             <button @click="selectedComponent = 'appNew'">New</button>
             <p>{{ selectedComponent }}</p>
-            <component :is="selectedComponent"></component>
+            <component :is="selectedComponent">Default content</component>
             <!--
             <app-quote>
               <h2 slot="title">{{ quoteTitle }}</h2>
