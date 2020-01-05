@@ -3,16 +3,21 @@
     <div class="container">
       <div class="row">
         <div class ="col-xs-12">
+            <hr>
             <button @click="selectedComponent = 'appQuote'">Quote</button>
             <button @click="selectedComponent = 'appAuthor'">Author</button>
             <button @click="selectedComponent = 'appNew'">New</button>
-            <hr>
+            <p>{{ selectedComponent }}</p>
+            <component :is="selectedComponent"></component>
+            <!--
             <app-quote>
               <h2 slot="title">{{ quoteTitle }}</h2>
               <!-- this line will go to the slot "title" in the child component -->
-              <p>My wonderful quote!</p>   <!-- this line will go to the unnamed slot as default--> 
+      <!--        <p>My wonderful quote!</p> 
+      -->     <!-- this line will go to the unnamed slot as default--> 
               <!-- This part of HTML code is passed to slot of the child component, to Quote.vue-->
-            </app-quote>
+      <!--      </app-quote>
+            -->
         </div>
       </div>
     </div>
