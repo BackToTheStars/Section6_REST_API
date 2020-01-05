@@ -16,7 +16,7 @@
             <!--
             <app-quote>
               <h2 slot="title">{{ quoteTitle }}</h2>
-              <!-- this line will go to the slot "title" in the child component -->
+             this line will go to the slot "title" in the child component -->
       <!--        <p>My wonderful quote!</p> 
       -->     <!-- this line will go to the unnamed slot as default--> 
               <!-- This part of HTML code is passed to slot of the child component, to Quote.vue-->
