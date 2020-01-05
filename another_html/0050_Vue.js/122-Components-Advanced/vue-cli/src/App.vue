@@ -8,7 +8,11 @@
             <button @click="selectedComponent = 'appAuthor'">Author</button>
             <button @click="selectedComponent = 'appNew'">New</button>
             <p>{{ selectedComponent }}</p>
-            <component :is="selectedComponent">Default content</component>
+            
+            <keep-alive> <!-- this keep alive will prevent components from destroying each time we press a button -->
+              <component :is="selectedComponent">Default content</component>
+            </keep-alive>  
+            
             <!--
             <app-quote>
               <h2 slot="title">{{ quoteTitle }}</h2>
