@@ -1,11 +1,26 @@
 <template>
     <div>
-        
+        <p>{{ this.greenText }}</p>
     </div>
 </template>
 
 <script>
     import { eventBus } from '../main.js';
+
+    export default {
+        data: function() {
+            return {
+                greenText: '',
+            };
+        },
+        created() {
+            eventBus.$on('greenTextChanged', data => {
+                this.greenText = data;
+                console.log(this.greenText);
+            });
+        },
+    };
+
 </script>
 
 <style scoped>

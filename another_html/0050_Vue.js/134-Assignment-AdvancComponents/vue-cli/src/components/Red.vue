@@ -1,21 +1,25 @@
 <template>
     <div>
-        <p>{{ redText }}</p>
+        <p>{{ this.redText }}</p>
     </div>
 </template>
 
 <script>
     import { eventBus } from '../main.js';
+
     export default {
         data: function() {
             return {
                 redText: '',
             };
-        }
-    }
-    eventBus.$on('redTextChanged', data => {
-        this.redText = data;
-    });
+        },
+        created() {
+            eventBus.$on('redTextChanged', data => {
+                this.redText = data;
+                console.log(this.redText);
+            });
+        },
+    };
 
 </script>
 

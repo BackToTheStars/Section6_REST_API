@@ -3,14 +3,14 @@ import App from './App.vue'
 
 export const eventBus = new Vue({
   methods: {
-    changeRedText(redText) {
-      this.$emit('redTextChanged', redText);     
+    changeRedText(text) {
+      this.$emit('redTextChanged', text);     
     },
-    changeBlueText(blueText) {
-      this.$emit('blueTextChanged', blueText);     
+    changeBlueText(text) {
+      this.$emit('blueTextChanged', text);     
     },
-    changeGreenText(greenText) {
-      this.$emit('greenTextChanged', greenText);     
+    changeGreenText(text) {
+      this.$emit('greenTextChanged', text);     
     },
   },
 });
