@@ -7,7 +7,7 @@ export const eventBus = new Vue({
       this.$emit('redTextChanged', text);     
     },
     changeBlueText(text) {
-      this.$emit('blueTextChanged', text);     
+      this.$emit('blueTextChanged', text);   
     },
     changeGreenText(text) {
       this.$emit('greenTextChanged', text);     

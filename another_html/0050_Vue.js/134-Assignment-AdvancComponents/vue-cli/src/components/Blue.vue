@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>{{ this.blueText }}</p>
+        <p>{{ blueText }}</p>
     </div>
 </template>
 
