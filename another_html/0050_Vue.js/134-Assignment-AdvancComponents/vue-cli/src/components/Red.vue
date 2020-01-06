@@ -1,8 +1,21 @@
 <template>
-    <div></div>
+    <div>
+        <p>{{ redText }}</p>
+    </div>
 </template>
 
 <script>
+    import { eventBus } from '../main.js';
+    export default {
+        data: function() {
+            return {
+                redText: '',
+            };
+        }
+    }
+    EventBus.$on('redTextChanged', data => {
+        this.redText = data;
+    });
 
 </script>
 
@@ -12,6 +25,6 @@
         background-color: lightcoral;
         padding: 30px;
         margin: 20px auto;
-        text-align: center
+        text-align: left;
     }
 </style>

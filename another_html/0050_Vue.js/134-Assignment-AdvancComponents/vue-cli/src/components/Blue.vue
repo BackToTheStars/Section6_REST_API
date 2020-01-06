@@ -1,9 +1,11 @@
 <template>
-    <div></div>
+    <div>
+        <slot name="blueText"></slot>
+    </div>
 </template>
 
 <script>
-
+    import { eventBus } from '../main.js';
 </script>
 
 <style scoped>
@@ -12,6 +14,6 @@
         background-color: lightblue;
         padding: 30px;
         margin: 20px auto;
-        text-align: center
+        text-align: left;
     }
 </style>
