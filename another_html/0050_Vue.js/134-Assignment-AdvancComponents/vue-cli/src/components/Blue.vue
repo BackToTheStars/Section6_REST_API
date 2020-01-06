@@ -16,7 +16,6 @@
         created() {
             eventBus.$on('blueTextChanged', data => {
                 this.blueText = data;
-                console.log(this.blueText);
             });
         },
     };
