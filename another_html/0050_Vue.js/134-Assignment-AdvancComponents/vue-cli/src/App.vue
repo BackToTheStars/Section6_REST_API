@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <br>
-                <button class="btn btn-primary" @click="changeBlueText">Load Blue Template</button>
-                <button class="btn btn-success" @click="changeGreenText">Load Green Template</button>
-                <button class="btn btn-danger" @click="changeRedText">Load Red Template</button>
+                <button class="btn btn-primary" @click="selectedComponent='appBlue'">Load Blue Template</button>
+                <button class="btn btn-success" @click="selectedComponent='appGreen'">Load Green Template</button>
+                <button class="btn btn-danger" @click="selectedComponent='appRed'">Load Red Template</button>
                 <hr>
                 <keep-alive>
                     <component :is="selectedComponent"></component>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-    import { eventBus } from '../main.js';
+    import { eventBus } from './main.js';
     import Blue from './components/Blue.vue';
     import Green from './components/Green.vue';
     import Red from './components/Red.vue';
@@ -40,9 +40,7 @@
         },
         data: function() {
             return {
-
                 selectedComponent: 'appRed',
-
                 redText: '',
                 blueText: '',
                 greenText: '',

@@ -13,7 +13,7 @@
             };
         }
     }
-    EventBus.$on('redTextChanged', data => {
+    eventBus.$on('redTextChanged', data => {
         this.redText = data;
     });
 
