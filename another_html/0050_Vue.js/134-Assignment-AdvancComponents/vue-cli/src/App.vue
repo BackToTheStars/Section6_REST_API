@@ -12,7 +12,7 @@
                 <keep-alive>
                     <component :is="selectedComponent"></component>
                 </keep-alive>
-<!--                
+<!--                                                                  Variant using slots         
                 <app-blue>
                     <p slot="blueText">{{ blueText }}</p>
                 </app-blue>
