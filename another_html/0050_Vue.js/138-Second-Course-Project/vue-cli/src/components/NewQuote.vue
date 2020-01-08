@@ -21,7 +21,8 @@
         },
         methods: {
             createNew() {
-                this.$emit('quoteAdded', this.quote);
+                this.$emit('quoteAdded', this.quote);    // emit the event to parent component
+                this.quote = '';
             },
         },
     };
