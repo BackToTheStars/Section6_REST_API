@@ -12,6 +12,7 @@
   "dependencies": {
     "primeicons": "^2.0.0",
     "primevue": "^1.0.0-rc.6",
+    "quill": "^1.3.7",
     "vue": "^2.5.11"
   },
   "browserslist": [

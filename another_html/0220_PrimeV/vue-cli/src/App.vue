@@ -1,9 +1,12 @@
 <template>
-  <div class="row">
-    <div class="col-sm-6">
-      <app-editor>
-        <Editor v-model="text" editorStyle="height: 800px; "/>
-      </app-editor>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <Editor v-model="value" editorStyle="height: 500px;"/>
+      </div>
+      <div class="col">
+        <p>{{ value }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -12,14 +15,14 @@
 import Editor from '../node_modules/primevue/editor';
 
 export default {
-  data () {
+  data: function() {
     return {
-      text: '',
+      value: '',
     };
   },
   components: {
-    appEditor: Editor,
-  }
+    Editor,
+  },
 };
 </script>
 
