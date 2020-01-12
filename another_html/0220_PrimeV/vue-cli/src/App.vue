@@ -13,7 +13,7 @@
       <div class="col-sm-3">
         <p></p>
         <h4>Highlighted</h4>
-        <p>{{ value }}</p>
+        <p>{{ findYellow(value) }}</p>
       </div>
 
 
@@ -41,6 +41,26 @@ export default {
   },
   components: {
     Editor,
+  },
+  
+  methods: {
+
+    findYellow(text) {
+      let quotes = [];
+      let m = 0;
+      let n = 0;
+      let i = 0;
+      let text2 = text;
+      while (m != -1 && n != -1) {
+        m = text2.indexOf("rgb(255, 255, 0)");  console.log('m = ' + m);
+        n = text2.indexOf("</span>"); console.log('n = ' + n);
+        quotes[i] = text.substring(m+19, n);
+        text2 = text2.substring(n+6);
+        i++;
+      };
+      return quotes;
+    },
+
   },
 };
 </script>
