@@ -46,8 +46,16 @@ export default {
 
   methods: {
     findYellow(text) {
-
-      return text;
+      var i = 0;
+      var searchStr = '';
+      var foundPos = [];
+      for (i = 0; i <= text.length; i++) {
+        searchStr = text.substring(i, i+16)
+        if (searchStr == 'rgb(255, 255, 0)') {
+          foundPos.push(i);
+        };
+      };
+      return foundPos;
     },
   },
 };

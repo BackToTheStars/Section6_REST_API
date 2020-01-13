@@ -20,6 +20,7 @@ export default {
       console.log(this.quotes);
       return this.quotes;
     },
+  }
 }
 
 </script>
