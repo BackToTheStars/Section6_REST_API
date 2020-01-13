@@ -2,10 +2,10 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-sm-5">
-        <p></p>
+      <div class="col-sm-6">
+
         <h4>Origin</h4>
-        <Editor v-model="value" editorStyle="height: 600px;"/>      
+        <Editor v-model="value" editorStyle="height: 520px;"/>      
       </div>
 
 
@@ -16,10 +16,9 @@
       </div>
 
 
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <p></p>
         <h4>Comments</h4>
-        <p>{{ value }}</p>
       </div>
     
     
@@ -49,23 +48,24 @@ export default {
       var searchStr2 = '';
       var foundPos = [];
       var quotes = [];
+      
       for (i = 0; i <= text.length; i++) {
-        
         searchStr = text.substring(i, i+16);
         if (searchStr == 'rgb(255, 255, 0)') {
           foundPos.push(i);
         };
-        
         searchStr2 = text.substring(i, i+7);  
         if (searchStr2 == '</span>') {
           foundPos.push(i);
         };
       };
-          for (i=0; i<= foundPos.length; i = i + 2) {
-            if (foundPos[i] && foundPos[i+1]) {
-              quotes.push(text.substring(foundPos[i]+19, foundPos[i+1]));
-            };
-          };
+
+      for (i=0; i<= foundPos.length; i = i + 2) {
+        if (foundPos[i] && foundPos[i+1]) {
+          quotes.push(text.substring(foundPos[i]+19, foundPos[i+1]));
+        };
+      };
+      
       return quotes;
     },
   },
