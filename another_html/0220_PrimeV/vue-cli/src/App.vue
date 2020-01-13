@@ -2,14 +2,14 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <p></p>
         <h4>Origin</h4>
         <Editor v-model="value" editorStyle="height: 600px;"/>      
       </div>
 
 
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <p></p>
         <h4>Highlighted</h4>
         <p>{{ findYellow(value) }}</p>
