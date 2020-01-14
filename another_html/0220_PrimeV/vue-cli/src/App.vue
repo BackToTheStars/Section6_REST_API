@@ -9,17 +9,34 @@
       </div>
 
 
-      <div class="col-sm-3">
-        <p></p>
-        <h4>Highlighted</h4>
+      <div class="col-sm-6">
+        <h4>Analysis</h4>
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Highlighted text</th>
+              <th scope="col">Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ quote1 }}</td>
+              <td>Comment one</td>
+            </tr>
+            <tr>
+              <td>{{ quote2 }}</td>
+              <td>Comment two</td>
+            </tr>
+            <tr>
+              <td>{{ quote3 }}</td>
+              <td>Comment three</td>
+            </tr>
+          </tbody>
+        </table>
+
         <p>{{ findYellow(value) }}</p>
       </div>
 
-
-      <div class="col-sm-3">
-        <p></p>
-        <h4>Comments</h4>
-      </div>
     
     
     </div>  
