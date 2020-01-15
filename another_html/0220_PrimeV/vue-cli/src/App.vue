@@ -85,6 +85,9 @@ export default {
           quotes.push(text.substring(foundPos[i]+19, foundPos[i+1]));
         };
       };
+      this.quote1 = quotes[0];
+      this.qoute2 = quotes[1];
+      this.quote3 = quotes[2];
       
       return quotes;
     },
