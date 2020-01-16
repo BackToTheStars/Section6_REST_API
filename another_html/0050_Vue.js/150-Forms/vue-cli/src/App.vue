@@ -11,7 +11,7 @@
                                 type="text"
                                 id="email"
                                 class="form-control"
-                                v-model="email">   <!-- 2-way binding with email variable -->
+                                v-model="userData.email">   <!-- 2-way binding with email variable -->
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
@@ -102,7 +102,7 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Mail:</p>
+                        <p>E-mail: {{ userData.email }}</p>
                         <p>Password:</p>
                         <p>Age:</p>
                         <p>Message: </p>
@@ -124,7 +124,11 @@
     export default {
         data() {
             return {
-                email: '',
+                userData: {
+                    email: "",
+                    password: "",
+                    age: 0,
+                },
             };
         },
     };
