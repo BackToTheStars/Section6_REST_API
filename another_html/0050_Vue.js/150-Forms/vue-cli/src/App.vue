@@ -18,14 +18,16 @@
                         <input
                                 type="password"
                                 id="password"
-                                class="form-control">
+                                class="form-control"
+                                v-model="userData.password">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
                         <input
                                 type="number"
                                 id="age"
-                                class="form-control">
+                                class="form-control"
+                                v-model="userData.age">
                     </div>
 
                 </div>
@@ -103,8 +105,8 @@
                     </div>
                     <div class="panel-body">
                         <p>E-mail: {{ userData.email }}</p>
-                        <p>Password:</p>
-                        <p>Age:</p>
+                        <p>Password: {{ userData.password }}</p>
+                        <p>Age: {{ userData.age }}</p>
                         <p>Message: </p>
                         <p><strong>Send Mail?</strong></p>
                         <ul>
