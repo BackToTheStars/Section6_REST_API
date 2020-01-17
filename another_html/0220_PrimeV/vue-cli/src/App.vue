@@ -20,15 +20,21 @@
           </thead>
           <tbody>
             <tr>
-              <td>{{ quote1 }}</td>
+              <td>
+                <span style="background-color: yellow">{{ quote1 }}</span>
+              </td>
               <td>Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations</td>
             </tr>
             <tr>
-              <td>{{ quote2 }}</td>
+              <td>
+                <span style="background-color: yellow">{{ quote2 }}</span>
+              </td>
               <td>Despite its age and a number of inaccuracies in specific domains (e.g., mathematics, biology, sociology), the book has lost no momentum in the past years. Among the themes that Lem discusses in the book and that were completely in the realm</td>
             </tr>
             <tr>
-              <td>{{ quote3 }}</td>
+              <td>
+                <span style="background-color: yellow">{{ quote3 }}</span>
+              </td>
               <td>In the preface to the first edition Lem mentions the crucial role of Iosif Shklovsky popular science monograph Вселенная, жизнь, разум (English: Universe, Life, Intelligence, Moscow, USSR Academy of Sciences Publisher, 1962)</td>
             </tr>
           </tbody>
