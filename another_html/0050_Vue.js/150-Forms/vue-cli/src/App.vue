@@ -19,7 +19,7 @@
                                 type="password"
                                 id="password"
                                 class="form-control"
-                                v-model.lazy="userData.password">
+                                v-model.lazy="userData.password"><!-- lazy = update only on change -->
                         <p>{{ userData.password }}</p>
                     </div>
                     <div class="form-group">
@@ -40,7 +40,9 @@
                     <textarea
                             id="message"
                             rows="5"
-                            class="form-control"></textarea>
+                            class="form-control"
+                            v-model="message"></textarea> 
+                            <!-- можно использовать для ввода комментариев к тексту в системе -->
                 </div>
             </div>
             <div class="row">
@@ -132,6 +134,7 @@
                     password: "",
                     age: 0,
                 },
+                message: '',
             };
         },
     };
