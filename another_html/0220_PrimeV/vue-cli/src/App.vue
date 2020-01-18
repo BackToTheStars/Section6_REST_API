@@ -18,7 +18,11 @@
               <th style="width: 60%" scope="col">Comments</th>
             </tr>
           </thead>
+          
           <tbody>
+            
+            <appquotesrow></appquotesrow>
+            
             <tr>
               <td>
                 <span style="background-color: yellow">{{ quote1 }}</span>
@@ -64,7 +68,7 @@ export default {
   },
   components: {
     Editor,
-    QuotesRow,
+    appquotesrow: QuotesRow,
   },
 
   methods: {
