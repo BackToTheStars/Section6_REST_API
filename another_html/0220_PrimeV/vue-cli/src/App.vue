@@ -51,6 +51,7 @@
 <script>
 
 import Editor from '../node_modules/primevue/editor';
+import QuotesRow from './components/QuotesRow.vue';
 
 export default {
   data: function() {
@@ -63,6 +64,7 @@ export default {
   },
   components: {
     Editor,
+    QuotesRow,
   },
 
   methods: {
