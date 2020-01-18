@@ -1,5 +1,36 @@
 
 
+
+
+
+
+
+
+******************   DRAFT VUE COMPONENT  *************************************************
+
+<template>
+    <div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+
+        };
+    },
+};
+</script>
+
+<style>
+</style>
+
+
+********************************************************************
+
+
+
               <th scope="row">1</th>
               <th scope="row">2</th>
               <th scope="row">3</th>
@@ -11,7 +42,7 @@
       </div>
 
 
-
+**********  FUNCTION TO FIND YELLOW HIGHLIGHTING  *****************************************
 
 <template>
 </template>
@@ -40,6 +71,4 @@ export default {
 
 </script>
 
-
-<style>
-</style>
+******************************************************************
