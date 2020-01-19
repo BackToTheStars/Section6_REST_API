@@ -5,7 +5,7 @@
       <div class="col-sm-5">
 
         <h4>Origin</h4>
-        <Editor v-model="value" editorStyle="height: 520px;"/>      
+        <Editor v-model="value" editorStyle="height: 520px;"/>  <!-- здесь проблема с прослушкой --> 
       </div>
 
 
@@ -44,7 +44,7 @@
           </tbody>
         </table>
 
-        <p>{{ findYellow(value) }}</p>
+        <p>{{ findYellow(value) }}</p>   <!-- похоже, эта строка запускает бесконечный цикл -->
 
         <p>{{ highlightedQuotes }}</p>
       </div>
