@@ -5,7 +5,8 @@
       <div class="col-sm-5">
 
         <h4>Origin</h4>
-        <Editor v-model="value" editorStyle="height: 520px;"/>  <!-- здесь проблема с прослушкой --> 
+        <Editor @text-change="txtChangeFunc($event)" editorStyle="height: 520px;"/>  
+                                            <!-- здесь проблема с прослушкой --> 
       </div>
 
 
@@ -44,9 +45,10 @@
           </tbody>
         </table>
 
-        <p>{{ findYellow(value) }}</p>   <!-- похоже, эта строка запускает бесконечный цикл -->
-
         <p>{{ highlightedQuotes }}</p>
+
+        <p>{{ commentsForQuotes }}</p>
+
       </div>
 
     </div>  
@@ -88,14 +90,15 @@ export default {
 
   methods: {
     
-    findYellow(text) {                            // проблема: эта функция запускается бесконечно.
+    txtChangeFunc(event) {                            // проблема: эта функция запускается бесконечно.
 
       var i = 0;
       var searchStr = '';
       var searchStr2 = '';
       var foundPos = [];
       var quotes = [];                            // массив цитат
-      var foundPiece = '';                           
+      var foundPiece = ''; 
+      var text = event.htmlValue;                          
 
       for (i = 0; i <= text.length; i++) {
         searchStr = text.substring(i, i+16);
@@ -120,7 +123,6 @@ export default {
       this.quote2 = quotes[1];
       this.quote3 = quotes[2];
       
-      return quotes;
     },
 
   },
