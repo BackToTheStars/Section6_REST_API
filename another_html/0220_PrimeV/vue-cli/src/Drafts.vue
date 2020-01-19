@@ -4,6 +4,43 @@
 
 
 
+*************************************  TEXTAREA  ************************************
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
+            <label for="message">Message</label><br>
+            <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
+                <textarea
+                    id="message"
+                    rows="5"
+                    class="form-control"
+                    v-model="message"></textarea> 
+                    <!-- можно использовать для ввода комментариев к тексту в системе -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="white-space: pre">Message: {{ message }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+**********************    V-FOR ERROR   ******************************************
+
+
+    <li v-for="item in sendMail" :key="item.id">{{ item }}</li> - for eslint error
+
+    <app-server v-for="server in servers" :server="server" :key="server.id"></app-server>
+        - this corrects eslint error (:key="[name].id")
+
+
 
 
 ******************   DRAFT VUE COMPONENT  *************************************************
@@ -27,13 +64,58 @@ export default {
 </style>
 
 
-********************************************************************
+**************************  BOOTSTRAP TABLE   ******************************************
+
+
+      <div class="col-sm-7">
+        <h4>Analysis</h4>
+        <table class="table table-borderless table-sm">
+          <thead>
+            <tr>
+              <th style="width: 40%" scope="col">Highlighted text</th>
+              <th style="width: 60%" scope="col">Comments</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <appquotesrow></appquotesrow>  <!-- вывод компонента (муж.) QuotesRow -->
+          </tbody>
+
+        </table>
+
+
+
+
+            style="width: 40%" scope="col"
+            style="width: 60%" scope="col"
+            
+            <tr>
+              <td>
+                <span style="background-color: yellow">{{ quote1 }}</span>
+              </td>
+              <td>Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations</td>
+            </tr>
+            <tr>
+              <td>
+                <span style="background-color: yellow">{{ quote2 }}</span>
+              </td>
+              <td>Despite its age and a number of inaccuracies in specific domains (e.g., mathematics, biology, sociology), the book has lost no momentum in the past years. Among the themes that Lem discusses in the book and that were completely in the realm</td>
+            </tr>
+            <tr>
+              <td>
+                <span style="background-color: yellow">{{ quote3 }}</span>
+              </td>
+              <td>In the preface to the first edition Lem mentions the crucial role of Iosif Shklovsky popular science monograph Вселенная, жизнь, разум (English: Universe, Life, Intelligence, Moscow, USSR Academy of Sciences Publisher, 1962)</td>
+            </tr>
+
 
 
 
               <th scope="row">1</th>
               <th scope="row">2</th>
               <th scope="row">3</th>
+
+
 
               
       <div class="col-sm-3">

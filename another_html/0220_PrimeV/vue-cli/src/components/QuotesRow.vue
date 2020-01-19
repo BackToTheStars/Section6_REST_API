@@ -1,12 +1,17 @@
 <template>
-        <tr>
-            <td style="width: 40%" scope="col">
-                <span style="background-color: yellow">{{ highlightedQuotes[0] }}</span>
-            </td>
-            <td style="width: 60%" scope="col">
-                <span>{{ commentsForQuotes[0] }}</span>
-            </td>
-        </tr>
+        <div>
+            <div class="row" v-for="(quote, index) in highlightedQuotes" :key="quote.id">               
+                                                     <!-- выводим строки цитат и комментариев к ним-->
+                <div class="col-4">
+                    <span style="background-color: yellow">{{ quote }}</span>
+                    <p></p>
+                </div>
+                <div class="col-8">
+                    <span>{{ commentsForQuotes[index] }}</span>
+                    <p></p>
+                </div>
+            </div>
+        </div>
 </template>
 
 <script>
@@ -32,4 +37,7 @@ export default {
 </script>
 
 <style>
+#redBorder {
+    border: 1px solid red;
+}
 </style>
