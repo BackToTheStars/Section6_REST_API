@@ -1,7 +1,7 @@
 <template>
         <div>
             <div class="row" v-for="(quote, index) in highlightedQuotes" :key="quote.id">               
-                                                     <!-- выводим строки цитат и комментариев к ним-->
+                                             <!-- выводим цикл - строки цитат, и комментарии к ним-->
                 <div class="col-4">
                     <span style="background-color: yellow">{{ quote }}</span>
                     <p></p>
@@ -10,8 +10,9 @@
                      style="cursor: pointer"
                      @click="commentSelect(index)">
                     
-                    <span v-if="!commentIsText[index]">{{ commentsForQuotes[index] }}</span>
-                          <!-- если кликнули комментарий, то не показываем его-->
+                    <span v-if="!commentInEditorMode[index]">{{ commentsForQuotes[index] }}</span>
+                                                <!-- если кликнули комментарий, то не показываем его-->
+                    <span v-if="commentInEditorMode[index]">Here will come the Editor to edit the comment</span>
                     
                     <p></p>
                 </div>
@@ -28,7 +29,7 @@ export default {
     
     data() {
         return {
-            commentIsText: [],      // массив для хранения какой комментарий показывать, а что нет
+            commentInEditorMode: [],      // массив для хранения какой комментарий показывать, а что нет
             commentIndex: null,     // индекс выбранного комментария
             highlightedQuotes: [],  // массив для хранения цитат
             commentsForQuotes: ['1: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '2: Despite its age and a number of inaccuracies in specific domains (e.g., mathematics, biology, sociology), the book has lost no momentum in the past years. Among the themes that Lem discusses in the book and that were completely in the realm', '3: In the preface to the first edition Lem mentions the crucial role of Iosif Shklovsky popular science monograph Вселенная, жизнь, разум (English: Universe, Life, Intelligence, Moscow, USSR Academy of Sciences Publisher, 1962)', '4: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '5: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '6: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '7: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '8: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '9: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations', '10: Paraphrasing the author, the book tries to "examine the thorns of roses that have not flowered yet" - in other words, to deal with problems of the remote (and in some cases, not so remote) future. The primary question Lem treats in the book is that of civilization in the absence of limitations'],  // массив для хранения комментариев
@@ -36,6 +37,7 @@ export default {
     },
 
     methods: {
+
         commentSelect(index) {
             
             var i = 0;
@@ -44,17 +46,13 @@ export default {
             eventBus.$emit('commentSelected', this.commentIndex);  
                                                 // публикуем в глобальную шину какой комментарий выбран
 
-            for (i=0; i<= this.commentIsText.length; i = i + 1) {
-                console.log(i);
-                this.commentIsText[i] = false;        
+            for (i=0; i<= this.commentInEditorMode.length-1; i = i + 1) {
+                this.commentInEditorMode[i] = false;        
                      // пробегаем по всем комментариям к цитатам, и присваеваем им значение "показывать"
-                console.log(this.commentIsText[i]);
-                if (this.commentIsText.length == 0) {
-                    break;
-                }
             };    
 
-            this.commentIsText[index] = true;  
+            this.commentInEditorMode[index] = true;  
+            console.log('commentSelect: ' + this.commentInEditorMode);
                                             // если кликнули комментарий, то не показываем его как текст
         },
     },
