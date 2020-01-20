@@ -45,4 +45,16 @@ export default {
 #blueBorder {
     border: 1px solid blue;
 }
+
+        /*
+        #quotes {
+            padding-right: 7px !important;
+            padding-left: 7px !important;
+        }
+        #comments {
+            padding-right: 7px !important;
+            padding-left: 7px !important;
+        }
+        */
+
 </style>

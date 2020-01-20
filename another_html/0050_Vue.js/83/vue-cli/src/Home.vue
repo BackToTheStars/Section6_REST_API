@@ -2,7 +2,7 @@
           to be used as a local component 5 times in Home global component -->
 <template>
     <div>
-        <app-server-status v-for="server in 5"></app-server-status>
+        <app-server-status v-for="server in 5" :key="server.id"></app-server-status>
     </div>
 </template>
 <script>

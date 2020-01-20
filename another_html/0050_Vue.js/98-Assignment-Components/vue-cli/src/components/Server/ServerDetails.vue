@@ -21,7 +21,7 @@
             };  
         },
         created() {
-            serverBus.$on('serverSelected', (server) => {
+            serverBus.$on('serverSelected', (server) => {  // слушаем событие шины данных
                 this.server = server;
             });
         },

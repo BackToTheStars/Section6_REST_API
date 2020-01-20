@@ -1,7 +1,64 @@
 
 
+***************************  ШИНА ДАННЫХ : ТОЛЬКО ПЕРЕМЕННАЯ  ***********************
 
+// **********  MAIN.JS
 
+import Vue from 'vue'
+import App from './App.vue'
+
+export const serverBus = new Vue();
+
+new Vue({
+  el: '#app',
+  render: h => h(App),    // ES6 syntax
+});
+
+// **********  ОТПРАВИТЕЛЬ.vue
+
+<templat>
+    <li
+        class="list-group-item"
+        style="cursor: pointer"
+        @click="serverSelected">
+        Server #{{ server.id }}
+    </li>
+</template>
+
+<scrip>
+    import { serverBus } from '../../main.js';
+    
+    export default {
+        props: ['server'],
+        methods: {
+            serverSelected() {
+                serverBus.$emit('serverSelected', this.server);  // id we get as a prop
+            },
+        },
+    }
+</script>
+
+// **********  ПОЛУЧАТЕЛЬ.vue
+
+import { serverBus } from '../../main.js';
+
+export default {
+  data: function() {
+      return {
+          server: null,
+      };  
+  },
+  created() {
+      serverBus.$on('serverSelected', (server) => {         // слушаем событие шины данных
+          this.server = server;
+      });
+  },
+};
+
+*************************************  SCOPED STYLE - LEARN  ************************
+
+<styl scoped>
+</style>
 
 
 *************************************  TEXTAREA  ************************************
@@ -45,12 +102,12 @@
 
 ******************   DRAFT VUE COMPONENT  *************************************************
 
-<template>
+<templat>
     <div>
     </div>
 </template>
 
-<script>
+<scrip>
 export default {
     data() {
         return {
@@ -60,7 +117,7 @@ export default {
 };
 </script>
 
-<style>
+<styl>
 </style>
 
 
@@ -126,10 +183,10 @@ export default {
 
 **********  FUNCTION TO FIND YELLOW HIGHLIGHTING  *****************************************
 
-<template>
+<templat>
 </template>
 
-<script>
+<scrip>
 export default {
   methods: {  
     
