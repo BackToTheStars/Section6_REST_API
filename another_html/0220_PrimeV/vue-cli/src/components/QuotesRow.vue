@@ -10,7 +10,7 @@
                      style="cursor: pointer"
                      @click="commentSelect(index)">
                     
-                    <span v-if="commentIsText[index]==!false">{{ commentsForQuotes[index] }}</span>
+                    <span v-if="!commentIsText[index]">{{ commentsForQuotes[index] }}</span>
                           <!-- если кликнули комментарий, то не показываем его-->
                     
                     <p></p>
