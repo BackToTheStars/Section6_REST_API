@@ -15,11 +15,13 @@
 </template>
 
 <script>
-import { eventBus } from '../main.js';
+
+import { eventBus } from '../main.js';          // импортируем глобальную шину данных
+
 export default {
     created() {
         eventBus.$on('highlightedQuotesChanged', data => {
-            this.highlightedQuotes = data;      // слушаем по глобальной шине массив цитат
+            this.highlightedQuotes = data;      // слушаем по глобальной шине изменения массива цитат
         });
         eventBus.$on('commentsChanged', data => {
             this.commentsForQuotes = data;      // слушаем по глобальной шине массив комментариев
