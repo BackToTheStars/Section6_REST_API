@@ -37,13 +37,25 @@ export default {
 
     methods: {
         commentSelect(index) {
+            
+            var i = 0;
+
             this.commentIndex = index;
             eventBus.$emit('commentSelected', this.commentIndex);  
                                                 // публикуем в глобальную шину какой комментарий выбран
-            console.log(this.commentIsText[index]);
-            this.commentIsText[index] = false;  
+
+            for (i=0; i<= this.commentIsText.length; i = i + 1) {
+                console.log(i);
+                this.commentIsText[i] = false;        
+                     // пробегаем по всем комментариям к цитатам, и присваеваем им значение "показывать"
+                console.log(this.commentIsText[i]);
+                if (this.commentIsText.length == 0) {
+                    break;
+                }
+            };    
+
+            this.commentIsText[index] = true;  
                                             // если кликнули комментарий, то не показываем его как текст
-            console.log(this.commentIsText[index]);
         },
     },
     
