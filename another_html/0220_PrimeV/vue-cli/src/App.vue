@@ -97,14 +97,4 @@ export default {
   padding-right: 6px !important;
 }
 
-#right {                            /* Эксперимент по независимому скроллу правой половины экрана
-    float: left;
-/*  width: 70%;              */
-/*  background: blue;        */
-    height: 100%;
-/*  overflow: auto;          */
-    overflow: auto;
-    box-sizing: border-box;
-/*  padding: 0.5em;          */
-}
 </style>
