@@ -9,7 +9,8 @@
                 <div class="col-8" 
                      style="cursor: pointer"
                      @click="commentSelect(index)">
-                    
+<!--                               !model[i].visible                      -->
+                    <pre> {{highlightedQuotes}}</pre>
                     <span v-if="!commentInEditorMode[index]">{{ commentsForQuotes[index] }}</span>
                                                 <!-- если кликнули комментарий, то не показываем его-->
                     <span v-if="commentInEditorMode[index]">Here will come the Editor to edit the comment</span>
@@ -40,13 +41,11 @@ export default {
 
         commentSelect(index) {
             
-            var i = 0;
-
-            this.commentIndex = index;
+            this.commentIndex = index; // убрать
             eventBus.$emit('commentSelected', this.commentIndex);  
                                                 // публикуем в глобальную шину какой комментарий выбран
 
-            for (i=0; i<= this.commentInEditorMode.length-1; i = i + 1) {
+            for (let i=0; i<= this.commentInEditorMode.length-1; i = i + 1) {
                 this.commentInEditorMode[i] = false;        
                      // пробегаем по всем комментариям к цитатам, и присваеваем им значение "показывать"
             };    
