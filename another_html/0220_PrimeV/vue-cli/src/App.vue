@@ -18,6 +18,8 @@
 
         <p>{{ commentsForQuotes }}</p>
 
+        <p>{{ turn.mainText }}</p>
+
       </div>
 
     </div>  
@@ -41,6 +43,22 @@ export default {
   data: function() {
     return {
       
+      turn: {                     // объект данного хода
+        actions: [                // массив действий
+          {   
+            post: {
+              id: 0,              // commentIndex: null,
+              quote: '',          // highlightedQuotes: [],
+              comment: '',        // commentsForQuotes: [],
+              isVisible: true,    // commentInEditorMode: [],
+            },
+          },
+        ],
+        mainText: 'Paraphrasing the author, the book tries to...', // текст с Editor
+      },
+
+
+
       highlightedQuotes: [],
       commentsForQuotes: [],
 
@@ -63,7 +81,10 @@ export default {
       var foundPos = [];
       var quotes = [];                            // массив цитат
       var foundPiece = ''; 
+
+// операция с turn object
       var text = event.htmlValue;                          
+      this.turn.mainText = event.htmlValue;
 
       for (i = 0; i <= text.length; i++) {
         searchStr = text.substring(i, i+16);

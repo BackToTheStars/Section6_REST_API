@@ -8,13 +8,24 @@ export default {
     data() {
         return {
 
-            turn: {
-                "id": 0,
-                "quote": "ABC",
-                "comment": "ABC",
-                "visible": true,
-            }
+
+            turn: {                             // объект данного хода
+                actions: [                      // массив действий
+                    {   
+                        post: {
+                            id: 0,              // commentIndex: null,
+                            quote: '',          // highlightedQuotes: [],
+                            comment: '',        // commentsForQuotes: [],
+                            isVisible: true,    // commentInEditorMode: [],
+                        },
+                    },
+                ],
+                mainText: 'Paraphrasing the author, the book tries to...', // текст с Editor
+            },
  
+
+
+
         };
     },
 };
