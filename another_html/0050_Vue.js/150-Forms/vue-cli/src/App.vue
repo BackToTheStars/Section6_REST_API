@@ -11,7 +11,12 @@
                                 type="text"
                                 id="email"
                                 class="form-control"
-                                v-model="userData.email">   <!-- 2-way binding with email variable -->
+                                :value="userData.email"
+                                @input="userData.email = $event.target.value">
+        <!--                    same as v-model                                     -->       
+        <!--                    v-model="userData.email"   !--   2-way binding with email variable -->
+        
+
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
