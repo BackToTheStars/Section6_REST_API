@@ -73,7 +73,7 @@ export default {
 
   methods: {
     
-    txtChangeFunc(event) {                            // проблема: эта функция запускается бесконечно.
+    txtChangeFunc(event) {
 
       var i = 0;
       var searchStr = '';

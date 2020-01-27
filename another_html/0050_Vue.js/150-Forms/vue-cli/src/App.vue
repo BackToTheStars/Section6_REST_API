@@ -89,8 +89,13 @@
                     <label for="priority">Priority</label>
                     <select
                             id="priority"
-                            class="form-control">
-                        <option></option>
+                            class="form-control"
+                            v-model="selectedPriority">  
+                                           <!-- binds the choice, will overwrite "selected" -->
+                        <option v-for="priority in priorities"
+                                :key="priority.id"
+                                :selected="priority=='Medium'"> {{ priority }}</option>
+                                               <!-- :selected is setting the default choice -->
                     </select>
                 </div>
             </div>
@@ -120,7 +125,7 @@
                             <li v-for="item in sendMail" :key="item.id">{{ item }}</li>
                         </ul>
                         <p>Gender: {{ gender }}</p>
-                        <p>Priority:</p>
+                        <p>Priority: {{ selectedPriority }}</p>
                         <p>Switched:</p>
                     </div>
                 </div>
@@ -144,6 +149,8 @@
                 
                 sendMail: [],
                 gender: 'Male',
+                priorities: ['High', 'Medium', 'Low'],
+                selectedPriority: 'High',
             };
         },
     };
