@@ -9,6 +9,30 @@
                     <!-- Mail -->
                     <!-- Password -->
                     <!-- Store Data? Yes/No -->
+                    <h2>Signup Form</h2>
+                    <hr>
+                     <div class="form-group">
+                        <label for="firsttname">First Name:</label>
+                        <input
+                                type="text"
+                                id="firstname"
+                                class="form-control"
+                                :value="userData.name"
+                                @input="userData.name = $event.target.value">
+        <!--                    same as v-model                                     -->       
+        <!--                    v-model="userData.email"   !--   2-way binding with email variable -->
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Mail:</label>
+                        <input
+                                type="text"
+                                id="email"
+                                class="form-control"
+                                v-model="userData.email">
+                    </div>
+
+
 
                     <!-- Exercise 2 -->
                     <!-- Only display the Form if it has NOT been submitted -->
@@ -28,8 +52,8 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Full Name: </p>
-                        <p>Mail: </p>
+                        <p>Full Name: {{ userData.name }}</p>
+                        <p>Mail: {{ userData.email }}</p>
                         <p>Password: </p>
                         <p>Store in Database?: </p>
                     </div>
@@ -41,7 +65,15 @@
 
 <script>
     export default {
-    }
+        data() {
+            return {
+                userData: {
+                    email: '',
+                    name: '',
+                }
+            };
+        },
+    };
 </script>
 
 <style>
