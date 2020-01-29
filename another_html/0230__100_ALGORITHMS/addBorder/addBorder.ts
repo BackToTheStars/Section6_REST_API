@@ -14,3 +14,10 @@ function addBorder(picture: string[]): any {
 };
 
 console.log(addBorder(["abc", "ded"]));
+
+
+
+
+
+
+
