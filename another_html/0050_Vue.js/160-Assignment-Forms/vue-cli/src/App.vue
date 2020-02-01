@@ -31,7 +31,6 @@
                                 class="form-control"
                                 v-model="userData.lastName">
                     </div>
-
                     <div class="form-group">
                         <label for="email">E-mail:</label>
                         <input
@@ -69,9 +68,9 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Full Name: {{ userData.name }}</p>
+                        <p>Full Name: {{ userData.name }} {{ userData.lastName }}</p>
                         <p>Mail: {{ userData.email }}</p>
-                        <p>Password: </p>
+                        <p>Password: {{ userData.password }}</p>
                         <p>Store in Database?: </p>
                     </div>
                 </div>
