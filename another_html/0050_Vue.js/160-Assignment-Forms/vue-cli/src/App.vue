@@ -19,17 +19,34 @@
                                 class="form-control"
                                 :value="userData.name"
                                 @input="userData.name = $event.target.value">
-        <!--                    same as v-model                                     -->       
-        <!--                    v-model="userData.email"   !--   2-way binding with email variable -->
-                    </div>
+        <!-- same as v-model  -->       
+        <!-- v-model="userData.email"   2-way binding with email variable -->
                     
+                    </div>
+                        <div class="form-group">
+                        <label for="lasttname">Last Name:</label>
+                        <input
+                                type="text"
+                                id="lasttname"
+                                class="form-control"
+                                v-model="userData.lastName">
+                    </div>
+
                     <div class="form-group">
-                        <label for="email">Mail:</label>
+                        <label for="email">E-mail:</label>
                         <input
                                 type="text"
                                 id="email"
                                 class="form-control"
                                 v-model="userData.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input
+                                type="text"
+                                id="password"
+                                class="form-control"
+                                v-model="userData.password">
                     </div>
 
 
@@ -70,6 +87,8 @@
                 userData: {
                     email: '',
                     name: '',
+                    lastName: '',
+                    password: '',
                 }
             };
         },
