@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <form>
+        <form v-show="formIsShown">
+            <h2 class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">Signup Form</h2>
+            <hr class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <!-- Exercise 1 -->
@@ -9,8 +11,6 @@
                     <!-- Mail -->
                     <!-- Password -->
                     <!-- Store Data? Yes/No -->
-                    <h2>Signup Form</h2>
-                    <hr>
                      <div class="form-group">
                         <label for="firsttname">First Name:</label>
                         <input
@@ -78,8 +78,11 @@
                 </div>
             </div>
         </form>
+        <button @click="submitForm"
+                class = "col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                Submit Form</button>
         <hr>
-        <div class="row">
+        <div class="row" v-show="!formIsShown">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -107,8 +110,15 @@
                     lastName: '',
                     password: '',
                     storeInDatabase: '',
-                }
+                },
+              formIsShown: true,
             };
+        },
+        methods: {
+          submitForm() {
+            this.formIsShown = false;
+            return this.formIsShown;
+          },
         },
     };
 </script>
