@@ -48,7 +48,7 @@
                                 v-model="userData.password">
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
+                        <div class="col-xs-12 col-sm-8 col-md-6 form-group">
                         <label for="password">Store in database?</label>
                             <label for="Yes">
                                 <input
