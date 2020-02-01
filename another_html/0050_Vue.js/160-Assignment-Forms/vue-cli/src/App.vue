@@ -47,7 +47,25 @@
                                 class="form-control"
                                 v-model="userData.password">
                     </div>
-
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
+                        <label for="password">Store in database?</label>
+                            <label for="Yes">
+                                <input
+                                    type="radio"
+                                    id="yes"
+                                    value="Yes"
+                                    v-model="userData.storeInDatabase"> Yes
+                            </label>
+                            <label for="No">
+                                <input
+                                    type="radio"
+                                    id="no"
+                                    value="No"
+                                    v-model="userData.storeInDatabase"> No
+                            </label>
+                        </div>
+                    </div>
 
 
                     <!-- Exercise 2 -->
@@ -71,7 +89,7 @@
                         <p>Full Name: {{ userData.name }} {{ userData.lastName }}</p>
                         <p>Mail: {{ userData.email }}</p>
                         <p>Password: {{ userData.password }}</p>
-                        <p>Store in Database?: </p>
+                        <p>Store in Database?: {{ userData.storeInDatabase }}</p>
                     </div>
                 </div>
             </div>
@@ -88,6 +106,7 @@
                     name: '',
                     lastName: '',
                     password: '',
+                    storeInDatabase: '',
                 }
             };
         },
