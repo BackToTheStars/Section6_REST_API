@@ -62,11 +62,9 @@ console.log(addBorder(["abc", "ded"]));
 // Дано двузначное число. Вывести сумму его цифр. 
 
 function add3 (x: any): number {
-  return x.toString().split('').reduce((a:string, b:string) => {
-    return parseInt(a) + parseInt(b);
-  });
+  return x.toString().split('').reduce((a:string, b:string) => parseInt(a) + parseInt(b));
 }
-
+                                    // arrow function notation, arguments and return
 console.log(add3(86))
 
 
