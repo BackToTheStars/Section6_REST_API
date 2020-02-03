@@ -58,6 +58,15 @@ function addBorder(picture: string[]): any {
 
 console.log(addBorder(["abc", "ded"]));
 
+// 4 -----------------------------------------------------------------------------------------
+// Дано двузначное число. Вывести сумму его цифр. 
 
+function add3 (x: any): number {
+  return x.toString().split('').reduce((a:string, b:string) => {
+    return parseInt(a) + parseInt(b);
+  });
+}
+
+console.log(add3(86))
 
 

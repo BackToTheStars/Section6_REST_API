@@ -4,8 +4,4 @@ function add (x: any): number {
   });
 }
 
-
-
-
-
 console.log(add(45))
