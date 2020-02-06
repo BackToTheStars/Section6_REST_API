@@ -65,6 +65,7 @@ function add3 (x: any): number {
   return x.toString().split('').reduce((a:string, b:string) => parseInt(a) + parseInt(b));
 }
                                     // arrow function notation, arguments and return
+                                    // scope of "this" would also change with arrow notation
 console.log(add3(86))
 
 
