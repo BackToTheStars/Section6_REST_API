@@ -153,10 +153,11 @@ export default {
     },
 
     saveComments(i, j) {
+      console.log('fired');
       this.turn.actions[i].editorIsVisible = false;
-      this.turn.actions[i].garbage[j] = " ";
-
-//      this.turn.actions[i].comments.push(this.turn.actions[i].temporaryText);
+      console.log('i=' + i + ', j=' + j);
+//      this.turn.actions[i].garbage.push(" ");
+      this.turn.actions[i].comments.push(this.turn.actions[i].temporaryText);
                                 // переписать временный текст для цитаты в массив комментариев 
 //      this.turn.actions[i].temporaryText = "";  // опустошить временный текст цитаты
 //      this.turn.actions[i].editorIsVisible = !this.turn.actions[i].editorIsVisible
