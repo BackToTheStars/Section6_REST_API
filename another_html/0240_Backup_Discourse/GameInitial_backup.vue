@@ -48,7 +48,7 @@
           <div id="commentsColumn" class="col-sm-7">
             <div v-for="(comment, j) in action.comments" v-bind:key="j">
               <button v-if="!action.editorIsVisible" @click="action.editorIsVisible = !action.editorIsVisible">Comment</button>            
-              <button v-if="action.editorIsVisible" @click="saveComments(i, j)">Done</button>   
+              <button v-if="action.editorIsVisible" @click="saveComments(i)">Done</button>   
 <!--          <p>{{ action }}</p>                     -->
               
               <div>  
@@ -60,11 +60,11 @@
                     </span>
                   </template>
                 </Editor>
-                <p v-if="!action.editorIsVisible" v-html="action.comment"></p>
+                <p v-if="!action.editorIsVisible" v-html="action.comments[j]"></p>
               </div>
 
-              <p>Comm: {{ action.comments }}</p>
-              <p>Temp: {{ action.temporaryText }}</p>
+ <!--             <p>Comm: {{ action.comments }}</p>        -->
+              <p>Temp: {{ action.temporaryText }}</p>  
 
             </div>
           </div>
@@ -107,7 +107,6 @@ export default {
             editorIsVisible: false,
             comments: [],
             temporaryText: "",
-            garbage: [],
           }
         ],
         mainText:
@@ -152,16 +151,18 @@ export default {
       }
     },
 
-    saveComments(i, j) {
-      console.log('fired');
-      this.turn.actions[i].editorIsVisible = false;
-      console.log('i=' + i + ', j=' + j);
-//      this.turn.actions[i].garbage.push(" ");
+    saveComments(i) {
+//      this.turn.actions[i].editorIsVisible = false;
+      for (let j = 0; j < this.turn.actions[i].comments.length; j++) { // убираем мусор из массива
+        console.log(j);
+        if (this.turn.actions[i].comments[j] == '') {           // комментариев
+            this.turn.actions[i].comments.splice(j, 1);
+        }
+      }
       this.turn.actions[i].comments.push(this.turn.actions[i].temporaryText);
                                 // переписать временный текст для цитаты в массив комментариев 
-//      this.turn.actions[i].temporaryText = "";  // опустошить временный текст цитаты
-//      this.turn.actions[i].editorIsVisible = !this.turn.actions[i].editorIsVisible
-      return 0;
+      this.turn.actions[i].temporaryText = "";  // опустошить временный текст цитаты
+      this.turn.actions[i].editorIsVisible = !this.turn.actions[i].editorIsVisible;
     }
     
 	},
