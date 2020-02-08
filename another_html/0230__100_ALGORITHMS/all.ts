@@ -105,7 +105,9 @@ function allLongestStrings(inputArray: string[]): string[] {
 //  for (let i = 0; i < inputArray.length; i++) {
   inputArray.forEach((word: string) => {
     if (word.length == longer.length) {
+      console.log(word)
       result.push(word);
+      console.log(result);
     };
   });  
 
@@ -113,3 +115,30 @@ function allLongestStrings(inputArray: string[]): string[] {
 };
 
 console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
+
+// 7 -----------------------------------------------------------------------------------------
+// Дан массив из чисел. Вывести true, если можно убрать ноль или один элемент, и получившийся массив будет возрастающим.
+// Вывести false, если этого сделать нельзя.
+
+function almostIncreasingSequence(sequence: number[]): boolean {
+  let result = true;
+  for (let i = 0; i < sequence.length; i++) {
+    let array = sequence;
+    console.log(array);
+    array.splice(i, 1);
+    console.log(array);
+    for (let j = 1; j < array.length - 1; j++) {
+      let check = array[j] < array[j + 1] ? true : false;
+      console.log(check);
+      if (check == false) {
+        result = false;
+      };
+    };
+
+  };
+
+  return result; 
+};
+
+console.log(almostIncreasingSequence([1, 3, 2, 1])) 
+//console.log(almostIncreasingSequence([1, 3, 2])) 
