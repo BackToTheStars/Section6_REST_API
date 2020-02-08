@@ -69,3 +69,47 @@ function add3 (x: any): number {
 console.log(add3(86))
 
 
+
+// 5 -----------------------------------------------------------------------------------------
+// Дан массив. Вывести максимальную сумму его соседних чисел.
+
+function adjacentElementsProduct(inputArray: number[]): number {
+
+    let max = inputArray[0] * inputArray[1];
+    console.log(max);
+  
+  for (let i=1; i < inputArray.length-1; i++) {
+    let sum = inputArray[i] * inputArray[i+1];
+    console.log(sum);
+    
+    max = max < sum ? sum : max;
+  }
+
+  return max;
+}
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]))
+
+// 6 -----------------------------------------------------------------------------------------
+// Дан массив из строк. Вывести массив, состоящий из его самых длинных строк.
+
+function allLongestStrings(inputArray: string[]): string[] {
+  let result = [];
+  let longer = '';
+  
+//  for (let i = 0; i < inputArray.length; i++) {
+  inputArray.forEach((word: string) => {                   // сделал ошибку for вместо .forEach
+    longer = longer.length < word.length ? word : longer;
+    console.log(longer);
+  })
+
+//  for (let i = 0; i < inputArray.length; i++) {
+  inputArray.forEach((word: string) => {
+    if (word.length == longer.length) {
+      result.push(word);
+    };
+  });  
+
+  return result;
+};
+
+console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
