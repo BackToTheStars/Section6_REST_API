@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Draggable Panels</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body onresize="ResetColumnSizes()">
+  <div id="page" onmouseup="EndDrag()" onmousemove="OnDrag(event)">
+		<div id="header">
+			Header
+		</div>
+		<div id="leftcol">
+  		Left Col
+		</div>
+		<div id="leftdragbar" onmousedown="StartLeftDrag()"></div>
+		<div id="tabs">
+			Tabs
+		</div>
+		<div id="tabpages">
+			Tab Pages
+		</div>
+		<div id="rightdragbar" onmousedown="StartRightDrag()"></div>
+		<div id="rightcol">
+			Rightcol
+		</div>
+		<div id="footer">
+			Footer
+		</div>
+	</div>
+</body>
