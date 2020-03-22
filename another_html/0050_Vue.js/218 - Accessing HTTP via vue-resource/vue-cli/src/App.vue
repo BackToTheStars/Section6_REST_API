@@ -26,7 +26,7 @@
           <br><br>
           
           <ul class="list-group">
-            <li class="list-group-item" v-for="t in turns">{{ t.user }} - {{ t.text }}</li>
+            <li class="list-group-item" v-for="t in turns" :key="t.id">{{ t.user }} - {{ t.text }}</li>
           </ul>
 
       </div>
@@ -77,7 +77,7 @@
 
 
   //  :key="t.id"
-  
+
 </script>
 
 <style>
