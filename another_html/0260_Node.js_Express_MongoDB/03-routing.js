@@ -38,10 +38,10 @@ const server = http.createServer((req, res) => {
 
   // OVERVIEW PAGE
 
-  if (pathName === '/' || pathName === '/overview') {   // Routing
+  if (pathName === '/' || pathName === '/overview') {   // Routing to different adresses
     res.writeHead(200, {'Content-Type': 'text/html'});
 
-    const cardsHtml = dataObj.map(el => replaceTemplate(tempCard, el)).join('');
+    const cardsHtml = dataObj.map(el => replaceTemplate(tempCard, el)).join(''); // map [] "dataObj" to [] "cardsHtml" & join it to a string
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
     res.end(output);
 
