@@ -33,26 +33,33 @@ const dataObj = JSON.parse(data);   // Loads once
 
 
 const server = http.createServer((req, res) => {
-  console.log(req.url);
-  const pathName = req.url;
+//  console.log(req.url);
+//  console.log(url.parse(req.url, true));  // this will show the query object
+  
+  const { query, pathname } = url.parse(req.url, true);
 
   // OVERVIEW PAGE
 
-  if (pathName === '/' || pathName === '/overview') {   // Routing to different adresses
+  if (pathname === '/' || pathname === '/overview') {   // Routing to different adresses
     res.writeHead(200, {'Content-Type': 'text/html'});
 
     const cardsHtml = dataObj.map(el => replaceTemplate(tempCard, el)).join(''); // map [] "dataObj" to [] "cardsHtml" & join it to a string
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
-    res.end(output);
+    res.end(output);                                    // возвращает изменённую html-страницу
 
   // PRODUCT PAGE  
 
-  } else if (pathName === '/product') {
-    res.end('This is the PRODUCT');
-
+  } else if (pathname === '/product') {
+    console.log(query);
+    console.log(pathname);
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    const product = dataObj[query.id];
+    const output = replaceTemplate(tempProduct, product);
+    // res.end('This is the PRODUCT');
+    res.end(output);
   // API
 
-  } else if (pathName === '/api') {
+  } else if (pathname === '/api') {
 
     res.writeHead(200, {
       'Content-Type': 'application/json'    // Header for JSON
