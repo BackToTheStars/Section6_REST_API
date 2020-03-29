@@ -1,14 +1,26 @@
-
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
-
-const replaceTemplate = require('./03-routing/modules/replaceTemplate'); // module import from a file, we give it the same name as before
 
 //ctrl-D - select all "..."
 
 
 // SERVER
+
+const replaceTemplate = (temp, product) => {
+  let output = temp.replace(/{%PRODUCTNAME%}/g, product.productName);
+  output = output.replace(/{%IMAGE%}/g, product.image);
+  output = output.replace(/{%PRICE%}/g, product.price);
+  output = output.replace(/{%FROM%}/g, product.from);
+  output = output.replace(/{%NUTRIENTS%}/g, product.nutrients);
+  output = output.replace(/{%QUANTITY%}/g, product.quantity);
+  output = output.replace(/{%DESCRIPTION%}/g, product.description);
+  output = output.replace(/{%ID%}/g, product.id);
+
+  if (!product.organic) output = output.replace(/{%NOT_ORGANIC%}/g, 'not-organic');
+  return output;
+
+}
 
 const tempOverview = fs.readFileSync(`${__dirname}/03-routing/template-overview.html`, 'utf8');
 const tempCard = fs.readFileSync(`${__dirname}/03-routing/template-card.html`, 'utf8');
