@@ -1,11 +1,14 @@
 {
   "firstName": "The Death of Globalization? Get Real",
   "secondName": "Geopolitical realism, in decline since the Cold War, is having a comeback. It shouldn’t be.",
-  "by": "Hal Brands",
+  "author": "Hal Brands",
   "dateTime": "March 24, 2020, 6:00 AM PDT",
   "venue": "Bloomberg",
 
-  "quotes": ["Geopolitical realism", "Cold War", "Thucydides", "vicious international insecurity", "affirmed that concept’s underlying logic", "tend to their own needs", "Germany", "chose, understandably, to keep badly needed medical supplies for themselves", "Beijing", "use the world’s distress to enhance its geopolitical position", "coronavirus originated in China", "tightly integrated supply chains may leave them dependent on rivals", "what kind of government a country has matters enormously", "Iran has become a coronavirus disaster zone", "commitment to rapidly disseminating reliable information", "which system handles shocks better", "using the G-7, G-20 and other international organizations", "requires countries to look past short-term calculations of parochial advantage and go in search of a larger global good", "foreign-policy analyst Kori Schake", "the Atlantic", "America’s traditional role as global coordinator of collective action", "it may well undermine America’s global influence", "reputation for relatively enlightened leadership"],
+  "quotes": ["Geopolitical realism", "Cold War", {"quote": "Thucydides", "link": "https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D0%BA%D0%B8%D0%B4%D0%B8%D0%B4", "comment": "Фукиди́д (др.-греч. Θουκυδίδης, ок. 460 — ок. 400 до н. э.) — крупнейший древнегреческий историк, основатель исторической науки, автор «Истории Пелопоннесской войны»."}, "vicious international insecurity", "affirmed that concept’s underlying logic", "tend to their own needs", "Germany", "chose, understandably, to keep badly needed medical supplies for themselves", "Beijing", "use the world’s distress to enhance its geopolitical position", "coronavirus originated in China", "tightly integrated supply chains may leave them dependent on rivals", "what kind of government a country has matters enormously", "Iran has become a coronavirus disaster zone", "commitment to rapidly disseminating reliable information", "which system handles shocks better", "using the G-7, G-20 and other international organizations", "requires countries to look past short-term calculations of parochial advantage and go in search of a larger global good", "foreign-policy analyst Kori Schake", "the Atlantic", "America’s traditional role as global coordinator of collective action", "it may well undermine America’s global influence", "reputation for relatively enlightened leadership"],
+
+  "openingComment": "",
+  "closingComment": "",
 
   "classes": {"countries": ["Germany, China, Iran, Italy, USA"], "phenomena": ["Coronavirus"], "threats": ["damage to supply chains", "medical supplies shortage", "pandemic", "biological weapon"], "projects": ["World government", "Mass vaccination"], "organizations": ["G-7", "G-20"], "persons": ["Hal Brands", "Tobin Harshaw", "Donald Trump", "Kori Schake"], "media": ["the Atlantic", "Bloomberg"], "concepts": ["Geopolitical realism", "America’s global influence", "Enlightened leadership"]},
 
