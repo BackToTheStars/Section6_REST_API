@@ -11,6 +11,8 @@ const replaceTemplate = (template, turn) => {
   let output = template.replace(/{%TEXT%}/g, turn.text);
   output = output.replace(/{%QUOTES%}/g, turn.quotes);
   output = output.replace(/{%COMMENTS%}/g, turn.classes);
+  output = output.replace(/{%TITLE%}/g, turn.firstName);
+  output = output.replace(/{%SECONDTITLE%}/g, turn.secondName);
   return output;
 }
 
