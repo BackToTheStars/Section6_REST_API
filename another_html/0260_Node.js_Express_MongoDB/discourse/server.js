@@ -7,9 +7,11 @@ const url = require('url');
 
 // SERVER
 
-const replaceTemplate = (template, source) => {
-  let output = template.replace(/{%sourceNAME%}/g, source.sourceName);
-  output = output.replace(/{%IMAGE%}/g, source.image);
+const replaceTemplate = (template, turn) => {
+  let output = template.replace(/{%TEXT%}/g, turn.text);
+  output = output.replace(/{%QUOTES%}/g, turn.quotes);
+  output = output.replace(/{%COMMENTS%}/g, turn.classes);
+  console.log(output);
 }
 
 const tempTurn = fs.readFileSync(`${__dirname}/template-turn.html`, 'utf8');
@@ -32,11 +34,10 @@ const server = http.createServer((req, res) => {
   // TURN PAGE  
 
   } else if (pathname === '/turn') {
-    console.log(query);
-    console.log(pathname);
     res.writeHead(200, {'Content-Type': 'text/html'});
-    const turnNumber = dataObj[query.id];                  // http://127.0.0.1:8000/turn?id=0   = dataObj[0]
-    const output = replaceTemplate(tempTurn, turnNumber);  // tempTurn мы загрузили из файла template-turn.html 
+    const turn = (dataObj[query.id]);                // http://127.0.0.1:8000/turn?id=0   = dataObj[0]
+    //console.log(dataObj[query.id].text);
+    const output = replaceTemplate(tempTurn, turn);  // tempTurn мы загрузили из файла template-turn.html, turnNumber = 0 
     res.end(output);
   
     // API
