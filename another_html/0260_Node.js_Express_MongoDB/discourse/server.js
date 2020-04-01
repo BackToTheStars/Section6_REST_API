@@ -7,33 +7,16 @@ const url = require('url');
 
 // SERVER
 
-const replaceTemplate = (temp, product) => {
-  let output = temp.replace(/{%PRODUCTNAME%}/g, product.productName);
-  output = output.replace(/{%IMAGE%}/g, product.image);
-  output = output.replace(/{%PRICE%}/g, product.price);
-  output = output.replace(/{%FROM%}/g, product.from);
-  output = output.replace(/{%NUTRIENTS%}/g, product.nutrients);
-  output = output.replace(/{%QUANTITY%}/g, product.quantity);
-  output = output.replace(/{%DESCRIPTION%}/g, product.description);
-  output = output.replace(/{%ID%}/g, product.id);
-
-  if (!product.organic) output = output.replace(/{%NOT_ORGANIC%}/g, 'not-organic');
-  return output;
-
+const replaceTemplate = (template, source) => {
+  let output = template.replace(/{%sourceNAME%}/g, source.sourceName);
+  output = output.replace(/{%IMAGE%}/g, source.image);
 }
 
-const tempOverview = fs.readFileSync(`${__dirname}/03-routing/template-overview.html`, 'utf8');
-const tempCard = fs.readFileSync(`${__dirname}/03-routing/template-card.html`, 'utf8');
-const tempProduct = fs.readFileSync(`${__dirname}/03-routing/template-product.html`, 'utf8');
-
-const data = fs.readFileSync(`${__dirname}/03-routing/data.json`, 'utf8');
+const tempTurn = fs.readFileSync(`${__dirname}/template-turn.html`, 'utf8');
+const data = fs.readFileSync(`${__dirname}/data.json`, 'utf8');
 const dataObj = JSON.parse(data);   // Loads once
 
-
-
 const server = http.createServer((req, res) => {
-//  console.log(req.url);
-//  console.log(url.parse(req.url, true));  // this will show the query object
   
   const { query, pathname } = url.parse(req.url, true);
 
@@ -44,19 +27,19 @@ const server = http.createServer((req, res) => {
 
     const cardsHtml = dataObj.map(el => replaceTemplate(tempCard, el)).join(''); // map [] "dataObj" to [] "cardsHtml" & join it to a string
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
-    res.end(output);                                    // возвращает изменённую html-страницу
+    res.end(output);                                                             // возвращает изменённую html-страницу
 
-  // PRODUCT PAGE  
+  // TURN PAGE  
 
-  } else if (pathname === '/product') {
+  } else if (pathname === '/turn') {
     console.log(query);
     console.log(pathname);
     res.writeHead(200, {'Content-Type': 'text/html'});
-    const product = dataObj[query.id];
-    const output = replaceTemplate(tempProduct, product);
-    // res.end('This is the PRODUCT');
+    const turnNumber = dataObj[query.id];                  // http://127.0.0.1:8000/turn?id=0   = dataObj[0]
+    const output = replaceTemplate(tempTurn, turnNumber);  // tempTurn мы загрузили из файла template-turn.html 
     res.end(output);
-  // API
+  
+    // API
 
   } else if (pathname === '/api') {
 

@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
     console.log(query);
     console.log(pathname);
     res.writeHead(200, {'Content-Type': 'text/html'});
-    const product = dataObj[query.id];
+    const product = dataObj[query.id];                  
     const output = replaceTemplate(tempProduct, product);
     // res.end('This is the PRODUCT');
     res.end(output);
