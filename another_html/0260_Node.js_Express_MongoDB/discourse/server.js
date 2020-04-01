@@ -11,7 +11,7 @@ const replaceTemplate = (template, turn) => {
   let output = template.replace(/{%TEXT%}/g, turn.text);
   output = output.replace(/{%QUOTES%}/g, turn.quotes);
   output = output.replace(/{%COMMENTS%}/g, turn.classes);
-  console.log(output);
+  return output;
 }
 
 const tempTurn = fs.readFileSync(`${__dirname}/template-turn.html`, 'utf8');
