@@ -17,6 +17,7 @@
         font-family: 'Crimson Text', serif;
         font-family: 'Oswald', sans-serif;
         font-size: 330%;
+        margin-top: 10px;
         margin-bottom: 15px;
       }      
       
@@ -44,15 +45,18 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col col-xl-5">
+        <div class="col col-xl-6">
           <h1>{%TITLE%}</h1>
           <h2>{%SECONDTITLE%}</h3>
-          <p>{%TEXT%}</p>
+            <div>
+              {%TEXT_PIECES%}
+            </div>
+          
         </div>
         <div class="col col-xl-4">
           <p>{%QUOTES%}</p>
         </div>
-        <div class="col col-xl-3">
+        <div class="col col-xl-2">
           <p>{%COMMENTS%}</p>
         </div>
       </div>
