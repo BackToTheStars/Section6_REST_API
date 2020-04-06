@@ -3,9 +3,14 @@ const fs = require('fs');
 const http = require('http');
 const url = require('url');
 
+const express = require('express');
+const app = express();
+
 //ctrl-D - select all "..."
 
 // SERVER
+
+app.use(express.static("/public"));
 
 const replaceTemplate = (template, turn) => {
   let output = template.replace(/{%QUOTES%}/g, turn.quotes);
