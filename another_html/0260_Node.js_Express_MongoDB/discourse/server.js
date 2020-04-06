@@ -12,6 +12,10 @@ const replaceTemplate = (template, turn) => {
   output = output.replace(/{%COMMENTS%}/g, turn.classes);
   output = output.replace(/{%TITLE%}/g, turn.firstName);
   output = output.replace(/{%SECONDTITLE%}/g, turn.secondName);
+  output = output.replace(/{%IMAGE%}/g, turn.imageLink)
+  output = output.replace(/{%IMAGEDESCRIPTION%}/g, turn.imageDescription)
+  output = output.replace(/{%AUTHOR%}/g, turn.author)
+
   return output;
 };
 
@@ -22,6 +26,8 @@ const replaceText = (template, text) => {
 
 const tempTurn = fs.readFileSync(`${__dirname}/template-turn.html`, 'utf8');
 const tempTextPieces = fs.readFileSync(`${__dirname}/template-text-pieces.html`, 'utf8');
+const tempQuotePieces = fs.readFileSync(`${__dirname}/template-quotes-pieces.html`, 'utf8');
+
 const data = fs.readFileSync(`${__dirname}/data.json`, 'utf8');
 const dataObj = JSON.parse(data); // Loads once
 
@@ -48,8 +54,11 @@ const server = http.createServer((req, res) => {
     //console.log(dataObj[query.id].text);
     let output = replaceTemplate(tempTurn, turn); // tempTurn мы загрузили из файла template-turn.html, turnNumber = 0
     
-    const textHtml = dataObj[query.id].text.map(el => replaceText(tempTextPieces, el)).join('');
+    let textHtml = dataObj[query.id].text.map(el => replaceText(tempTextPieces, el)).join('');
     output = output.replace('{%TEXT_PIECES%}', textHtml);
+
+    textHtml = dataObj[query.id].quotes.map(el => replaceText(tempQuotePieces, el)).join('');
+    output = output.replace('{%QUOTE_PIECES%}', textHtml);
 
     res.end(output);                                    // возвращает изменённую html-страницу
 

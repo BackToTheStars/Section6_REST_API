@@ -28,16 +28,39 @@
         font-family: 'Rubik', sans-serif;
         font-family: 'Muli', sans-serif;
         font-size: 220%;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
 
       p {
+        position: relative;
         font-family: 'PT Serif', serif;
         font-family: 'Crimson Text', serif;
         font-size: 190%;
         text-align: left;
         line-height: 120%;
       }
+      .author {
+        float: left;
+        margin-left: 15px;
+      }
+      img {
+        max-width: 60%;
+        border-radius: 12px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+      }
+      .quotes {
+        margin-right: 15px;
+        margin-left: 15px;
+        font-family: 'PT Serif', serif;
+        font-family: 'Crimson Text', serif;
+        font-size: 190%;
+        text-align: left;
+        line-height: 120%;
+        margin-bottom: 15px;
+      }
+
+
     </style>
 
   </head>
@@ -48,17 +71,24 @@
         <div class="col col-xl-6">
           <h1>{%TITLE%}</h1>
           <h2>{%SECONDTITLE%}</h3>
+          <div class="row">  
+            <p class="author">By {%AUTHOR%}</p>
+          </div>
+          <div class="row">  
+            <img src={%IMAGE%} alt={%IMAGEDESCRIPTION%}>
+          </div>
+          <div>
+            {%TEXT_PIECES%}
+          </div>
+        </div>
+        <div class="col col-xl-6">
+          <div class="row">  
             <div>
-              {%TEXT_PIECES%}
+              {%QUOTE_PIECES%}
             </div>
-          
+          </div>
         </div>
-        <div class="col col-xl-4">
-          <p>{%QUOTES%}</p>
-        </div>
-        <div class="col col-xl-2">
-          <p>{%COMMENTS%}</p>
-        </div>
+
       </div>
     </div>
   </body>
