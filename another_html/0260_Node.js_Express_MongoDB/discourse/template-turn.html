@@ -49,7 +49,7 @@
         margin-top: 15px;
         margin-bottom: 15px;
       }
-      h2 {
+      .secondName {
         font-family: 'PT Serif', serif;
         font-family: 'Crimson Text', serif;
         font-family: 'Oswald', sans-serif;
@@ -58,7 +58,7 @@
         font-size: 220%;
         margin-bottom: 8px;
       }
-      p {
+      .text {
         position: relative;
         font-family: 'PT Serif', serif;
         font-family: 'Crimson Text', serif;
@@ -135,7 +135,7 @@
         <div class="col col-xl-6">
           <div class="left-column">
             <h1>{%TITLE%}</h1>
-            <h2>{%SECONDTITLE%}</h2>
+            <div class="secondName">{%SECONDTITLE%}</div>
             <img
               class="red-rectangle"
               src="https://i.ibb.co/vqJ9bSV/red-rectangle.png"
@@ -147,7 +147,7 @@
             <div class="row">
               <img class="mainPic" src="{%IMAGE%}" alt="{%IMAGEDESCRIPTION%}" />
             </div>
-            <div>
+            <div class="text">
               {%TEXT_PIECES%}
             </div>
           </div>
