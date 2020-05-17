@@ -1,9 +1,10 @@
+
 import React from "react";
 
-function Footer() {
+function Footer(props) {
   return (
     <div>
-      This is a Footer
+      This is a Footer {props.v}
     </div>
   );
 }
