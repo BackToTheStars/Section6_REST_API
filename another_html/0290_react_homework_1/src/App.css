@@ -1,17 +1,12 @@
 
 .mainContent {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 0 35px 0 35px;
 }
 .header {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px 0 20px;
     color: darkgrey;
 }
 .footer {
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px 0 20px;
     color: darkgray;
 }
