@@ -4,9 +4,11 @@ import React from 'react';
 function TopMenu(props) {
   return (
     <div class="col-sm">
-      <h6>
-        {props.item}
-      </h6>
+      <div>
+        <h5>
+          {props.item}
+        </h5>
+      </div>
     </div>
   );
 }

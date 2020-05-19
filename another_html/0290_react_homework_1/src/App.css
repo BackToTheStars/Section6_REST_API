@@ -5,8 +5,11 @@
 .header {
     padding: 20px 20px 0 20px;
     color: darkgrey;
+    text-align: left;
 }
 .footer {
     padding: 0 20px 0 20px;
-    color: darkgray;
+    color: deepskyblue;
+    text-align: left;
+
 }

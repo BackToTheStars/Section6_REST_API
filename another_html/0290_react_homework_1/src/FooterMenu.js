@@ -4,9 +4,11 @@ import React from 'react';
 function FooterMenu(props) {
   return (
     <div class="col-sm">
-      <p>
-        {props.item}
-      </p>
+      <div>
+        <h6>
+          {props.item}
+        </h6>
+      </div>
     </div>
   );
 }
