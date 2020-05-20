@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from './Header';
 import Footer from "./Footer";
@@ -11,10 +12,10 @@ function App() {
     // это hook, отправленный в дочерний компонент
     console.log('pulled successfully')
   }
-  const printText = (text) => {
+  let printText = (text) => {
     console.log(text);
   }
-  const print = (object) => {
+  let print = (object) => {
     console.log(object);
   }
 

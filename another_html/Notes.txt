@@ -1,0 +1,269 @@
+
+19 мая 2020 - GIT & HOOKS
+Git - нужно пройти курс по Git.
+Один коммит минимум делать каждый день.
+Можно залить свой React-проект на сайт в Github.
+Hooks
+
+
+16 мая 2020 - PROPS
+Сегодня изучаем props (properties)
+Например из App в Header и Footer передать переменную X
+{ } значит сейчас будет врезан кусок JavaScript
+const newArray = num.map(el => el*2)
+Аналог шины это Redux
+Домашняя работа: сделать 6 компонентов, с передачей props
+stephen grider, maximillian schwarzmuller, and andrew mead have really really good classes
+BootStrap HTML CSS
+Вторник
+
+
+Жигинас Сергей Вильямович  5/13/2020 skype -----------------------------------------
+
+Одесса Тернополь Мат Логика и теория алгоритмов Чернигов
+Программист, программные комплексы, игра Жизнь, модели эволюции.
+Бизнес, торговля, редактор журнала, маркетинговые исследования, экспансия на рынках. Общественная деятельность, пассионарий. 89 год народный рух, координатор по Черниговской области, давление КГБ, революционер, колбасная революция, добились успеха. Создание демократической партии, объединение трёх партий, вплоть до обретения независимости. Меритократическая партия (ширма), лидер идеологического ядра. Выперли из партии, партия развалилась. Медиатор гражданского общества. Плёл сеть идеологий, в поле. Интеграционные функции - лучше всего. Пространство согласия, вебсайт. Чат, смыслы. Смысловая память социума, общие решения. За два-три дня решение рождается из множества обсуждений.
+Общий результат, силами разных людей. 60% баранов, 20% любители, 3% философов, все участвуют.
+Израильская армия: любой солдат может предложить решение. Субъект коллективного разума. 4D текст это результат работы социума. Навигатор по любому вопросу. Ризома. rizzoma.com
+
+Доверие: разум доверяет всем, принимает всё без фильтров. Дух дышит где хочет. Дилетант может высказаться. Подобное притягивает подобное. Превращаем в карту решений. 4D-текст возвращается толпе, чтобы она получила обратную связь. Формируется сеть из людей-нейронов. В споре рождаются первичные смыслы.
+Артур Кларк - Паладор. Миротворческие войска. 
+
+Англичане - клубы, организации, глобальные сети.
+Книга Перетолчина "Войны и глобальные элиты".
+Книга "Смыслы".
+Коммунизм, решение локальной задачи.
+-------------------------------------------------------------------------------------
+
+
+Массивы + функции JS
+Поставить WebStorm
+JSX - язык шаблонов для работы с React
+Import App from App - импортируем App из App.js 
+className вместо class (JSX)
+У реакта хорошие сообщения об ошибках.
+
+
+TAKE COURSE OF COMPUTER SCIENCE ?
+
+Node.js: Google V8 engine + LIBUV 
+LIBUV: C++, Event Loop + Thread Pool
+V8 uses JavaScript + C++
+Event Loop (Node.js C++ program) offloads heavy tasks to Thread Pool automatically.
+
+
+Мировозрение - взгляд на мир
+Человек может только сравнивать, не может оценить того, чего он не знает. 
+
+***********  Евгений Данилов, на пенсии, 7 апреля 2020 г. ********************
+
+Сознание герметично, продукт социума, символы, смыслы, можно только перепрошить
+Голливуд - братья Вачовски (Матрица, Восхождение Юпитер, Облачный Атлас), стихи Лермонтова, компьютерные игры, масонские ложи - ритуалы
+Никто не поддержал Советский Союз, джинсовый миф
+Пелевин - "Искусство лёгких касаний", химеры, американцы - Qanon, Алекс Джонс
+Культурологи, специалисты по мифам
+Проблема "Игры в Бисер" - требования к Мастерам Игры
+Соревнование сознаний 
+Гегель - осевое время, и победа свободы
+Работали над сознанием немцев и японцев, попытка восстановить субъектность
+Если мы проиграем, будет архаика, война всех против всех.
+Цивилизационное ядро
+Новая страна, 300 млн. человек, новая "американская" конституция
+Коммерческий проект, привлечение инвестиций, снос диктатур? 
+
+******************************
+
+
+npm i nodemon --global                 - install global dependency
+npm install nodemon --save-dev         - install dependency for development
+npm install slugify                    - install dependency for production
+package.json:  
+  "scripts": {
+    "start": "nodemon 04-modules.js"   - npm run start    - it will run start script
+                                       - or "npm start"   - same
+slugify('Fresh Avocados', { lower: true })   - will make a slug string
+version: "X.X.X" - major version, minor version, patch version
+patch version = bugs only, minor version = new features, major version = if you'll change the version, the code will break.
+
+npm outdated                  - will return a table of outdated packages
+npm install slugify@1.0.0     - install specific version
+~1.0.0 means we accept only the patch releases (safest for code)
+^1.0.0 means we accept the minor releases as well
+*1.0.0 means we accept any new releases (not a good idea)
+npm update slugify    - updates to version max possibly by *, ^ or ~ param
+
+npm i express             - install express package
+npm uninstall express     - uninstall
+
+npm install               - install all dependencies
+
+Prettier: formatOnSave: true; .prettierrc: {"singleQuote": true}
+
+Суббота: 
+1. Executive Intelligence Review quotes/findings
+2. Интервью с Илларионовым, Гордоном - Украина? Конспект.
+
+Речь:
+The idea of this project, Discource, is to change thinking.
+
+Google fonts
+CSS font style / size
+Bootstrap column sizes for different screens
+container-fluid = max width
+
+**************************************************************
+
+    Heroku - SQLite
+    Digital Ocean - PostgreSQL
+    Firebase - only storage
+
+
+Blocking code = synchronous code
+Non-blocking code = asynchronous code, callback functions 
+Callback Hell => Async / Await solution
+
+1. Создать сервер и роутер в *.js, считать файлы templates и JSON.
+
+2. Отдать страницу Overview.html, вместо "product-cards" считать объект JSON, "map" его с массивом template-card, преобразовать этот массив в строку, вставить строку-html-код вместо "product-cards". Это будет страница overview.
+
+3. Для страницы продукта, сначала парсить request в path и query, затем вывести по номеру query.id данные из json.parse(data.json), заменить эти поля в html-файле product-template, и отдать получившийся html-код. 
+
+4. В JavaScript любой файл рассматривается системой как модуль, импортирующий другие модули для работы, из xyz.js в abc.js.
+
+5. npm - это Node Package Manager. В данный момент его репозиторий составляет 800.000 packages. "node init" создаёт файл package.json.
+
+6. nodemon 03-routing.js для development environment
+
+
+
+*******  vue-resourse  ***************************************
+
+vue init webpack-simple vue-cli
+cd .\vue-cli\
+npm install  
+npm run dev  
+
+*******  Deploy Digital Ocean - something's wrong  ************
+root
+hikx36azqb9c
+
+ssh Putty:
+apt-get update
+apt-get install postgresql postgresql-contrib
+sudo -i -u postgres
+psql
+\conninfo
+\q
+exit
+
+adduser nick
+hikx36azqb9c - password
+
+visudo
+nick    ALL=(ALL:ALL) ALL
+vi /etc/ssh/sshd_config
+
+connect as nick@167.71.156.250
+sudo su - super user
+
+postgres user nick
+password hikx36azqb9c
+
+createdb nick
+dropdb ...   - delete the database
+
+/var/www/html/discourse
+
+*******  Deploy Heroku  ************
+
+Предел 10.000 rows в PostgreSQL
+Deploy Heroku = изменили запуск db
+Сделать branch develop, и auto-deploy для master.
+cmd -> heroku logs --app=discourse-backend-api   - errors log
+
+! Сейчас ходы идут по порядку, по всем играм, а нужны номера ходов в игре.
+
+************************************
+
+no need to "jsonify" in flask_restful, it does it for us
+
+*********************** Libraries to install
+install python3.5 (changed it to ??? to work in Heroku and Digital Ocean)
+pip install Flask
+pip install Flask-RESTful
+pip install Flask-JWT
+***********************
+
+Test-first design
+Error-first approach
+
+Game:
+  - create game                         POST /game
+  - show game(s) by name                GET  /game
+  - delete game by unique id            DEL  /game
+  - update game by unique id            PUT  /game
+
+Turn:
+  - show turns of this game             GET  /game/<>/turns
+  - create turn opening statement       POST /game/<>/turn/<>
+  - create turn text                    POST /game/<>/turn/<>
+  - update turn quotes                  PUT  /game/<>/turn/<>     PUT = create or update
+  - update turn comment for quote       PUT  /game/<>/turn/<>  
+  - delete turn by unique id            DEL  /game/<>/turn/<>
+
+Class:
+  - create class                                POST /class/<>
+  - connect class to game/turn/quote            POST /class/<>
+  - connect class to game/turn/quote/comment
+  - find class in games                         GET  /class/<>
+  - show classes                                GET  /classes
+
+
+
+Http verbs: GET POST PUT OPTIONS HEAD
+Connect to the PostgreSQL database server in Python program using psycopg database adapter
+
+**************************************************************************************
+
+Setup a backend server using whatever technology you prefer. (PHP, NodeJS, Ruby, Python ...)
+Setup Axios on you frontend application
+Fire requests to APIs when the user clicks on some button, or do something.
+Handle those requests into your backend
+Send responses to provide informations to your frontend
+Display those informations on your interface so your user knows what's going on
+
+--------------------------
+
+Installed PostgreSQL 12
+    oijDlKfge9803535
+    Postgres password
+    port 5433
+
+\l - list all databases
+CREATE DATABASE test;   (answer: CREATE DATABASE)
+
+**************************************************************************************
+
+Вопрос, кому принадлежит вся земля в России -> изменение Конституции
+
+
+
+https://www.dropbox.com/s/n27jc0gpgn5qm0y/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%94%D0%B8%D1%81%D0%BA%D1%83%D1%80%D1%81%20Feb%2015%2C%209.09%20AM.mp3?dl=0
+
+Я думаю, люди просто разучились разговаривать. Мы предпочитаем Инстаграм вместо диалога. Поэтому прогресс остановился.Мы стали слишком обидчивыми, слишком замкнутыми. Все на всех обижаются, и системы не работают. В какой форме вы руководите философской группой? В оффлайне? Встречи? Интересно. Если будете что-то стоящее обсуждать, дайте знать. Цели, будущее, переустройство общества. Практическую философию. Меня очень интересует вопрос, как переделать страну из того безумия, в котором она находится, в страну, в которой можно будет жить, работать, учить и делать.
+
+Николай, приветствую! Спасибо за классный и глубокий комментарий! Жаль, вы далеко, с удовольствием бы организовал по чашечке кофе. Иногда работаю с проектами в области social engineering, и организую пока стихийные заседания философского клуба))
+Любопытная тема. Вы в направлении трансформационной грамматики и построения/восприятия речевых конструкций  двигаетесь? Инстаграмм высвободил часть ящика пандоры, который традиционно регулировали древние практики и мировоззрение. Теперь, нужно признать, что они устарели и деликатно вносить изменения в эти системы, т.к. сильно изменились привычки и картина мира людей. Либо оставить все как есть и ожидать естественных эволюционных изменений. Да, я понял. Многое соприкасается с лингвистическими разработками Ноама Хомского и трудами Гриндера и Бендлера. Там встречаются любопытные концепции метамоделей, это про чувствительность к паттернам языка. В основном пока это на уровне заседаний экспертного клуба. Арендуем на вечер кафе или делаем квартирник. Wine&talk, иногда присоединяются участники из французского делового сообщества. Это все выросло из книжного клуба, мы обсуждали время от времени книги по экономике, социологии, истории, культуре.
+
+
+
+Cubernetes набирает силу
+Haskell top-down
+
+
+***
+бек - идешь в папку сервер и npm run start
+фронт - в папку с клиентом(навазние проекта) и там npm run serve
+
+
+
