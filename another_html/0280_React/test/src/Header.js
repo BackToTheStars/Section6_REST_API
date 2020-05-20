@@ -3,6 +3,13 @@ import React from "react";
 import MenuItem from "./MenuItem";
 
 function Header(props) {  // получение props
+
+  const add = () => {
+    console.log('Add')
+    props.pushedButton1(); // рыба клюёт на крючок hook
+                           // в родительском компоненте
+  }
+
   return (
     <div>
       This is a Header {props.version} {props.menu}
@@ -17,6 +24,8 @@ function Header(props) {  // получение props
       <ul>
           {props.menu.map(el => <MenuItem key={el} item={el} />)}
       </ul>
+
+      <button onClick={add}>Add</button>
 
     </div>
 
