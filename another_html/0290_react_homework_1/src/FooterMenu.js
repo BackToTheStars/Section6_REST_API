@@ -11,7 +11,7 @@ function FooterMenu(props) {
   return (
     <div class="col-sm">
       <div>
-        <h6 onClick={clicked}>
+        <h6 class="bottomMenuItem" onClick={clicked}>
           {props.item}
         </h6>
       </div>
