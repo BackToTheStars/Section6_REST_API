@@ -1,10 +1,12 @@
 
+
+
 19 мая 2020 - GIT & HOOKS
 Git - нужно пройти курс по Git.
 Один коммит минимум делать каждый день.
 Можно залить свой React-проект на сайт в Github.
 Hooks
-
+Домашка: сделать hooks "Clicked 1-7" в App.js + State + Classes state
 
 16 мая 2020 - PROPS
 Сегодня изучаем props (properties)

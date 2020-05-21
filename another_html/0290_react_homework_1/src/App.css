@@ -13,3 +13,6 @@
     text-align: left;
 
 }
+.topMenuItem {
+    cursor: pointer;
+}

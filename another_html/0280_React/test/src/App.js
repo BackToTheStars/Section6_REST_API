@@ -15,9 +15,6 @@ function App() {
   let printText = (text) => {
     console.log(text);
   }
-  let print = (object) => {
-    console.log(object);
-  }
 
   return (                       // version is props
     <div className="App">
@@ -28,7 +25,6 @@ function App() {
       <p>Some paragraph goes here</p>
       <Footer v={appVersion}
               resultText={printText /* this is second hook */}
-              objectPassed={print}
               />
     </div>
   );

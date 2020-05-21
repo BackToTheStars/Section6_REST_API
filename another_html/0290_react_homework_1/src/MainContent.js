@@ -2,6 +2,7 @@
 import React from 'react';
 
 function MainContent(props) {
+
   return (
     <div class="row">
       <div class="mainContent">
