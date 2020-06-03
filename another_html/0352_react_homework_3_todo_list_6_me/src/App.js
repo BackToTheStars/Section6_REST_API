@@ -34,7 +34,7 @@ function App() {
         onCreateTask={onCreateTask}
       />
       <OutputComponent
-        todos={todos}
+        todos={todos} //переменная
         onDeleteTask={onDeleteTask}
         onToggleDone={onToggleDone}
       />
