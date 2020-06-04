@@ -1,67 +1,49 @@
 import React, { useState } from 'react';
-const tasks1 = {
-  todo: [],
-  progress: [],
-  review: [],
-  done: [],
-};
-const boardOrder = [123, 3234, 43234]
-const statuses = {
-  s1: {name : 'TODO'},
-  s5: {name : 'QA'},
-}
-const tasks2 = [
-  {
-    id: 123,
-    name: 'Create F1',
-    priority: 10,
-    status: 's1'
-  },
-  // <--
-  {
-    name: 'Create F2',
-    priority: 20,
-    status: 's5'
-  } ,
-  {
-    name: 'Create F2',
-    priority: 20,
-    status: 'done'
-  } ,
-  {
-    name: 'Create F3',
-    priority: 30,
-    status: 'todo'
-  }
+
+const tasks = [
+  { id: 123, name: 'Read to children', priority: 10, status: 'todo'},
+  { id: 124, name: 'Check bank', priority: 20, status: 'inProgress'},
+  { id: 125, name: 'Plan next week', priority: 30, status: 'review'},
+  { id: 126, name: 'Quality control', priority: 40, status: 'done'}
 ]
+
 function App() {
-  const [isOpenCreateTaskForm, setIsOpenCreateTaskForm] = useState(false);
-  const [taskInput, setTaskInput] = useState('');
+
+  const [isOpenCreateTaskForm, setIsOpenCreateTaskForm]         = useState(false);
+  // определяет, какую группу кнопок показывать наверху
+  const [taskInput, setTaskInput]                               = useState('');
+  // название таски
   const [isActiveButtonTaskCreate, setIsActiveButtonTaskCreate] = useState(false);
-  const openCreateTaskForm = () => {
+  // горит ли кнопка создать таску
+
+  const openCreateTaskForm = () => {  // меняет группу кнопок наверху
     setIsOpenCreateTaskForm(true);
   };
-  const onTaskChange = (e) => {
+  const onTaskChange = (e) => {      // вводит имя таски в инпуте
     setIsActiveButtonTaskCreate(e.target.value.length > 4);
     setTaskInput(e.target.value);
   };
-  const taskSubmit = (e) => {
+  const taskSubmit = (e) => {        // нажата кнопки "создать таску"
     e.preventDefault();
     console.log(taskInput);
     taskReset();
   };
-  const taskReset = () => {
+  const taskReset = () => {          // сбросить весь верх в начальное положение
     setTaskInput('');
     setIsOpenCreateTaskForm(false);
     setIsActiveButtonTaskCreate(false);
   };
+
   return (
     <div>
       <div className="container">
         <h1>Kanban</h1>
+
         {!isOpenCreateTaskForm &&
         <button className="btn btn-primary" onClick={openCreateTaskForm}>Create
-          Task</button>}
+          Task</button>
+        }
+
         {isOpenCreateTaskForm &&
         <form>
           <div className="form-group">
@@ -79,6 +61,7 @@ function App() {
           </button>
         </form>
         }
+
         <div className="row">
           <div className="col-sm">
             To do
@@ -93,6 +76,7 @@ function App() {
             Done
           </div>
         </div>
+
       </div>
     </div>
   );
