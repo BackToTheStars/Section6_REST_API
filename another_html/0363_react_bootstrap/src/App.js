@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import ToDoCard from "./ToDoCard";
 
-const tasks = [
+const taskArray = [
   { id: 123, name: 'Read to children', priority: 10, status: 'todo'},
   { id: 124, name: 'Check bank', priority: 20, status: 'inProgress'},
   { id: 125, name: 'Plan next week', priority: 30, status: 'review'},
@@ -15,6 +16,7 @@ function App() {
   // название таски
   const [isActiveButtonTaskCreate, setIsActiveButtonTaskCreate] = useState(false);
   // горит ли кнопка создать таску
+  const [tasks, setTasks]                                       = useState(taskArray);
 
   const openCreateTaskForm = () => {  // меняет группу кнопок наверху
     setIsOpenCreateTaskForm(true);
@@ -25,7 +27,9 @@ function App() {
   };
   const taskSubmit = (e) => {        // нажата кнопки "создать таску"
     e.preventDefault();
-    console.log(taskInput);
+    let tempTasks = [...tasks];
+    tempTasks.push({ id: Math.random(), name: taskInput, priority: 10, status: 'todo'});
+    setTasks(tempTasks);
     taskReset();
   };
   const taskReset = () => {          // сбросить весь верх в начальное положение
@@ -33,6 +37,11 @@ function App() {
     setIsOpenCreateTaskForm(false);
     setIsActiveButtonTaskCreate(false);
   };
+  const filterTasks = (status) => {
+    let filterTasks = [...tasks];
+    filterTasks = filterTasks.filter(el => el.status === status);
+    return filterTasks;
+  }
 
   return (
     <div>
@@ -61,19 +70,23 @@ function App() {
           </button>
         </form>
         }
-
+        <p></p>
         <div className="row">
           <div className="col-sm">
-            To do
+            <h4>To do</h4>
+            {filterTasks('todo').map(el => <ToDoCard task={el} key={el}/>)}
           </div>
           <div className="col-sm">
-            In progress
+            <h4>In progress</h4>
+            {filterTasks('inProgress').map(el => <ToDoCard task={el} key={el}/>)}
           </div>
           <div className="col-sm">
-            Review
+            <h4>Review</h4>
+            {filterTasks('review').map(el => <ToDoCard task={el} key={el}/>)}
           </div>
           <div className="col-sm">
-            Done
+            <h4>Done</h4>
+            {filterTasks('done').map(el => <ToDoCard task={el} key={el}/>)}
           </div>
         </div>
 
