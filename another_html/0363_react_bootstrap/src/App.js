@@ -28,7 +28,7 @@ function App() {
   const taskSubmit = (e) => {        // нажата кнопки "создать таску"
     e.preventDefault();
     let tempTasks = [...tasks];
-    tempTasks.push({ id: Math.random(), name: taskInput, priority: 10, status: 1});
+    tempTasks.push({ id: Math.random(), name: taskInput, priority: 0, status: 1});
     setTasks(tempTasks);
     taskReset();
   };
@@ -50,18 +50,31 @@ function App() {
     tempTasks.push(tempTask);
     tempTasks = tempTasks.map((e, i) => e = {...e, priority: i});
     setTasks(tempTasks);
-    console.log(tempTasks);
+    //console.log(tempTasks);
   }
-  const moveY = (i, y) => {                               // двигает таски по оси Y
-    console.log(i+" "+y)
+  const moveY = (id, i, y, s) => {    // двигает таски по оси Y
     let tempTasks = [...tasks];
-    if ((i > 0 & y===-1) || (i < tempTasks.length-1 & y===1)) {
-      let el = tempTasks.splice(i, 1)[0];      // remove `from` item and store it
-      tempTasks.splice(i + y, 0, el);     // insert stored item into position `to`
-      tempTasks = tempTasks.map((e, i) => e = {...e, priority: i});
-      setTasks(tempTasks);
-      console.log(tempTasks);
+    let tempTasks2 =[];
+    for (let index=1; index<=4; index++) {
+      let element = tempTasks.filter(e => e.status === index).map((e, i) => e = {...e, priority: i});
+      element.map(e => tempTasks2.push(e))
     }
+    tempTasks = tempTasks2.filter(e => e.status === s);
+    for (let i=0; i<tempTasks.length; i++) {
+      if (tempTasks[i].id === id) {
+        let task = tempTasks.splice(i, 1)[0];      // remove `from` item and store it
+        tempTasks.splice(i + y, 0, task);     // insert stored item into position `to`
+        break;
+      }
+    }
+    let tempTasks3 = tempTasks2.filter(e => e.status !== s);
+    tempTasks.map((e, i) => tempTasks3.push(tempTasks[i]));
+    tempTasks2 = [];
+    for (let index=1; index<=4; index++) {
+      let element = tempTasks3.filter(e => e.status === index).map((e, i) => e = {...e, priority: i});
+      element.map(e => tempTasks2.push(e))
+    }
+    setTasks(tempTasks2);
   }
 
   return (
@@ -95,19 +108,19 @@ function App() {
         <div className="row">
           <div className="col-sm">
             <h4>To do</h4>
-            {filterTasks(1).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} maxPriority={tasks.length} />)}
+            {filterTasks(1).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} />)}
           </div>
           <div className="col-sm">
             <h4>In progress</h4>
-            {filterTasks(2).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} maxPriority={tasks.length} />)}
+            {filterTasks(2).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} />)}
           </div>
           <div className="col-sm">
             <h4>Review</h4>
-            {filterTasks(3).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} maxPriority={tasks.length} />)}
+            {filterTasks(3).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} />)}
           </div>
           <div className="col-sm">
             <h4>Done</h4>
-            {filterTasks(4).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} maxPriority={tasks.length} />)}
+            {filterTasks(4).map(el => <ToDoCard task={el} key={el.id} moveX={moveX} moveY={moveY} />)}
           </div>
         </div>
       </div>

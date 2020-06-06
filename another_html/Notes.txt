@@ -1,3 +1,11 @@
+Bug tracker
+UI
+Bootstrap React paid theme
+Login page
+Security, authentication
+SRS
+Database
+Use your software to track your project
 
 ------------------------------------------------------------------------------------
 Конспект лекции 30 мая 2020
