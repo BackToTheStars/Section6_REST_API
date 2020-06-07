@@ -1,3 +1,26 @@
 
+.urgent {
+    font-size: x-small;
+    background-color: darkviolet;
+    color: white;
+}
 
-
+.high {
+    font-size: x-small;
+    background-color: red;
+    color: white;
+}
+.medium {
+    font-size: x-small;
+    background-color: yellow;
+    color: black;
+}
+.low {
+    font-size: x-small;
+    background-color: forestgreen;
+    color: white;
+}
+.greyColumn {
+    background-color: lightgrey;
+    border-radius: 5px;
+}

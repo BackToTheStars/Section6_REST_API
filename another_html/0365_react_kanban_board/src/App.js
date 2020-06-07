@@ -10,7 +10,6 @@ const taskArray = [
   { id: uuidv4(), name: 'Quality control', priority: 3, status: 'review'}
 ]
 
-const priorities = ['extreme', 'important', 'normal', 'low'];
 const colors     = ['violet', 'red', 'yellow', 'green'];
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
   const taskSubmit = (e) => {            // нажата кнопки "создать таску"
     e.preventDefault();
     let copyTasks = [...tasks];
-    copyTasks.push({ id: uuidv4(), name: taskInput, priority: 2, status: 1});
+    copyTasks.push({ id: uuidv4(), name: taskInput, priority: 2, status: 'todo'});
     setTasks(copyTasks);
     taskReset();
   };
@@ -44,8 +43,9 @@ function App() {
   };
 
   const changeStatus = ({id, direction}) => {
-    console.log(id, direction);
     const statuses = ['todo', 'progress', 'review', 'done'];
+    const priorities = [0, 1, 2, 3];
+
     const updatedTasks = tasks.map(el => {
       if (el.id===id) {
         if (direction==='left') {
@@ -53,6 +53,14 @@ function App() {
         }
         if (direction==='right') {
           el.status = statuses[statuses.indexOf(el.status)+1];
+        }
+        if (direction==='up') {
+          console.log(el.priority);
+          el.priority = priorities[priorities.indexOf(el.priority)-1];
+        }
+        if (direction==='down') {
+          console.log(el.priority);
+          el.priority = priorities[priorities.indexOf(el.priority)+1];
         }
         return el;
       }
@@ -91,20 +99,20 @@ function App() {
         </form>
         }
         <div className="row mt-3">
-          <div className="col-sm">
-            <h4>To do</h4>
+          <div className="col-sm greyColumn mr-2">
+            <h4 className="mt-3 mb-3">To Do</h4>
             <Column tasks={tasks} status={'todo'} changeStatus={changeStatus}/>
           </div>
-          <div className="col-sm">
-            <h4>In progress</h4>
+          <div className="col-sm greyColumn mr-2 ml-2">
+            <h4 className="mt-3 mb-3">In Progress</h4>
             <Column tasks={tasks} status={'progress'} changeStatus={changeStatus}/>
           </div>
-          <div className="col-sm">
-            <h4>Review</h4>
+          <div className="col-sm greyColumn mr-2 ml-2">
+            <h4 className="mt-3 mb-3">Review</h4>
             <Column tasks={tasks} status={'review'} changeStatus={changeStatus}/>
           </div>
-          <div className="col-sm">
-            <h4>Done</h4>
+          <div className="col-sm greyColumn mr-2 ml-2">
+            <h4 className="mt-3 mb-3">Done</h4>
             <Column tasks={tasks} status={'done'} changeStatus={changeStatus}/>
           </div>
         </div>
