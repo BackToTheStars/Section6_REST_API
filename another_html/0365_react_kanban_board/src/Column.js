@@ -10,7 +10,9 @@ function Column(props) {
         .map(el => <TaskCard
           key={el.id}
           task={el}
-          changeStatus={props.changeStatus} />)}
+          changeStatus={props.changeStatus}
+          onTaskSave={props.onTaskSave}
+        />)}
     </div>
   );
 }

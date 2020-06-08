@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const left = (<svg className="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
@@ -35,9 +35,34 @@ const deleteCross = (<svg className="bi bi-x" width="1em" height="1em" viewBox="
 </svg>);
 
 function TaskCard(props) {
+
+  // пакет для task name change
+  const [taskEdit, setTaskEdit] = useState({});
+  const editMode = (task) => { setTaskEdit(task); };
+  const onEditTaskChange = (e) => { setTaskEdit({ ...taskEdit, name: e.target.value }); };
+  const taskSave = () => {
+    props.onTaskSave(taskEdit);
+    setTaskEdit({});
+  };
+  // -----
+
   return (
     <div className="card mb-3 mr-1 ml-1">
-      {props.task.name}
+
+      {taskEdit.id === props.task.id ? (
+        <>
+          <input
+            type="text"
+            value={taskEdit.name}
+            onChange={onEditTaskChange}
+          />
+          <button onClick={taskSave} disabled={!taskEdit.name.trim()}>
+            Save
+          </button>
+        </>
+      ) : (
+        <span onClick={() => editMode(props.task)}>{props.task.name}</span>
+      )}
 
       {props.task.status!=='todo' &&
         <span onClick={() => props.changeStatus({id: props.task.id, direction: 'left'})}

@@ -42,6 +42,16 @@ function App() {
     setIsActiveButtonTaskCreate(false);
   };
 
+  // для name change
+  const onTaskSave = (task) => {
+    const updatedTasks = tasks.map((el) => {
+      if (el.id === task.id) return { ...el, name: task.name };
+      else return el;
+    });
+    setTasks(updatedTasks);
+  };
+  // ------
+
   const changeStatus = ({id, direction}) => {
     const statuses = ['todo', 'progress', 'review', 'done'];
     const priorities = [0, 1, 2, 3];
@@ -91,19 +101,19 @@ function App() {
         <div className="row mt-3">
           <div className="col-sm greyColumn mr-2">
             <h4 className="mt-3 mb-3">To Do</h4>
-            <Column tasks={tasks} status={'todo'} changeStatus={changeStatus}/>
+            <Column tasks={tasks} status={'todo'} changeStatus={changeStatus} onTaskSave={onTaskSave}/>
           </div>
           <div className="col-sm greyColumn mr-2 ml-2">
             <h4 className="mt-3 mb-3">In Progress</h4>
-            <Column tasks={tasks} status={'progress'} changeStatus={changeStatus}/>
+            <Column tasks={tasks} status={'progress'} changeStatus={changeStatus} onTaskSave={onTaskSave}/>
           </div>
           <div className="col-sm greyColumn mr-2 ml-2">
             <h4 className="mt-3 mb-3">Review</h4>
-            <Column tasks={tasks} status={'review'} changeStatus={changeStatus}/>
+            <Column tasks={tasks} status={'review'} changeStatus={changeStatus} onTaskSave={onTaskSave}/>
           </div>
           <div className="col-sm greyColumn mr-2 ml-2">
             <h4 className="mt-3 mb-3">Done</h4>
-            <Column tasks={tasks} status={'done'} changeStatus={changeStatus}/>
+            <Column tasks={tasks} status={'done'} changeStatus={changeStatus} onTaskSave={onTaskSave}/>
           </div>
         </div>
       </div>
