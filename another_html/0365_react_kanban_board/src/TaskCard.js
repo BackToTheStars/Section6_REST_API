@@ -28,6 +28,12 @@ const down = (<svg className="bi bi-arrow-down-short" width="1em" height="1em" v
   <path fillRule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
 </svg>);
 
+const deleteCross = (<svg className="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg">
+  <path fillRule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+  <path fillRule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+</svg>);
+
 function TaskCard(props) {
   return (
     <div className="card mb-3 mr-1 ml-1">
@@ -48,6 +54,9 @@ function TaskCard(props) {
       {props.task.priority!==3 &&
       <span onClick={() => props.changeStatus({id: props.task.id, direction: 'down'})}
       >{down}</span>}
+
+      <span onClick={() => props.changeStatus({id: props.task.id, direction: 'delete'})}
+      >{deleteCross}</span>
 
       {props.task.priority===0 &&
         <p className="urgent">urgent</p>

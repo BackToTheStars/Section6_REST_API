@@ -10,7 +10,7 @@ const taskArray = [
   { id: uuidv4(), name: 'Quality control', priority: 3, status: 'review'}
 ]
 
-const colors     = ['violet', 'red', 'yellow', 'green'];
+//const colors     = ['violet', 'red', 'yellow', 'green'];
 
 function App() {
 
@@ -45,30 +45,21 @@ function App() {
   const changeStatus = ({id, direction}) => {
     const statuses = ['todo', 'progress', 'review', 'done'];
     const priorities = [0, 1, 2, 3];
+    let updatedTasks = tasks;
 
-    const updatedTasks = tasks.map(el => {
+    if (direction==='delete') updatedTasks = updatedTasks.filter(el => el.id !== id);
+
+    updatedTasks = updatedTasks.map(el => {
       if (el.id===id) {
-        if (direction==='left') {
-          el.status = statuses[statuses.indexOf(el.status)-1];
-        }
-        if (direction==='right') {
-          el.status = statuses[statuses.indexOf(el.status)+1];
-        }
-        if (direction==='up') {
-          console.log(el.priority);
-          el.priority = priorities[priorities.indexOf(el.priority)-1];
-        }
-        if (direction==='down') {
-          console.log(el.priority);
-          el.priority = priorities[priorities.indexOf(el.priority)+1];
-        }
+        if (direction==='left')  el.status   = statuses[statuses.indexOf(el.status)-1];
+        if (direction==='right') el.status   = statuses[statuses.indexOf(el.status)+1];
+        if (direction==='up')    el.priority = priorities[priorities.indexOf(el.priority)-1];
+        if (direction==='down')  el.priority = priorities[priorities.indexOf(el.priority)+1];
         return el;
       }
       else return el;
     });
     setTasks(updatedTasks);
-
-
   };
 
   return (
@@ -77,8 +68,7 @@ function App() {
         <h1 className="mb-3">Kanban Board</h1>
 
         {!isOpenCreateTaskForm &&
-        <button className="btn btn-primary" onClick={openCreateTaskForm}>Create
-          Task</button>
+        <button className="btn btn-primary" onClick={openCreateTaskForm}>New Task</button>
         }
 
         {isOpenCreateTaskForm &&
