@@ -1,6 +1,8 @@
+
 import React, {useState} from 'react';
 import InputComponent from './InputComponent';
 import OutputComponent from './OutputComponent';
+
 
 function App() {
 
@@ -25,7 +27,6 @@ function App() {
       else return el;
     });
     setTodos(tempTodos);
-    console.log(todos);
   }
 
   return (
