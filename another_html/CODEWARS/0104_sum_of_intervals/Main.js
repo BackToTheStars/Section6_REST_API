@@ -52,7 +52,29 @@ function ideal(intervals){
   return numbers.length;
 }
 
+function ideal2(intervals) {
+  const ranges = new Set();
 
+  intervals.forEach(([start, end]) => {
+    for (let i = start; i < end; i++) ranges.add(i);
+  });
+
+  return ranges.size;
+}
+
+function ideal3(m) {
+  var a = [];
+  for (let i = 0; i < m.length; i++) for (let j = m[i][0]; j < m[i][1]; j++) if (a.indexOf(j) === -1) a.push(j);
+  return a.length;
+}
+
+function ideal4(intervals){
+  let s = new Set();
+  for ( let i=0; i< intervals.length; i++)
+    for (let j=intervals[i][0]; j<intervals[i][1];j++)
+      s.add(j);
+  return s.size;
+}
 
 console.log(sumIntervals([[1,5]]) === 4);
 console.log(' ');
