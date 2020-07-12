@@ -20,6 +20,7 @@ function App() {
     tempTodos = tempTodos.filter((el) => el.id !== id);
     setTodos(tempTodos);
   }
+  
   const onToggleDone = (id) => {
     let tempTodos = [...todos];
     tempTodos = tempTodos.map(el => {

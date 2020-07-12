@@ -76,6 +76,15 @@ function ideal4(intervals){
   return s.size;
 }
 
+function ideal5(intervals){
+  z = new Set();
+  for (var interval of intervals)
+    for (q=interval[0]; q<interval[1]; q++)
+      z.add(q);
+  return z.size;
+}
+
+
 console.log(sumIntervals([[1,5]]) === 4);
 console.log(' ');
 console.log(sumIntervals([[1,5],[6,10]]) === 8);
